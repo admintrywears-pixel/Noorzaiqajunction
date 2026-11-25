@@ -12,25 +12,25 @@ interface FooterProps {
 
 export function Footer({ onNavigate }: FooterProps) {
   return (
-    <footer className="relative z-10 bg-[#051811]/95 text-[#B4C4BA] border-t border-[#EAB344]/20 pt-12 pb-24">
+    <footer className="relative z-10 bg-[#100805]/95 text-[#C7B198] border-t border-[#EAB344]/20 pt-12 pb-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
           <button
             type="button"
             onClick={() => onNavigate('home')}
-            className="shrink-0 cursor-pointer text-left px-4 py-2.5 rounded-xl border border-[#EAB344]/40 bg-[#08281D] hover:border-[#F5C451] transition-colors"
+            className="shrink-0 cursor-pointer text-left px-4 py-2.5 rounded-xl border border-[#EAB344]/40 bg-[#21120B] hover:border-[#F5C451] transition-colors"
             aria-label="Go to Noor Zaiqa Junction Home"
           >
             <p className="font-display text-lg font-bold text-[#F3C969] leading-tight">
               Noor Zaiqa Junction
             </p>
-            <p lang="ur" className="font-urdu-inline text-sm text-[#FDF9EE]">
+            <p lang="ur" className="font-urdu-inline text-sm text-[#FDF6E9]">
               نور ذائقہ جنکشن
             </p>
           </button>
 
           <div className="space-y-1 text-xs">
-            <p className="font-semibold text-[#FDF9EE]">
+            <p className="font-semibold text-[#FDF6E9]">
               Ghar ka Zaiqa, Har Plate Mein ·{' '}
               <span
                 lang="ur"

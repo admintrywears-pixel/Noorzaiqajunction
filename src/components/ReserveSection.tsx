@@ -52,12 +52,12 @@ export function ReserveSection() {
   };
 
   return (
-    <section id="reserve" className="relative z-10 text-[#FDF9EE] py-16 sm:py-24">
+    <section id="reserve" className="relative z-10 text-[#FDF6E9] py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           <div className="lg:col-span-6 flex flex-col justify-between gap-6">
-            <div className="rounded-t-[200px] rounded-b-3xl p-2.5 border border-[#EAB344]/35 bg-[#08261C]/88 flex-1 min-h-[300px] shadow-2xl">
-              <div className="w-full h-full rounded-t-[190px] rounded-b-2xl overflow-hidden bg-[#0B3024]">
+            <div className="rounded-t-[200px] rounded-b-3xl p-2.5 border border-[#EAB344]/35 bg-[#21120B]/88 flex-1 min-h-[300px] shadow-2xl">
+              <div className="w-full h-full rounded-t-[190px] rounded-b-2xl overflow-hidden bg-[#2E1910]">
                 <img
                   src={IMAGE_ASSETS.mutanjanZarda}
                   alt="Noor Zaiqa Junction Mutanjan Zarda & Homemade Dawat Feast"
@@ -67,7 +67,7 @@ export function ReserveSection() {
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 p-4 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#08261C]/90 border border-[#EAB344]/20 text-xs text-[#C4BFB0]">
+            <div className="grid grid-cols-3 gap-4 p-4 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#21120B]/90 border border-[#EAB344]/20 text-xs text-[#C7B198]">
               <div>
                 <p className="font-semibold text-[#F5C451]">1 KG Trays</p>
                 <p>Biryani, Qorma, Achaari, Qeema, Zarda</p>
@@ -83,21 +83,21 @@ export function ReserveSection() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/94 border border-[#EAB344]/35 p-7 sm:p-10 shadow-2xl flex flex-col justify-between">
+          <div className="lg:col-span-6 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/94 border border-[#EAB344]/35 p-7 sm:p-10 shadow-2xl flex flex-col justify-between">
             {bookingRef ? (
               <div className="space-y-5 my-auto">
                 <div className="flex items-center gap-3 text-[#F5C451]">
                   <CheckCircle2 className="w-7 h-7 shrink-0" />
                   <div>
                     <p className="text-xs font-mono uppercase">Custom Request Ready</p>
-                    <h3 className="text-2xl font-semibold text-[#FDF9EE]">
+                    <h3 className="text-2xl font-semibold text-[#FDF6E9]">
                       {bookingRef.id}
                     </h3>
                   </div>
                 </div>
-                <p className="text-sm leading-relaxed text-[#D8D3C2]">
+                <p className="text-sm leading-relaxed text-[#E6D7C3]">
                   Shukriya,{' '}
-                  <span className="font-semibold text-[#FDF9EE]">
+                  <span className="font-semibold text-[#FDF6E9]">
                     {bookingRef.name}
                   </span>
                   . Your request for{' '}
@@ -112,7 +112,7 @@ export function ReserveSection() {
                     href={bookingRef.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#EAB344] text-[#072118] text-xs font-bold hover:bg-[#F5C451] transition-colors"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#EAB344] text-[#140B07] text-xs font-bold hover:bg-[#F5C451] transition-colors"
                   >
                     <MessageCircle className="w-4 h-4" />
                     <span>Confirm on WhatsApp ({WHATSAPP_DISPLAY})</span>
@@ -123,7 +123,7 @@ export function ReserveSection() {
                       setBookingRef(null);
                       setGuestName('');
                     }}
-                    className="px-4 py-2.5 rounded-lg border border-[#EAB344]/35 text-xs font-semibold text-[#FDF9EE] hover:border-[#F5C451] transition-colors cursor-pointer"
+                    className="px-4 py-2.5 rounded-lg border border-[#EAB344]/35 text-xs font-semibold text-[#FDF6E9] hover:border-[#F5C451] transition-colors cursor-pointer"
                   >
                     New Custom Request
                   </button>
@@ -135,7 +135,7 @@ export function ReserveSection() {
                   <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#F5C451]">
                     Custom Homemade Cooking · 0371-2442688
                   </p>
-                  <h2 className="text-3xl font-semibold tracking-tight text-[#FDF9EE]">
+                  <h2 className="text-3xl font-semibold tracking-tight text-[#FDF6E9]">
                     Book Custom Dishes or Dawat Trays
                   </h2>
                   <p lang="ur" className="font-urdu text-lg text-[#EAB344]">
@@ -145,7 +145,7 @@ export function ReserveSection() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-[#D7D2BE] mb-1">
+                    <label className="block text-xs font-medium text-[#E6D7C3] mb-1">
                       Your Name
                     </label>
                     <input
@@ -153,17 +153,17 @@ export function ReserveSection() {
                       value={guestName}
                       onChange={(e) => setGuestName(e.target.value)}
                       placeholder="e.g. Ayesha Siddiqui"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-[#EAB344]/20 text-sm text-[#FDF9EE] placeholder:text-[#7E9689] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-[#EAB344]/20 text-sm text-[#FDF6E9] placeholder:text-[#9E8468] focus:outline-none focus:border-[#EAB344]"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#D7D2BE] mb-1">
+                    <label className="block text-xs font-medium text-[#E6D7C3] mb-1">
                       Karachi Delivery Zone
                     </label>
                     <select
                       value={zone}
                       onChange={(e) => setZone(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-[#EAB344]/20 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-[#EAB344]/20 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                     >
                       <option>Karachi Home Delivery</option>
                       <option>Clifton / Defence / PECHS</option>
@@ -174,24 +174,24 @@ export function ReserveSection() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-[#D7D2BE] mb-1">
+                    <label className="block text-xs font-medium text-[#E6D7C3] mb-1">
                       Date
                     </label>
                     <input
                       type="date"
                       value={date}
                       onChange={(e) => setDate(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-[#EAB344]/20 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-[#EAB344]/20 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#D7D2BE] mb-1">
+                    <label className="block text-xs font-medium text-[#E6D7C3] mb-1">
                       Delivery Slot
                     </label>
                     <select
                       value={slot}
                       onChange={(e) => setSlot(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-[#EAB344]/20 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-[#EAB344]/20 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                     >
                       <option>Lunch (1:00 PM – 3:00 PM)</option>
                       <option>Dinner (7:30 PM – 9:30 PM)</option>
@@ -199,13 +199,13 @@ export function ReserveSection() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#D7D2BE] mb-1">
+                    <label className="block text-xs font-medium text-[#E6D7C3] mb-1">
                       Quantity / Scale
                     </label>
                     <select
                       value={packSize}
                       onChange={(e) => setPackSize(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-[#EAB344]/20 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-[#EAB344]/20 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                     >
                       <option>Family Meal / 1–2 KG Order</option>
                       <option>Frozen Shami Kabab Trays (24+)</option>
@@ -216,7 +216,7 @@ export function ReserveSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-[#D7D2BE] mb-1">
+                  <label className="block text-xs font-medium text-[#E6D7C3] mb-1">
                     Custom Dish / Preference (Anything Outside Menu)
                   </label>
                   <input
@@ -224,7 +224,7 @@ export function ReserveSection() {
                     value={customRequest}
                     onChange={(e) => setCustomRequest(e.target.value)}
                     placeholder="e.g. Karahi, Nihari, Palak Paneer, Haleem, or Mild Masala"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-[#EAB344]/20 text-sm text-[#FDF9EE] placeholder:text-[#7E9689] focus:outline-none focus:border-[#EAB344]"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-[#EAB344]/20 text-sm text-[#FDF6E9] placeholder:text-[#9E8468] focus:outline-none focus:border-[#EAB344]"
                   />
                 </div>
 
@@ -237,7 +237,7 @@ export function ReserveSection() {
 
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-lg bg-[#EAB344] text-[#072118] text-sm font-bold hover:bg-[#F5C451] transition-colors cursor-pointer"
+                  className="w-full py-3 rounded-lg bg-[#EAB344] text-[#140B07] text-sm font-bold hover:bg-[#F5C451] transition-colors cursor-pointer"
                 >
                   Prepare Custom Order for WhatsApp
                 </button>

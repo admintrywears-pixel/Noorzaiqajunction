@@ -81,12 +81,12 @@ export function OrbitalMenuWheel({
           <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#F5C451]">
             3D Orbital Dish Wheel · Spin &amp; Attach
           </p>
-          <h2 className="text-2xl sm:text-4xl font-semibold text-[#FDF9EE]">
+          <h2 className="text-2xl sm:text-4xl font-semibold text-[#FDF6E9]">
             Spin Every Plate to the Front
           </h2>
         </div>
 
-        <div className="flex flex-wrap items-center gap-1.5 p-1 bg-[#061C14] rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md border border-[#EAB344]/20">
+        <div className="flex flex-wrap items-center gap-1.5 p-1 bg-[#0F0705] rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md border border-[#EAB344]/20">
           {MENU_CATEGORIES.map((cat) => {
             const active = selectedCategory === cat;
             return (
@@ -96,8 +96,8 @@ export function OrbitalMenuWheel({
                 onClick={() => onSelectCategory(cat)}
                 className={`px-3 py-1.5 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm text-xs font-semibold transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   active
-                    ? 'bg-[#EAB344] text-[#072118]'
-                    : 'text-[#D8D3C2] hover:text-[#FDF9EE]'
+                    ? 'bg-[#EAB344] text-[#140B07]'
+                    : 'text-[#E6D7C3] hover:text-[#FDF6E9]'
                 }`}
               >
                 <span className="inline-flex items-center gap-1">
@@ -149,11 +149,11 @@ export function OrbitalMenuWheel({
                 }}
                 className={`absolute w-[305px] sm:w-[420px] lg:w-[485px] rounded-tl-[3.25rem] rounded-br-[3.25rem] rounded-tr-2xl rounded-bl-2xl p-3.5 sm:p-4 border ${
                   isFront
-                    ? 'bg-[#08261C]/96 border-[#F5C451] shadow-2xl'
-                    : 'bg-[#061E15]/90 border-[#EAB344]/30 cursor-pointer hover:border-[#EAB344]/70'
+                    ? 'bg-[#21120B]/96 border-[#F5C451] shadow-2xl'
+                    : 'bg-[#180C07]/90 border-[#EAB344]/30 cursor-pointer hover:border-[#EAB344]/70'
                 }`}
               >
-                <div className="relative h-[165px] sm:h-[205px] lg:h-[225px] w-full overflow-hidden rounded-tl-[2.25rem] rounded-br-[2.25rem] rounded-tr-xl rounded-bl-xl bg-[#0B3024]">
+                <div className="relative h-[165px] sm:h-[205px] lg:h-[225px] w-full overflow-hidden rounded-tl-[2.25rem] rounded-br-[2.25rem] rounded-tr-xl rounded-bl-xl bg-[#2E1910]">
                   <img
                     src={item.image}
                     alt={item.name}
@@ -161,7 +161,7 @@ export function OrbitalMenuWheel({
                     className="w-full h-full object-cover"
                   />
                   <div
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-[#061E16]/90 via-[#061E16]/40 to-transparent"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-[#120906]/90 via-[#120906]/40 to-transparent"
                     aria-hidden="true"
                   />
                   <div className="absolute bottom-2 left-3.5 right-3.5 flex items-center justify-between text-xs">
@@ -169,12 +169,12 @@ export function OrbitalMenuWheel({
                       {String(idx + 1).padStart(2, '0')} /{' '}
                       {String(items.length).padStart(2, '0')}
                     </span>
-                    <span className="font-medium text-[#EFE8D5]">{item.category}</span>
+                    <span className="font-medium text-[#E6D7C3]">{item.category}</span>
                   </div>
                 </div>
 
                 <div className="px-2 pt-2.5 pb-1 space-y-1.5">
-                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-[#B2C1B7]">
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-[#C7B198]">
                     <div className="flex items-center gap-2">
                       <span>{item.urduTag}</span>
                       <span aria-hidden="true">·</span>
@@ -203,7 +203,7 @@ export function OrbitalMenuWheel({
                   </div>
 
                   <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
-                    <h3 className="text-lg sm:text-xl font-semibold leading-snug text-[#FDF9EE] line-clamp-1">
+                    <h3 className="text-lg sm:text-xl font-semibold leading-snug text-[#FDF6E9] line-clamp-1">
                       {item.name}
                     </h3>
                     {URDU_DISHES[item.id] && (
@@ -219,7 +219,7 @@ export function OrbitalMenuWheel({
                   <p className="text-[11px] sm:text-xs font-medium text-[#F5C451] line-clamp-1">
                     {getHealthFocus(item)}
                   </p>
-                  <p className="text-xs leading-relaxed text-[#D8D3C2] line-clamp-1 sm:line-clamp-2">
+                  <p className="text-xs leading-relaxed text-[#E6D7C3] line-clamp-1 sm:line-clamp-2">
                     {item.description}
                   </p>
 
@@ -236,7 +236,7 @@ export function OrbitalMenuWheel({
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
                           title="Instant WhatsApp order for this dish"
-                          className="inline-flex items-center gap-1.5 px-3 py-2 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/45 bg-[#0B3024] text-xs font-medium text-[#F5C451] hover:border-[#F5C451] transition-colors whitespace-nowrap shrink-0"
+                          className="inline-flex items-center gap-1.5 px-3 py-2 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/45 bg-[#2E1910] text-xs font-medium text-[#F5C451] hover:border-[#F5C451] transition-colors whitespace-nowrap shrink-0"
                         >
                           <MessageCircle className="w-3.5 h-3.5" />
                           <span className="hidden sm:inline">WhatsApp</span>
@@ -245,7 +245,7 @@ export function OrbitalMenuWheel({
                         {qty > 0 && onUpdateQty ? (
                           <div
                             onClick={(e) => e.stopPropagation()}
-                            className="inline-flex items-center rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] overflow-hidden"
+                            className="inline-flex items-center rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] overflow-hidden"
                           >
                             <button
                               type="button"
@@ -276,8 +276,8 @@ export function OrbitalMenuWheel({
                             }}
                             className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm text-xs font-bold transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                               isAdded
-                                ? 'bg-[#D4A23E] text-[#072118]'
-                                : 'bg-[#EAB344] text-[#072118] hover:bg-[#F5C451]'
+                                ? 'bg-[#D4A23E] text-[#140B07]'
+                                : 'bg-[#EAB344] text-[#140B07] hover:bg-[#F5C451]'
                             }`}
                           >
                             {isAdded ? (
@@ -307,12 +307,12 @@ export function OrbitalMenuWheel({
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto w-full mb-1 flex items-center justify-between gap-3 px-4 py-2 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#08261C]/92 border border-[#EAB344]/35 shadow-xl">
+      <div className="max-w-3xl mx-auto w-full mb-1 flex items-center justify-between gap-3 px-4 py-2 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#21120B]/92 border border-[#EAB344]/35 shadow-xl">
         <button
           type="button"
           onClick={() => setActiveIndex(Math.max(0, safeIndex - 1))}
           disabled={safeIndex <= 0}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0B3024] text-xs font-medium text-[#FDF9EE] disabled:opacity-40 hover:border-[#EAB344] border border-[#EAB344]/20 transition-colors cursor-pointer whitespace-nowrap shrink-0"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#2E1910] text-xs font-medium text-[#FDF6E9] disabled:opacity-40 hover:border-[#EAB344] border border-[#EAB344]/20 transition-colors cursor-pointer whitespace-nowrap shrink-0"
           aria-label="Previous dish"
         >
           <ChevronLeft className="w-4 h-4 text-[#F5C451]" />
@@ -320,7 +320,7 @@ export function OrbitalMenuWheel({
         </button>
 
         <div className="flex-1 min-w-0 text-center space-y-1">
-          <p className="text-xs sm:text-sm font-medium text-[#FDF9EE] truncate">
+          <p className="text-xs sm:text-sm font-medium text-[#FDF6E9] truncate">
             <span className="font-mono text-[#F5C451] tabular-nums mr-2">
               {String(safeIndex + 1).padStart(2, '0')}/{items.length}
             </span>
@@ -347,7 +347,7 @@ export function OrbitalMenuWheel({
           type="button"
           onClick={() => setActiveIndex(Math.min(items.length - 1, safeIndex + 1))}
           disabled={safeIndex >= items.length - 1}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0B3024] text-xs font-medium text-[#FDF9EE] disabled:opacity-40 hover:border-[#EAB344] border border-[#EAB344]/20 transition-colors cursor-pointer whitespace-nowrap shrink-0"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#2E1910] text-xs font-medium text-[#FDF6E9] disabled:opacity-40 hover:border-[#EAB344] border border-[#EAB344]/20 transition-colors cursor-pointer whitespace-nowrap shrink-0"
           aria-label="Next dish"
         >
           <span className="hidden sm:inline">Next Dish</span>

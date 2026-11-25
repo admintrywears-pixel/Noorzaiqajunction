@@ -21,25 +21,25 @@ const STAGE_IMAGES = [
 const STAGE_SHAPES = [
   {
     wrapper:
-      'rounded-[46%_54%_42%_58%/52%_42%_58%_48%] p-2.5 border border-[#EAB344]/45 bg-[#08261C]/75',
+      'rounded-[46%_54%_42%_58%/52%_42%_58%_48%] p-2.5 border border-[#EAB344]/45 bg-[#21120B]/75',
     img: 'rounded-[45%_55%_41%_59%/51%_41%_59%_49%]',
     card: 'rounded-tl-[3.25rem] rounded-br-[3.25rem] rounded-tr-xl rounded-bl-xl',
   },
   {
     wrapper:
-      'p-2 border border-[#F5C451]/45 bg-[#08261C]/75 rounded-tr-[3.5rem] rounded-bl-[3.5rem] rounded-tl-lg rounded-br-lg',
+      'p-2 border border-[#F5C451]/45 bg-[#21120B]/75 rounded-tr-[3.5rem] rounded-bl-[3.5rem] rounded-tl-lg rounded-br-lg',
     img: 'rounded-tr-[3rem] rounded-bl-[3rem] rounded-tl-md rounded-br-md',
     card: 'rounded-tr-[3.25rem] rounded-bl-[3.25rem] rounded-tl-xl rounded-br-xl',
   },
   {
     wrapper:
-      'rounded-t-[200px] rounded-b-3xl p-2.5 border border-[#D4A64A]/45 bg-[#08261C]/75',
+      'rounded-t-[200px] rounded-b-3xl p-2.5 border border-[#D4A64A]/45 bg-[#21120B]/75',
     img: 'rounded-t-[190px] rounded-b-2xl',
     card: 'rounded-tl-[3.25rem] rounded-br-[3.25rem] rounded-tr-xl rounded-bl-xl',
   },
   {
     wrapper:
-      'p-2.5 border border-[#EAB344]/45 bg-[#08261C]/75 rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl',
+      'p-2.5 border border-[#EAB344]/45 bg-[#21120B]/75 rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl',
     img: 'rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-xl rounded-bl-xl',
     card: 'rounded-tr-[3.25rem] rounded-bl-[3.25rem] rounded-tl-xl rounded-br-xl',
   },
@@ -54,7 +54,7 @@ export function HomeStorySection({
       <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 left-0 w-full lg:w-[68%] bg-gradient-to-r from-[#051B13]/92 via-[#062118]/70 to-transparent"
+          className="pointer-events-none absolute inset-y-0 left-0 w-full lg:w-[68%] bg-gradient-to-r from-[#120906]/92 via-[#140B07]/70 to-transparent"
         />
         <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -84,7 +84,7 @@ export function HomeStorySection({
               </div>
 
               <h1
-                className="text-4xl sm:text-6xl lg:text-[4.15rem] font-semibold leading-[1.03] tracking-tight text-[#FDF9EE] drop-shadow-[0_4px_24px_rgba(4,18,12,0.92)]"
+                className="text-4xl sm:text-6xl lg:text-[4.15rem] font-semibold leading-[1.03] tracking-tight text-[#FDF6E9] drop-shadow-[0_4px_24px_rgba(16,8,5,0.92)]"
                 style={{ textWrap: 'balance' }}
               >
                 Ghar ka Zaiqa,{' '}
@@ -94,12 +94,12 @@ export function HomeStorySection({
 
               <p
                 lang="ur"
-                className="font-urdu text-2xl sm:text-[1.7rem] font-semibold text-[#F3C969] drop-shadow-[0_3px_14px_rgba(4,18,12,0.98)] leading-[2.2]"
+                className="font-urdu text-2xl sm:text-[1.7rem] font-semibold text-[#F3C969] drop-shadow-[0_3px_14px_rgba(16,8,5,0.98)] leading-[2.2]"
               >
                 نور ذائقہ جنکشن — گھر کا اصلی ذائقہ، ہر پلیٹ میں
               </p>
 
-              <p className="text-base sm:text-lg leading-relaxed text-[#E5E2D3] max-w-xl drop-shadow-[0_2px_12px_rgba(4,18,12,0.95)]">
+              <p className="text-base sm:text-lg leading-relaxed text-[#E6D7C3] max-w-xl drop-shadow-[0_2px_12px_rgba(16,8,5,0.95)]">
                 Authentic Pakistani homestyle masala dishes prepared hygienically in
                 Karachi—Beef &amp; Chicken Shami Kabab, Chicken Achaari, Chicken Biryani,
                 Chicken Qorma, Aalu Qeema, Zarda, Mutanjan, Chicken Chowmien, Daal Chawal +
@@ -109,7 +109,7 @@ export function HomeStorySection({
 
               <p
                 lang="ur"
-                className="font-urdu-body text-sm sm:text-base text-[#D7D2BE] max-w-xl drop-shadow-[0_2px_10px_rgba(4,18,12,0.95)]"
+                className="font-urdu-body text-sm sm:text-base text-[#E6D7C3] max-w-xl drop-shadow-[0_2px_10px_rgba(16,8,5,0.95)]"
               >
                 بیف و چکن شامی کباب، چکن اچاری، بریانی، قورمہ، آلو قیمہ، زردہ، متنجن، چکن
                 چاؤمین، دال چاول، روٹی اور آلو کا پراٹھا — ان ڈشز کے علاوہ بھی جو آپ کو بنوانا
@@ -124,7 +124,7 @@ export function HomeStorySection({
                       .getElementById('chapter-1')
                       ?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#EAB344] text-[#072118] text-sm font-bold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer shadow-lg"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#EAB344] text-[#140B07] text-sm font-bold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer shadow-lg"
                 >
                   <span className="inline-flex items-center gap-1.5">
                     <span>Kitchen Process ·</span>
@@ -137,7 +137,7 @@ export function HomeStorySection({
                 <button
                   type="button"
                   onClick={onJumpToMenu}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-tr-2xl rounded-bl-2xl rounded-tl-md rounded-br-md border border-[#EAB344]/50 bg-[#08261C]/92 text-[#FDF9EE] text-sm font-medium hover:border-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-tr-2xl rounded-bl-2xl rounded-tl-md rounded-br-md border border-[#EAB344]/50 bg-[#21120B]/92 text-[#FDF6E9] text-sm font-medium hover:border-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
                 >
                   <span className="inline-flex items-center gap-1.5">
                     <span>Special Menu ({MENU_ITEMS.length} Dishes) ·</span>
@@ -155,8 +155,8 @@ export function HomeStorySection({
 
             <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
               <div className="relative w-full max-w-md">
-                <div className="rounded-t-[210px] rounded-b-[2rem] p-3 border border-[#EAB344]/45 bg-[#08261C]/88 shadow-2xl">
-                  <div className="rounded-t-[198px] rounded-b-[1.5rem] overflow-hidden aspect-[4/4.3] bg-[#0B3024]">
+                <div className="rounded-t-[210px] rounded-b-[2rem] p-3 border border-[#EAB344]/45 bg-[#21120B]/88 shadow-2xl">
+                  <div className="rounded-t-[198px] rounded-b-[1.5rem] overflow-hidden aspect-[4/4.3] bg-[#2E1910]">
                     <img
                       src={IMAGE_ASSETS.chickenBiryani}
                       alt="Noor Zaiqa Junction Karachi Special Chicken Biryani 1 KG"
@@ -169,7 +169,7 @@ export function HomeStorySection({
                       <p className="text-[11px] font-mono uppercase tracking-wider text-[#F5C451]">
                         Special Menu · 1 KG Dum Tray
                       </p>
-                      <p className="font-display text-lg font-semibold text-[#FDF9EE]">
+                      <p className="font-display text-lg font-semibold text-[#FDF6E9]">
                         Chicken Biryani (1 KG)
                       </p>
                     </div>
@@ -179,7 +179,7 @@ export function HomeStorySection({
                   </div>
                 </div>
 
-                <div className="hidden sm:block absolute -left-8 bottom-14 w-40 rounded-tl-[2.25rem] rounded-br-[2.25rem] rounded-tr-lg rounded-bl-lg p-1.5 bg-[#072118]/96 border border-[#EAB344]/55 shadow-2xl">
+                <div className="hidden sm:block absolute -left-8 bottom-14 w-40 rounded-tl-[2.25rem] rounded-br-[2.25rem] rounded-tr-lg rounded-bl-lg p-1.5 bg-[#140B07]/96 border border-[#EAB344]/55 shadow-2xl">
                   <img
                     src={IMAGE_ASSETS.beefShami}
                     alt="Beef Shami Kabab 12 Pieces"
@@ -212,7 +212,7 @@ export function HomeStorySection({
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
                 <div className={`lg:col-span-6 ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
                   <article
-                    className={`relative p-7 sm:p-10 bg-[#08261C]/90 border transition-colors duration-300 space-y-4 ${shape.card} ${
+                    className={`relative p-7 sm:p-10 bg-[#21120B]/90 border transition-colors duration-300 space-y-4 ${shape.card} ${
                       isCurrent ? 'border-[#EAB344]/65' : 'border-[#EAB344]/20'
                     }`}
                   >
@@ -220,7 +220,7 @@ export function HomeStorySection({
                       <span className="font-display italic text-4xl sm:text-5xl font-semibold text-[#F5C451] leading-none tabular-nums">
                         {stage.stepNumber}
                       </span>
-                      <div className="flex items-center gap-2 text-xs font-mono tabular-nums text-[#D7D2BE]">
+                      <div className="flex items-center gap-2 text-xs font-mono tabular-nums text-[#E6D7C3]">
                         <span>{stage.heatTemp}</span>
                         <span aria-hidden="true">·</span>
                         <span>{stage.duration}</span>
@@ -229,7 +229,7 @@ export function HomeStorySection({
 
                     <div className="space-y-1.5 pt-1">
                       <h2
-                        className="text-2xl sm:text-4xl font-semibold leading-tight text-[#FDF9EE]"
+                        className="text-2xl sm:text-4xl font-semibold leading-tight text-[#FDF6E9]"
                         style={{ textWrap: 'balance' }}
                       >
                         {stage.title}
@@ -247,17 +247,17 @@ export function HomeStorySection({
                       )}
                     </div>
 
-                    <p className="text-sm sm:text-base leading-relaxed text-[#D8D3C2]">
+                    <p className="text-sm sm:text-base leading-relaxed text-[#E6D7C3]">
                       {stage.description}
                     </p>
                     {urduStage && (
-                      <p lang="ur" className="font-urdu-body text-sm text-[#C4BFB0]">
+                      <p lang="ur" className="font-urdu-body text-sm text-[#C7B198]">
                         {urduStage.summary}
                       </p>
                     )}
 
                     <div className="pt-4 border-t border-[#EAB344]/15 flex items-center justify-between gap-4">
-                      <p className="text-xs font-medium text-[#B8C4BA]">
+                      <p className="text-xs font-medium text-[#C7B198]">
                         {stage.keyIngredients.join(' · ')}
                       </p>
                     </div>
@@ -267,7 +267,7 @@ export function HomeStorySection({
                 <div className={`lg:col-span-6 ${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className={`${shape.wrapper} shadow-2xl`}>
                     <div
-                      className={`aspect-[4/3] w-full overflow-hidden bg-[#0B3024] ${shape.img}`}
+                      className={`aspect-[4/3] w-full overflow-hidden bg-[#2E1910] ${shape.img}`}
                     >
                       <img
                         src={STAGE_IMAGES[idx]}

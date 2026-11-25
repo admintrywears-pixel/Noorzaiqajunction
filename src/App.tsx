@@ -196,7 +196,7 @@ export default function App() {
   const stageNames = PAGE_STAGE_CONFIG[activePage].stageNames;
 
   return (
-    <div className="relative min-h-screen bg-[#072118] text-[#FDF9EE]">
+    <div className="relative min-h-screen bg-[#140B07] text-[#FDF6E9]">
       <SceneBackdrop
         activePage={activePage}
         pageScrollProgress={scrollProgress}
@@ -261,8 +261,8 @@ export default function App() {
 
       <div className="fixed bottom-4 right-4 z-20 flex flex-col items-end max-w-[92vw]">
         {!hudHidden && (
-          <div className="mb-2 flex flex-wrap items-center justify-end gap-2 px-3 py-2 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#08261B]/95 border border-[#EAB344]/35 shadow-2xl">
-            <div className="flex flex-wrap items-center gap-1 p-1 rounded-lg bg-[#051811] border border-[#EAB344]/15">
+          <div className="mb-2 flex flex-wrap items-center justify-end gap-2 px-3 py-2 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#21120B]/95 border border-[#EAB344]/35 shadow-2xl">
+            <div className="flex flex-wrap items-center gap-1 p-1 rounded-lg bg-[#0F0705] border border-[#EAB344]/15">
               {stageNames.map((label, idx) => {
                 const stageNum = idx + 1;
                 return (
@@ -272,8 +272,8 @@ export default function App() {
                     onClick={() => jumpToStage(stageNum)}
                     className={`px-2.5 py-1.5 rounded-md text-xs font-medium transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                       activeStage === stageNum
-                        ? 'bg-[#EAB344] text-[#072118] font-semibold'
-                        : 'text-[#D8D3C2] hover:text-[#FDF9EE] hover:bg-[#0D3528]'
+                        ? 'bg-[#EAB344] text-[#140B07] font-semibold'
+                        : 'text-[#E6D7C3] hover:text-[#FDF6E9] hover:bg-[#2E1910]'
                     }`}
                   >
                     {label}
@@ -287,8 +287,8 @@ export default function App() {
               onClick={toggleSizzle}
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                 sizzleEnabled
-                  ? 'bg-[#EAB344] text-[#072118] border-[#EAB344] font-semibold'
-                  : 'bg-[#0C3124] text-[#FDF9EE] border-[#EAB344]/20 hover:border-[#F5C451]/60'
+                  ? 'bg-[#EAB344] text-[#140B07] border-[#EAB344] font-semibold'
+                  : 'bg-[#2E1910] text-[#FDF6E9] border-[#EAB344]/20 hover:border-[#F5C451]/60'
               }`}
               aria-label="Toggle kitchen sizzle audio"
             >
@@ -309,8 +309,8 @@ export default function App() {
               onClick={toggleSizzle}
               className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer shadow-xl ${
                 sizzleEnabled
-                  ? 'bg-[#EAB344] text-[#072118] border-[#EAB344] font-semibold'
-                  : 'bg-[#08241A]/92 text-[#D8D3C2] border-[#EAB344]/30 hover:border-[#F5C451]'
+                  ? 'bg-[#EAB344] text-[#140B07] border-[#EAB344] font-semibold'
+                  : 'bg-[#21120B]/92 text-[#E6D7C3] border-[#EAB344]/30 hover:border-[#F5C451]'
               }`}
               aria-label="Toggle kitchen sizzle audio"
             >
@@ -328,7 +328,7 @@ export default function App() {
           <button
             type="button"
             onClick={() => setHudHidden((prev) => !prev)}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#08241A]/92 border border-[#EAB344]/30 text-xs font-medium text-[#D8D3C2] hover:text-[#FDF9EE] hover:border-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer shadow-xl"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#21120B]/92 border border-[#EAB344]/30 text-xs font-medium text-[#E6D7C3] hover:text-[#FDF6E9] hover:border-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer shadow-xl"
             aria-expanded={!hudHidden}
           >
             {hudHidden ? (

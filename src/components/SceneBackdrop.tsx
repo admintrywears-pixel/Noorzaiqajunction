@@ -36,10 +36,10 @@ function createGlowTexture(): THREE.CanvasTexture {
   const ctx = canvas.getContext('2d');
   if (ctx) {
     const grad = ctx.createRadialGradient(64, 64, 2, 64, 64, 64);
-    grad.addColorStop(0, 'rgba(255, 255, 255, 1.0)');
-    grad.addColorStop(0.35, 'rgba(240, 255, 220, 0.55)');
-    grad.addColorStop(0.7, 'rgba(180, 235, 140, 0.14)');
-    grad.addColorStop(1, 'rgba(180, 235, 140, 0.0)');
+    grad.addColorStop(0, 'rgba(255, 248, 232, 1.0)');
+    grad.addColorStop(0.35, 'rgba(250, 212, 142, 0.55)');
+    grad.addColorStop(0.7, 'rgba(220, 130, 52, 0.16)');
+    grad.addColorStop(1, 'rgba(220, 130, 52, 0.0)');
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, 128, 128);
   }
@@ -58,9 +58,9 @@ function createLeafTexture(anisotropy: number): THREE.CanvasTexture {
     ctx.save();
     ctx.translate(128, 230.4);
     const grad = ctx.createLinearGradient(0, 0, 0, -204.8);
-    grad.addColorStop(0, '#092B20');
-    grad.addColorStop(0.45, '#0F4533');
-    grad.addColorStop(0.85, '#C89B3C');
+    grad.addColorStop(0, '#4A180B');
+    grad.addColorStop(0.45, '#8C3315');
+    grad.addColorStop(0.85, '#D97724');
     grad.addColorStop(1, '#F5C451');
     ctx.fillStyle = grad;
     ctx.beginPath();
@@ -69,7 +69,7 @@ function createLeafTexture(anisotropy: number): THREE.CanvasTexture {
     ctx.bezierCurveTo(-78, -110, -64, -36, 0, 0);
     ctx.closePath();
     ctx.fill();
-    ctx.strokeStyle = 'rgba(245, 196, 81, 0.52)';
+    ctx.strokeStyle = 'rgba(255, 224, 160, 0.52)';
     ctx.lineWidth = 2.5;
     ctx.beginPath();
     ctx.moveTo(0, 8);
@@ -116,10 +116,10 @@ function buildHomeScene(anisotropy: number): ManagedScene {
 
   const glowTex = createGlowTexture();
   const leafTex = createLeafTexture(anisotropy);
-  const t1 = createSolidTexture('#0B1E13');
-  const t2 = createSolidTexture('#0E2A19');
-  const t3 = createSolidTexture('#091910');
-  const t4 = createSolidTexture('#0D2417');
+  const t1 = createSolidTexture('#1E0F09');
+  const t2 = createSolidTexture('#28140C');
+  const t3 = createSolidTexture('#160B06');
+  const t4 = createSolidTexture('#22110A');
   disposables.push(glowTex, leafTex, t1, t2, t3, t4);
 
   const uniforms = {
@@ -197,25 +197,25 @@ function buildHomeScene(anisotropy: number): ManagedScene {
         if (cycle < 1.0) {
           float k = smoothstep(0.05, 0.95, cycle);
           col = mix(va, vb, k);
-          col *= mix(vec3(0.88, 1.02, 0.86), vec3(0.84, 1.08, 0.84), k);
+          col *= mix(vec3(1.04, 0.94, 0.84), vec3(1.06, 0.92, 0.80), k);
         } else if (cycle < 2.0) {
           float k = smoothstep(0.05, 0.95, cycle - 1.0);
           col = mix(vb, vc, k);
-          col *= mix(vec3(0.84, 1.08, 0.84), vec3(0.94, 1.0, 0.88), k);
+          col *= mix(vec3(1.06, 0.92, 0.80), vec3(1.03, 0.95, 0.86), k);
         } else if (cycle < 3.0) {
           float k = smoothstep(0.05, 0.95, cycle - 2.0);
           col = mix(vc, vd, k);
-          col *= mix(vec3(0.94, 1.0, 0.88), vec3(0.96, 1.04, 0.84), k);
+          col *= mix(vec3(1.03, 0.95, 0.86), vec3(1.05, 0.94, 0.82), k);
         } else {
           float k = smoothstep(0.05, 0.95, cycle - 3.0);
           col = mix(vd, va, k);
-          col *= mix(vec3(0.96, 1.04, 0.84), vec3(0.88, 1.02, 0.86), k);
+          col *= mix(vec3(1.05, 0.94, 0.82), vec3(1.04, 0.94, 0.84), k);
         }
         float dist = length((vUv - 0.5) * vec2(1.1, 1.0));
         float vignette = smoothstep(0.95, 0.22, dist);
         float leftScrim = mix(0.48, 1.0, smoothstep(0.08, 0.62, vUv.x));
-        vec3 forestShadow = vec3(0.025, 0.11, 0.08);
-        col = mix(forestShadow, col * 0.72 * leftScrim, vignette * 0.86 + 0.14);
+        vec3 tandoorShadow = vec3(0.08, 0.04, 0.025);
+        col = mix(tandoorShadow, col * 0.74 * leftScrim, vignette * 0.86 + 0.14);
         gl_FragColor = vec4(col, 1.0);
       }
     `,
@@ -232,21 +232,21 @@ function buildHomeScene(anisotropy: number): ManagedScene {
     transparent: true,
     opacity: 0.38,
   });
-  const limeMat = new THREE.MeshStandardMaterial({
-    color: 0xd4a64a,
-    emissive: 0x855e14,
+  const copperMat = new THREE.MeshStandardMaterial({
+    color: 0xd96b27,
+    emissive: 0x7c2d12,
     emissiveIntensity: 0.42,
     transparent: true,
-    opacity: 0.24,
+    opacity: 0.26,
   });
   const torus1Geo = new THREE.TorusGeometry(4.2, 0.028, 12, 100);
   const torus2Geo = new THREE.TorusGeometry(3.15, 0.024, 10, 88);
   const torus1 = new THREE.Mesh(torus1Geo, brassMat);
-  const torus2 = new THREE.Mesh(torus2Geo, limeMat);
+  const torus2 = new THREE.Mesh(torus2Geo, copperMat);
   torus1.position.set(1.55, 0, -2.8);
   torus2.position.set(1.55, 0, -2.8);
   group.add(torus1, torus2);
-  disposables.push(torus1Geo, torus2Geo, brassMat, limeMat);
+  disposables.push(torus1Geo, torus2Geo, brassMat, copperMat);
 
   const leafGeo = new THREE.PlaneGeometry(0.42, 0.42);
   const leafMat = new THREE.MeshBasicMaterial({
@@ -333,9 +333,9 @@ function buildOrbitalRingsScene(
         float band = sin(vPos.x * 4.2 + uTime * 0.35 + uProgress * 6.0)
                    * cos(vPos.z * 3.2 - uTime * 0.25 + uProgress * 4.0);
         float ribbon = smoothstep(0.12, 0.85, band * 0.5 + 0.5) * exp(-abs(y + 0.04) * 2.8);
-        vec3 abyss = vec3(0.02, 0.09, 0.065);
-        vec3 canopy = vec3(0.045, 0.19, 0.135);
-        vec3 goldGlow = vec3(0.92, 0.70, 0.27);
+        vec3 abyss = vec3(0.06, 0.028, 0.018);
+        vec3 canopy = vec3(0.16, 0.075, 0.04);
+        vec3 goldGlow = vec3(0.95, 0.70, 0.28);
         vec3 col = mix(abyss, canopy, smoothstep(-0.6, 0.6, y)) + goldGlow * ribbon * 0.22;
         gl_FragColor = vec4(col, 1.0);
       }
@@ -360,7 +360,7 @@ function buildOrbitalRingsScene(
   const m1 = new THREE.MeshStandardMaterial({ color: primaryHex, metalness: 0.9, roughness: 0.2 });
   const m2 = new THREE.MeshStandardMaterial({
     color: secondaryHex,
-    emissive: 0x7a5612,
+    emissive: 0x7c2d12,
     emissiveIntensity: 0.45,
     metalness: 0.72,
     roughness: 0.24,
@@ -524,7 +524,7 @@ export function SceneBackdrop({
     renderer.domElement.addEventListener('webglcontextrestored', onContextRestored);
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x061e16);
+    scene.background = new THREE.Color(0x140b07);
 
     const pmrem = new THREE.PMREMGenerator(renderer);
     const envTex = pmrem.fromScene(new RoomEnvironment(), 0.04);
@@ -534,26 +534,26 @@ export function SceneBackdrop({
     const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 60);
     camera.position.set(0, 0, 6.2);
 
-    const hemi = new THREE.HemisphereLight(0xfdf9ee, 0x061e16, 0.85);
+    const hemi = new THREE.HemisphereLight(0xfdf6e9, 0x1a0d08, 0.9);
     scene.add(hemi);
     const keyLight = new THREE.DirectionalLight(0xf5c451, 1.45);
     keyLight.position.set(5, 7, 5);
     scene.add(keyLight);
-    const rimLight = new THREE.DirectionalLight(0xd4a64a, 0.75);
+    const rimLight = new THREE.DirectionalLight(0xd96b27, 0.78);
     rimLight.position.set(-5, -2, 3);
     scene.add(rimLight);
 
     const anisotropy = renderer.capabilities.getMaxAnisotropy();
     const scenes: Record<PageId, ManagedScene> = {
       home: buildHomeScene(anisotropy),
-      menu: buildOrbitalRingsScene(0xd4a64a, 0xf5c451, 0xc89b3c),
-      health: buildOrbitalRingsScene(0xeab344, 0x15803d, 0xd4a64a),
-      orders: buildOrbitalRingsScene(0xf3c969, 0xd4a64a, 0xc89b3c),
-      story: buildOrbitalRingsScene(0xeab344, 0x166534, 0xd4a64a),
-      branches: buildOrbitalRingsScene(0xf5c451, 0xd4a64a, 0x15803d),
+      menu: buildOrbitalRingsScene(0xd4a64a, 0xf5c451, 0xc85a24),
+      health: buildOrbitalRingsScene(0xeab344, 0xd97706, 0xd4a64a),
+      orders: buildOrbitalRingsScene(0xf3c969, 0xd96b27, 0xc89b3c),
+      story: buildOrbitalRingsScene(0xeab344, 0xb45309, 0xd4a64a),
+      branches: buildOrbitalRingsScene(0xf5c451, 0xd4a64a, 0x9a3412),
       reserve: buildOrbitalRingsScene(0xd4a64a, 0xf5c451, 0xeab344),
-      contact: buildOrbitalRingsScene(0xeab344, 0xf3c969, 0x166534),
-      privacy: buildOrbitalRingsScene(0xd4a64a, 0x855e14, 0x14532d),
+      contact: buildOrbitalRingsScene(0xeab344, 0xf3c969, 0xc85a24),
+      privacy: buildOrbitalRingsScene(0xd4a64a, 0x9a3412, 0xb45309),
     };
 
     (Object.keys(scenes) as PageId[]).forEach((key) => {
@@ -563,7 +563,7 @@ export function SceneBackdrop({
 
     const fadeGeo = new THREE.PlaneGeometry(3, 3);
     const fadeMat = new THREE.MeshBasicMaterial({
-      color: 0x061e16,
+      color: 0x140b07,
       transparent: true,
       opacity: 0,
       depthTest: false,
@@ -698,7 +698,7 @@ export function SceneBackdrop({
   if (fallbackActive) {
     return (
       <div
-        className="fixed inset-0 z-0 pointer-events-none bg-gradient-to-b from-[#072118] via-[#0B2E22] to-[#051811]"
+        className="fixed inset-0 z-0 pointer-events-none bg-gradient-to-b from-[#140B07] via-[#24130C] to-[#0E0704]"
         aria-hidden="true"
       />
     );

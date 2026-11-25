@@ -76,13 +76,13 @@ export function HomePage({
           <button
             type="button"
             onClick={() => onNavigate('health')}
-            className="group text-left p-5 rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-lg rounded-bl-lg bg-[#08281D]/88 border border-[#EAB344]/25 hover:border-[#F5C451] transition-colors cursor-pointer space-y-1.5"
+            className="group text-left p-5 rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-lg rounded-bl-lg bg-[#21120B]/88 border border-[#EAB344]/25 hover:border-[#F5C451] transition-colors cursor-pointer space-y-1.5"
           >
             <p className="text-xs font-mono text-[#F5C451]">
               01 · Hygienic Homemade
             </p>
             <div className="flex items-center justify-between gap-2">
-              <h3 className="text-lg font-semibold text-[#FDF9EE]">
+              <h3 className="text-lg font-semibold text-[#FDF6E9]">
                 Hygiene &amp; Purity ·{' '}
                 <span lang="ur" className="font-urdu-inline text-sm text-[#EAB344]">
                   صفائی
@@ -90,7 +90,7 @@ export function HomePage({
               </h3>
               <ArrowRight className="w-4 h-4 text-[#F5C451] transition-transform group-hover:translate-x-1" />
             </div>
-            <p className="text-xs text-[#C4BFB0]">
+            <p className="text-xs text-[#C7B198]">
               Pure ghar ka masala, clean single-use oil &amp; fresh daily prep.
             </p>
           </button>
@@ -98,13 +98,13 @@ export function HomePage({
           <button
             type="button"
             onClick={() => onNavigate('menu')}
-            className="group text-left p-5 rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-lg rounded-bl-lg bg-[#08281D]/88 border border-[#EAB344]/25 hover:border-[#F5C451] transition-colors cursor-pointer space-y-1.5"
+            className="group text-left p-5 rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-lg rounded-bl-lg bg-[#21120B]/88 border border-[#EAB344]/25 hover:border-[#F5C451] transition-colors cursor-pointer space-y-1.5"
           >
             <p className="text-xs font-mono text-[#EAB344]">
               02 · {MENU_ITEMS.length} Dishes
             </p>
             <div className="flex items-center justify-between gap-2">
-              <h3 className="text-lg font-semibold text-[#FDF9EE]">
+              <h3 className="text-lg font-semibold text-[#FDF6E9]">
                 Special Menu ·{' '}
                 <span lang="ur" className="font-urdu-inline text-sm text-[#EAB344]">
                   مینیو
@@ -112,7 +112,7 @@ export function HomePage({
               </h3>
               <ArrowRight className="w-4 h-4 text-[#F5C451] transition-transform group-hover:translate-x-1" />
             </div>
-            <p className="text-xs text-[#C4BFB0]">
+            <p className="text-xs text-[#C7B198]">
               Shami Kabab, Biryani, Qorma, Achaari, Zarda, Chowmien &amp; Rotis.
             </p>
           </button>
@@ -120,11 +120,11 @@ export function HomePage({
           <button
             type="button"
             onClick={() => onNavigate('orders')}
-            className="group text-left p-5 rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-lg rounded-bl-lg bg-[#08281D]/88 border border-[#EAB344]/25 hover:border-[#F5C451] transition-colors cursor-pointer space-y-1.5"
+            className="group text-left p-5 rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-lg rounded-bl-lg bg-[#21120B]/88 border border-[#EAB344]/25 hover:border-[#F5C451] transition-colors cursor-pointer space-y-1.5"
           >
             <p className="text-xs font-mono text-[#F5C451]">03 · Direct WhatsApp</p>
             <div className="flex items-center justify-between gap-2">
-              <h3 className="text-lg font-semibold text-[#FDF9EE]">
+              <h3 className="text-lg font-semibold text-[#FDF6E9]">
                 Orders ·{' '}
                 <span lang="ur" className="font-urdu-inline text-sm text-[#EAB344]">
                   آرڈر
@@ -132,7 +132,7 @@ export function HomePage({
               </h3>
               <ArrowRight className="w-4 h-4 text-[#F5C451] transition-transform group-hover:translate-x-1" />
             </div>
-            <p className="text-xs text-[#C4BFB0]">
+            <p className="text-xs text-[#C7B198]">
               Auto-attached dish photos straight to {WHATSAPP_DISPLAY}.
             </p>
           </button>
@@ -140,11 +140,11 @@ export function HomePage({
           <button
             type="button"
             onClick={() => onNavigate('reserve')}
-            className="group text-left p-5 rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-lg rounded-bl-lg bg-[#08281D]/88 border border-[#EAB344]/25 hover:border-[#F5C451] transition-colors cursor-pointer space-y-1.5"
+            className="group text-left p-5 rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-lg rounded-bl-lg bg-[#21120B]/88 border border-[#EAB344]/25 hover:border-[#F5C451] transition-colors cursor-pointer space-y-1.5"
           >
             <p className="text-xs font-mono text-[#EAB344]">04 · Custom Orders</p>
             <div className="flex items-center justify-between gap-2">
-              <h3 className="text-lg font-semibold text-[#FDF9EE]">
+              <h3 className="text-lg font-semibold text-[#FDF6E9]">
                 Order Par Tayyar ·{' '}
                 <span lang="ur" className="font-urdu-inline text-sm text-[#EAB344]">
                   فرمائش
@@ -152,7 +152,7 @@ export function HomePage({
               </h3>
               <ArrowRight className="w-4 h-4 text-[#F5C451] transition-transform group-hover:translate-x-1" />
             </div>
-            <p className="text-xs text-[#C4BFB0]">
+            <p className="text-xs text-[#C7B198]">
               In dishes ke ilawa bhi jo aapko banwana ho, order par ban jata hai.
             </p>
           </button>
@@ -217,16 +217,16 @@ export function MenuPage({
   };
 
   return (
-    <div className="relative z-10 text-[#FDF9EE] pb-16">
+    <div className="relative z-10 text-[#FDF6E9] pb-16">
       <section className="min-h-[78vh] pt-28 pb-12 flex flex-col justify-center">
         <div className="max-w-7xl mx-auto w-full px-6 lg:px-10 space-y-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-7 space-y-5 p-7 sm:p-10 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/85 border border-[#EAB344]/30 shadow-2xl">
+            <div className="lg:col-span-7 space-y-5 p-7 sm:p-10 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/85 border border-[#EAB344]/30 shadow-2xl">
               <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#F5C451]">
                 Noor Zaiqa Junction Special Menu · {MENU_ITEMS.length} Dishes
               </p>
               <h1
-                className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-tight text-[#FDF9EE]"
+                className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-tight text-[#FDF6E9]"
                 style={{ textWrap: 'balance' }}
               >
                 Ghar ka{' '}
@@ -238,7 +238,7 @@ export function MenuPage({
               <p lang="ur" className="font-urdu text-xl sm:text-2xl text-[#EAB344]">
                 بیف و چکن شامی کباب، چکن اچاری، بریانی، قورمہ، آلو قیمہ، زردہ، متنجن، چکن چاؤمین، دال چاول، روٹی اور آلو کا پراٹھا
               </p>
-              <p className="text-sm sm:text-base leading-relaxed text-[#D8D3C2] max-w-2xl">
+              <p className="text-sm sm:text-base leading-relaxed text-[#E6D7C3] max-w-2xl">
                 Every dish is cooked fresh in Karachi with balanced traditional Pakistani
                 masalas, pure spices, and clean cooking oil—available in full 1 KG trays,
                 12-piece kabab boxes, or single meal plates. In dishes ke ilawa bhi jo
@@ -248,7 +248,7 @@ export function MenuPage({
                 <button
                   type="button"
                   onClick={() => jumpToWheel()}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-xs font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
                 >
                   <span>Spin 3D Orbital Wheel</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -256,7 +256,7 @@ export function MenuPage({
                 <button
                   type="button"
                   onClick={jumpToFullCatalog}
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/45 bg-[#0B2E22]/90 text-xs font-semibold text-[#FDF9EE] hover:border-[#F5C451] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/45 bg-[#2E1910]/90 text-xs font-semibold text-[#FDF6E9] hover:border-[#F5C451] transition-colors cursor-pointer"
                 >
                   <span className="inline-flex items-center gap-1.5">
                     <span>Browse All {MENU_ITEMS.length} Special Menu Rates ·</span>
@@ -273,9 +273,9 @@ export function MenuPage({
               <button
                 type="button"
                 onClick={() => jumpToWheel('Homemade Curries & Biryani')}
-                className="group text-left rounded-t-[110px] rounded-b-2xl p-1.5 border border-[#EAB344]/35 bg-[#08281D]/85 hover:border-[#F5C451] transition-colors cursor-pointer"
+                className="group text-left rounded-t-[110px] rounded-b-2xl p-1.5 border border-[#EAB344]/35 bg-[#21120B]/85 hover:border-[#F5C451] transition-colors cursor-pointer"
               >
-                <div className="aspect-[3/4.3] overflow-hidden rounded-t-[100px] rounded-b-xl bg-[#0B3024]">
+                <div className="aspect-[3/4.3] overflow-hidden rounded-t-[100px] rounded-b-xl bg-[#2E1910]">
                   <img
                     src={IMAGE_ASSETS.chickenAchaari}
                     alt="Chicken Achaari 1 KG"
@@ -283,7 +283,7 @@ export function MenuPage({
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <p className="pt-2 pb-1 text-center text-[11px] font-medium text-[#D8D3C2] truncate">
+                <p className="pt-2 pb-1 text-center text-[11px] font-medium text-[#E6D7C3] truncate">
                   Achaari &amp; Qorma
                 </p>
               </button>
@@ -291,9 +291,9 @@ export function MenuPage({
               <button
                 type="button"
                 onClick={() => jumpToWheel('Shami Kababs')}
-                className="group text-left rounded-tl-[2.25rem] rounded-br-[2.25rem] rounded-tr-lg rounded-bl-lg p-1.5 border border-[#EAB344]/45 bg-[#08281D]/90 -translate-y-4 hover:border-[#EAB344] transition-colors cursor-pointer shadow-2xl"
+                className="group text-left rounded-tl-[2.25rem] rounded-br-[2.25rem] rounded-tr-lg rounded-bl-lg p-1.5 border border-[#EAB344]/45 bg-[#21120B]/90 -translate-y-4 hover:border-[#EAB344] transition-colors cursor-pointer shadow-2xl"
               >
-                <div className="aspect-[3/4.5] overflow-hidden rounded-tl-[1.85rem] rounded-br-[1.85rem] rounded-tr-md rounded-bl-md bg-[#0B3024]">
+                <div className="aspect-[3/4.5] overflow-hidden rounded-tl-[1.85rem] rounded-br-[1.85rem] rounded-tr-md rounded-bl-md bg-[#2E1910]">
                   <img
                     src={IMAGE_ASSETS.beefShami}
                     alt="Beef & Chicken Shami Kabab 12 Pieces"
@@ -309,9 +309,9 @@ export function MenuPage({
               <button
                 type="button"
                 onClick={() => jumpToWheel('Desserts (Meetha)')}
-                className="group text-left rounded-t-[110px] rounded-b-2xl p-1.5 border border-[#EAB344]/35 bg-[#08281D]/85 hover:border-[#F5C451] transition-colors cursor-pointer"
+                className="group text-left rounded-t-[110px] rounded-b-2xl p-1.5 border border-[#EAB344]/35 bg-[#21120B]/85 hover:border-[#F5C451] transition-colors cursor-pointer"
               >
-                <div className="aspect-[3/4.3] overflow-hidden rounded-t-[100px] rounded-b-xl bg-[#0B3024]">
+                <div className="aspect-[3/4.3] overflow-hidden rounded-t-[100px] rounded-b-xl bg-[#2E1910]">
                   <img
                     src={IMAGE_ASSETS.mutanjanZarda}
                     alt="Mutanjan & Zarda 1 KG"
@@ -319,7 +319,7 @@ export function MenuPage({
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <p className="pt-2 pb-1 text-center text-[11px] font-medium text-[#D8D3C2] truncate">
+                <p className="pt-2 pb-1 text-center text-[11px] font-medium text-[#E6D7C3] truncate">
                   Zarda &amp; Mutanjan
                 </p>
               </button>
@@ -336,18 +336,18 @@ export function MenuPage({
                   onClick={() => jumpToWheel(cat.category)}
                   className={`group text-left p-3 rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-lg rounded-bl-lg border transition-all cursor-pointer flex items-center gap-3 ${
                     active
-                      ? 'bg-[#0B2E22]/95 border-[#F5C451] shadow-xl'
-                      : 'bg-[#08261C]/88 border-[#EAB344]/25 hover:border-[#F5C451]/70'
+                      ? 'bg-[#2E1910]/95 border-[#F5C451] shadow-xl'
+                      : 'bg-[#21120B]/88 border-[#EAB344]/25 hover:border-[#F5C451]/70'
                   }`}
                 >
                   <img
                     src={cat.image}
                     alt={cat.category}
                     referrerPolicy="no-referrer"
-                    className="w-14 h-14 rounded-tl-2xl rounded-br-2xl rounded-tr-sm rounded-bl-sm object-cover shrink-0 bg-[#0B3024]"
+                    className="w-14 h-14 rounded-tl-2xl rounded-br-2xl rounded-tr-sm rounded-bl-sm object-cover shrink-0 bg-[#2E1910]"
                   />
                   <div className="min-w-0">
-                    <p className="text-xs font-semibold text-[#FDF9EE] truncate">
+                    <p className="text-xs font-semibold text-[#FDF6E9] truncate">
                       {cat.category}
                     </p>
                     <p className="text-[11px] text-[#F5C451] truncate">
@@ -383,7 +383,7 @@ export function MenuPage({
         <button
           type="button"
           onClick={() => onNavigate('orders')}
-          className="inline-flex items-center gap-2 px-6 py-3.5 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#EAB344] text-[#072118] text-sm font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
+          className="inline-flex items-center gap-2 px-6 py-3.5 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#EAB344] text-[#140B07] text-sm font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
         >
           <span>Proceed to WhatsApp Orders Checkout</span>
           <ArrowRight className="w-4 h-4" />
@@ -430,15 +430,15 @@ export function HealthPage({
   );
 
   return (
-    <div className="relative z-10 text-[#FDF9EE] pb-20">
+    <div className="relative z-10 text-[#FDF6E9] pb-20">
       <section className="min-h-[82vh] pt-28 pb-14 flex items-center">
         <div className="max-w-7xl mx-auto w-full px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 space-y-6 p-7 sm:p-10 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/88 border border-[#EAB344]/30 shadow-2xl">
+          <div className="lg:col-span-7 space-y-6 p-7 sm:p-10 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/88 border border-[#EAB344]/30 shadow-2xl">
             <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#F5C451]">
               Kitchen Hygiene &amp; Ingredient Charter · Ghar Ka Khana
             </p>
             <h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-tight text-[#FDF9EE]"
+              className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-tight text-[#FDF6E9]"
               style={{ textWrap: 'balance' }}
             >
               Real Homestyle Masala.{' '}
@@ -450,13 +450,13 @@ export function HealthPage({
             <p lang="ur" className="font-urdu text-xl sm:text-2xl text-[#EAB344]">
               خالص گھر کے مصالحے، صاف تیل اور ہائجینک ماحول — ہر پلیٹ میں گھر جیسا ذائقہ
             </p>
-            <p className="text-base sm:text-lg leading-relaxed text-[#D8D3C2] max-w-2xl">
+            <p className="text-base sm:text-lg leading-relaxed text-[#E6D7C3] max-w-2xl">
               Restaurant food often hurts your stomach not because of traditional spices,
               but because of stale reheated oil, artificial gravy thickeners, and bulk
               adulterants. At Noor Zaiqa Junction, every dish uses pure ghar ka masala,
               fresh meat, and single-use cooking oil.
             </p>
-            <p lang="ur" className="font-urdu-body text-sm text-[#C4BFB0] max-w-2xl">
+            <p lang="ur" className="font-urdu-body text-sm text-[#C7B198] max-w-2xl">
               چکن اچاری، بریانی، قورمہ، آلو قیمہ، شامی کباب اور زردہ سب روزانہ صاف ستھرے
               طریقے سے تازہ آئل اور گھر کے اصلی مصالحوں سے تیار کیے جاتے ہیں۔
             </p>
@@ -466,7 +466,7 @@ export function HealthPage({
                 <p className="font-display italic text-2xl sm:text-3xl font-semibold text-[#F5C451] tabular-nums">
                   100%
                 </p>
-                <p className="text-xs text-[#A8A292]">
+                <p className="text-xs text-[#C7B198]">
                   Pure Home Spices &amp; Fresh Meat
                 </p>
               </div>
@@ -474,13 +474,13 @@ export function HealthPage({
                 <p className="font-display italic text-2xl sm:text-3xl font-semibold text-[#EAB344] tabular-nums">
                   0%
                 </p>
-                <p className="text-xs text-[#A8A292]">Preservatives &amp; Stale Oil</p>
+                <p className="text-xs text-[#C7B198]">Preservatives &amp; Stale Oil</p>
               </div>
               <div>
                 <p className="font-display italic text-2xl sm:text-3xl font-semibold text-[#F5C451] tabular-nums">
                   On Order
                 </p>
-                <p className="text-xs text-[#A8A292]">
+                <p className="text-xs text-[#C7B198]">
                   Custom Spice &amp; Oil Requests
                 </p>
               </div>
@@ -490,7 +490,7 @@ export function HealthPage({
               <button
                 type="button"
                 onClick={() => onNavigate('menu')}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-xs font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
               >
                 <span>Order From Special Menu</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -501,7 +501,7 @@ export function HealthPage({
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/45 bg-[#08281D]/90 text-xs font-medium text-[#FDF9EE] hover:border-[#F5C451] transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/45 bg-[#21120B]/90 text-xs font-medium text-[#FDF6E9] hover:border-[#F5C451] transition-colors"
               >
                 <MessageCircle className="w-3.5 h-3.5 text-[#F5C451]" />
                 <span>Custom Meal Guidance on WhatsApp</span>
@@ -510,8 +510,8 @@ export function HealthPage({
           </div>
 
           <div className="lg:col-span-5 space-y-4">
-            <div className="rounded-t-[200px] rounded-b-3xl p-2.5 border border-[#EAB344]/35 bg-[#08261C]/85 shadow-2xl">
-              <div className="rounded-t-[190px] rounded-b-2xl overflow-hidden aspect-[4/4.2] bg-[#0B3024]">
+            <div className="rounded-t-[200px] rounded-b-3xl p-2.5 border border-[#EAB344]/35 bg-[#21120B]/85 shadow-2xl">
+              <div className="rounded-t-[190px] rounded-b-2xl overflow-hidden aspect-[4/4.2] bg-[#2E1910]">
                 <img
                   src={IMAGE_ASSETS.daalChawalKabab}
                   alt="Homestyle Daal Chawal + Shami Kabab Plate"
@@ -525,7 +525,7 @@ export function HealthPage({
       </section>
 
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-10 space-y-8">
-        <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#051811] border border-white/10 w-fit">
+        <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#0F0705] border border-white/10 w-fit">
           {BENEFIT_GOALS.map((goal) => (
             <button
               key={goal}
@@ -533,8 +533,8 @@ export function HealthPage({
               onClick={() => setGoalFilter(goal)}
               className={`px-3.5 py-2 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm text-xs font-semibold transition-colors cursor-pointer ${
                 goalFilter === goal
-                  ? 'bg-[#EAB344] text-[#072118]'
-                  : 'text-[#D8D3C2] hover:text-[#FDF9EE]'
+                  ? 'bg-[#EAB344] text-[#140B07]'
+                  : 'text-[#E6D7C3] hover:text-[#FDF6E9]'
               }`}
             >
               <span className="inline-flex items-center gap-1.5">
@@ -554,7 +554,7 @@ export function HealthPage({
             return (
               <article
                 key={benefit.id}
-                className="rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-xl rounded-bl-xl bg-[#08261C]/92 border border-[#EAB344]/25 p-6 flex flex-col justify-between space-y-4 shadow-xl"
+                className="rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-xl rounded-bl-xl bg-[#21120B]/92 border border-[#EAB344]/25 p-6 flex flex-col justify-between space-y-4 shadow-xl"
               >
                 <div className="space-y-2.5">
                   <div className="flex items-baseline justify-between gap-2">
@@ -566,7 +566,7 @@ export function HealthPage({
                       {benefit.metric}
                     </span>
                   </div>
-                  <h2 className="text-xl font-semibold text-[#FDF9EE]">
+                  <h2 className="text-xl font-semibold text-[#FDF6E9]">
                     {benefit.title}
                   </h2>
                   {urdu && (
@@ -574,16 +574,16 @@ export function HealthPage({
                       {urdu.title}
                     </p>
                   )}
-                  <p className="text-sm leading-relaxed text-[#D8D3C2]">
+                  <p className="text-sm leading-relaxed text-[#E6D7C3]">
                     {benefit.summary}
                   </p>
                   {urdu && (
-                    <p lang="ur" className="font-urdu-body text-xs text-[#C4BFB0]">
+                    <p lang="ur" className="font-urdu-body text-xs text-[#C7B198]">
                       {urdu.summary}
                     </p>
                   )}
                 </div>
-                <p className="pt-3 border-t border-white/10 text-xs text-[#A8A292]">
+                <p className="pt-3 border-t border-white/10 text-xs text-[#C7B198]">
                   {benefit.unit} · {benefit.scienceNote}
                 </p>
               </article>
@@ -593,12 +593,12 @@ export function HealthPage({
       </section>
 
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-12">
-        <div className="rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/94 border border-[#EAB344]/30 p-7 sm:p-11 space-y-8 shadow-2xl">
+        <div className="rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/94 border border-[#EAB344]/30 p-7 sm:p-11 space-y-8 shadow-2xl">
           <div className="space-y-2">
             <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#F5C451]">
               Kitchen Quality Benchmark
             </p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#FDF9EE]">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#FDF6E9]">
               Noor Zaiqa Junction vs. Ordinary Commercial Food
             </h2>
           </div>
@@ -607,19 +607,19 @@ export function HealthPage({
             {COMPARISON_ROWS.map((row) => (
               <div
                 key={row.pillar}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-4 p-4 sm:p-5 rounded-2xl bg-[#061C14] border border-white/10 items-start"
+                className="grid grid-cols-1 lg:grid-cols-12 gap-4 p-4 sm:p-5 rounded-2xl bg-[#0F0705] border border-white/10 items-start"
               >
                 <div className="lg:col-span-3">
                   <p className="text-sm font-semibold text-[#EAB344]">
                     {row.pillar}
                   </p>
                 </div>
-                <div className="lg:col-span-5 flex items-start gap-2.5 text-sm text-[#FDF9EE]">
+                <div className="lg:col-span-5 flex items-start gap-2.5 text-sm text-[#FDF6E9]">
                   <CheckCircle2 className="w-4 h-4 text-[#EAB344] shrink-0 mt-0.5" />
                   <span>{row.zaiqaStandard}</span>
                 </div>
-                <div className="lg:col-span-4 flex items-start gap-2.5 text-xs sm:text-sm text-[#A8A292]">
-                  <XCircle className="w-4 h-4 text-[#7E9689] shrink-0 mt-0.5" />
+                <div className="lg:col-span-4 flex items-start gap-2.5 text-xs sm:text-sm text-[#C7B198]">
+                  <XCircle className="w-4 h-4 text-[#9E8468] shrink-0 mt-0.5" />
                   <span>{row.ordinaryRestaurant}</span>
                 </div>
               </div>
@@ -634,14 +634,14 @@ export function HealthPage({
             <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#F5C451]">
               Hygienic Homemade Favorites
             </p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#FDF9EE]">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#FDF6E9]">
               Fresh Dishes Cooked Cleanly on Order
             </h2>
           </div>
           <button
             type="button"
             onClick={() => onNavigate('orders')}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-xs font-semibold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-semibold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
           >
             <span>Open Orders &amp; WhatsApp ({WHATSAPP_DISPLAY})</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -654,10 +654,10 @@ export function HealthPage({
             return (
               <article
                 key={item.id}
-                className="rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-xl rounded-bl-xl bg-[#08261C]/92 border border-[#EAB344]/25 p-4 flex flex-col justify-between space-y-4"
+                className="rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-xl rounded-bl-xl bg-[#21120B]/92 border border-[#EAB344]/25 p-4 flex flex-col justify-between space-y-4"
               >
                 <div className="space-y-3">
-                  <div className="aspect-[16/10] rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-lg rounded-bl-lg overflow-hidden bg-[#0B3024]">
+                  <div className="aspect-[16/10] rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-lg rounded-bl-lg overflow-hidden bg-[#2E1910]">
                     <img
                       src={item.image}
                       alt={item.name}
@@ -668,7 +668,7 @@ export function HealthPage({
                   <p className="text-xs font-medium text-[#F5C451]">
                     {getHealthFocus(item)}
                   </p>
-                  <h3 className="text-lg font-semibold text-[#FDF9EE]">
+                  <h3 className="text-lg font-semibold text-[#FDF6E9]">
                     {item.name}
                   </h3>
                   {URDU_DISHES[item.id] && (
@@ -676,7 +676,7 @@ export function HealthPage({
                       {URDU_DISHES[item.id].name}
                     </p>
                   )}
-                  <p className="text-xs leading-relaxed text-[#D8D3C2]">
+                  <p className="text-xs leading-relaxed text-[#E6D7C3]">
                     {item.description}
                   </p>
                 </div>
@@ -688,7 +688,7 @@ export function HealthPage({
                   <button
                     type="button"
                     onClick={() => onAddToCart(item)}
-                    className="px-4 py-2 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-xs font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
+                    className="px-4 py-2 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
                   >
                     {qty > 0 ? `Attached (${qty})` : 'Add Dish'}
                   </button>
@@ -736,20 +736,20 @@ export function OrdersPage({
   onNavigate: (page: PageId) => void;
 }) {
   return (
-    <div className="relative z-10 text-[#FDF9EE] pb-16">
+    <div className="relative z-10 text-[#FDF6E9] pb-16">
       <section className="min-h-[68vh] pt-28 pb-12 flex items-center">
         <div className="max-w-7xl mx-auto w-full px-6 lg:px-10">
-          <div className="max-w-3xl p-8 sm:p-10 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/85 border border-[#EAB344]/30 shadow-2xl space-y-5">
+          <div className="max-w-3xl p-8 sm:p-10 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/85 border border-[#EAB344]/30 shadow-2xl space-y-5">
             <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#F5C451]">
               Direct Kitchen Dispatch · {WHATSAPP_DISPLAY}
             </p>
             <h1
-              className="text-4xl sm:text-5xl font-semibold leading-[1.06] tracking-tight text-[#FDF9EE]"
+              className="text-4xl sm:text-5xl font-semibold leading-[1.06] tracking-tight text-[#FDF6E9]"
               style={{ textWrap: 'balance' }}
             >
               Order Homemade Noor Zaiqa Junction Dishes on WhatsApp.
             </h1>
-            <p className="text-base leading-relaxed text-[#D8D3C2]">
+            <p className="text-base leading-relaxed text-[#E6D7C3]">
               Your selected dishes from our {MENU_ITEMS.length}-item Special Menu attach
               automatically below—plus you can request custom dishes made fresh to order
               via Call/WhatsApp 0371-2442688.
@@ -758,7 +758,7 @@ export function OrdersPage({
               <button
                 type="button"
                 onClick={() => onNavigate('menu')}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-xs font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
               >
                 <span>Browse {MENU_ITEMS.length}-Dish Menu</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -767,7 +767,7 @@ export function OrdersPage({
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/40 bg-[#08281D]/88 text-xs font-medium text-[#FDF9EE] hover:border-[#F5C451] transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/40 bg-[#21120B]/88 text-xs font-medium text-[#FDF6E9] hover:border-[#F5C451] transition-colors"
               >
                 <MessageCircle className="w-3.5 h-3.5 text-[#F5C451]" />
                 <span>WhatsApp Desk: {WHATSAPP_DISPLAY}</span>
@@ -790,13 +790,13 @@ export function OrdersPage({
           {ORDER_STEPS.map((step) => (
             <article
               key={step.num}
-              className="p-6 rounded-tl-[2.25rem] rounded-br-[2.25rem] rounded-tr-lg rounded-bl-lg bg-[#08261C]/88 border border-[#EAB344]/20 space-y-2.5"
+              className="p-6 rounded-tl-[2.25rem] rounded-br-[2.25rem] rounded-tr-lg rounded-bl-lg bg-[#21120B]/88 border border-[#EAB344]/20 space-y-2.5"
             >
               <span className="font-display italic text-3xl font-semibold text-[#F5C451] tabular-nums">
                 {step.num}
               </span>
-              <h2 className="text-xl font-semibold text-[#FDF9EE]">{step.title}</h2>
-              <p className="text-sm leading-relaxed text-[#D8D3C2]">{step.body}</p>
+              <h2 className="text-xl font-semibold text-[#FDF6E9]">{step.title}</h2>
+              <p className="text-sm leading-relaxed text-[#E6D7C3]">{step.body}</p>
             </article>
           ))}
         </div>
@@ -807,7 +807,7 @@ export function OrdersPage({
 
 export function StoryPage({ onNavigate }: { onNavigate: (page: PageId) => void }) {
   return (
-    <div className="relative z-10 text-[#FDF9EE] pb-20">
+    <div className="relative z-10 text-[#FDF6E9] pb-20">
       <section className="min-h-[86vh] pt-28 pb-16 flex items-center">
         <div className="max-w-7xl mx-auto w-full px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
@@ -815,14 +815,14 @@ export function StoryPage({ onNavigate }: { onNavigate: (page: PageId) => void }
               Our Story · Ghar ka Zaiqa, Har Plate Mein
             </p>
             <h1
-              className="text-4xl sm:text-5xl lg:text-[3.75rem] font-semibold leading-[1.06] tracking-tight text-[#FDF9EE]"
+              className="text-4xl sm:text-5xl lg:text-[3.75rem] font-semibold leading-[1.06] tracking-tight text-[#FDF6E9]"
               style={{ textWrap: 'balance' }}
             >
               True Homemade Taste in{' '}
               <span className="italic font-medium text-[#F5C451]">Karachi</span>{' '}
               With Real Spices.
             </h1>
-            <p className="text-base sm:text-lg leading-relaxed text-[#D8D3C2] max-w-2xl">
+            <p className="text-base sm:text-lg leading-relaxed text-[#E6D7C3] max-w-2xl">
               Noor Zaiqa Junction was founded on one honest promise: give every family,
               student, and office in Karachi authentic homemade food cooked with balanced
               traditional masalas—just the way Pakistani homes cook Biryani, Qorma, Achaari,
@@ -832,7 +832,7 @@ export function StoryPage({ onNavigate }: { onNavigate: (page: PageId) => void }
               <button
                 type="button"
                 onClick={() => onNavigate('menu')}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#EAB344] text-[#072118] text-sm font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#EAB344] text-[#140B07] text-sm font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
               >
                 <span>Explore Special Menu</span>
                 <ArrowRight className="w-4 h-4" />
@@ -840,7 +840,7 @@ export function StoryPage({ onNavigate }: { onNavigate: (page: PageId) => void }
               <button
                 type="button"
                 onClick={() => onNavigate('reserve')}
-                className="inline-flex items-center px-6 py-3 rounded-tr-2xl rounded-bl-2xl rounded-tl-md rounded-br-md border border-[#EAB344]/40 bg-[#08281D]/88 text-[#FDF9EE] text-sm font-medium hover:border-[#F5C451] transition-colors cursor-pointer"
+                className="inline-flex items-center px-6 py-3 rounded-tr-2xl rounded-bl-2xl rounded-tl-md rounded-br-md border border-[#EAB344]/40 bg-[#21120B]/88 text-[#FDF6E9] text-sm font-medium hover:border-[#F5C451] transition-colors cursor-pointer"
               >
                 Request Custom Dish on Order
               </button>
@@ -848,8 +848,8 @@ export function StoryPage({ onNavigate }: { onNavigate: (page: PageId) => void }
           </div>
 
           <div className="lg:col-span-5">
-            <div className="rounded-t-[200px] rounded-b-3xl p-3 border border-[#EAB344]/35 bg-[#08261C]/85 shadow-2xl">
-              <div className="rounded-t-[190px] rounded-b-2xl overflow-hidden aspect-[4/4.2] bg-[#0B3024]">
+            <div className="rounded-t-[200px] rounded-b-3xl p-3 border border-[#EAB344]/35 bg-[#21120B]/85 shadow-2xl">
+              <div className="rounded-t-[190px] rounded-b-2xl overflow-hidden aspect-[4/4.2] bg-[#2E1910]">
                 <img
                   src={IMAGE_ASSETS.chickenQorma}
                   alt="Homemade Pakistani Chicken Qorma 1 KG"
@@ -867,7 +867,7 @@ export function StoryPage({ onNavigate }: { onNavigate: (page: PageId) => void }
           <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#F5C451]">
             Homestyle Kitchen Craft
           </p>
-          <h2 className="text-3xl sm:text-5xl font-semibold text-[#FDF9EE]">
+          <h2 className="text-3xl sm:text-5xl font-semibold text-[#FDF6E9]">
             How Every Noor Zaiqa Junction Dish Is Prepared
           </h2>
         </div>
@@ -876,7 +876,7 @@ export function StoryPage({ onNavigate }: { onNavigate: (page: PageId) => void }
           {STORY_TIMELINE.map((step) => (
             <div
               key={step.num}
-              className={`max-w-3xl p-7 sm:p-9 rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-xl rounded-bl-xl bg-[#08261C]/88 border border-[#EAB344]/25 shadow-xl space-y-3 ${
+              className={`max-w-3xl p-7 sm:p-9 rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-xl rounded-bl-xl bg-[#21120B]/88 border border-[#EAB344]/25 shadow-xl space-y-3 ${
                 step.align === 'right' ? 'ml-auto' : ''
               }`}
             >
@@ -886,8 +886,8 @@ export function StoryPage({ onNavigate }: { onNavigate: (page: PageId) => void }
                 </span>
                 <span className="text-xs font-mono text-[#EAB344]">{step.time}</span>
               </div>
-              <h3 className="text-2xl font-semibold text-[#FDF9EE]">{step.title}</h3>
-              <p className="text-sm sm:text-base leading-relaxed text-[#D8D3C2]">
+              <h3 className="text-2xl font-semibold text-[#FDF6E9]">{step.title}</h3>
+              <p className="text-sm sm:text-base leading-relaxed text-[#E6D7C3]">
                 {step.body}
               </p>
             </div>
@@ -900,7 +900,7 @@ export function StoryPage({ onNavigate }: { onNavigate: (page: PageId) => void }
           <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#F5C451]">
             Authentic Home Pantry
           </p>
-          <h2 className="text-3xl sm:text-4xl font-semibold text-[#FDF9EE]">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-[#FDF6E9]">
             Six Core Ingredients Behind Our Real Ghar Ka Zaiqa
           </h2>
         </div>
@@ -909,15 +909,15 @@ export function StoryPage({ onNavigate }: { onNavigate: (page: PageId) => void }
           {PANTRY_INGREDIENTS.map((ing) => (
             <article
               key={ing.index}
-              className="p-6 rounded-tr-[2.5rem] rounded-bl-[2.5rem] rounded-tl-xl rounded-br-xl bg-[#08261C]/90 border border-[#EAB344]/22 space-y-3"
+              className="p-6 rounded-tr-[2.5rem] rounded-bl-[2.5rem] rounded-tl-xl rounded-br-xl bg-[#21120B]/90 border border-[#EAB344]/22 space-y-3"
             >
               <div className="flex items-baseline justify-between gap-2">
                 <span className="font-mono text-xs text-[#F5C451]">{ing.index}</span>
                 <span className="text-xs text-[#EAB344]">{ing.origin}</span>
               </div>
-              <h3 className="text-xl font-semibold text-[#FDF9EE]">{ing.name}</h3>
+              <h3 className="text-xl font-semibold text-[#FDF6E9]">{ing.name}</h3>
               <p className="text-xs font-medium text-[#F5C451]">{ing.role}</p>
-              <p className="text-sm leading-relaxed text-[#D8D3C2]">{ing.detail}</p>
+              <p className="text-sm leading-relaxed text-[#E6D7C3]">{ing.detail}</p>
             </article>
           ))}
         </div>
@@ -954,20 +954,20 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
   };
 
   return (
-    <div className="relative z-10 text-[#FDF9EE] pb-20">
+    <div className="relative z-10 text-[#FDF6E9] pb-20">
       <section className="min-h-[84vh] pt-28 pb-16 flex items-center">
         <div className="max-w-7xl mx-auto w-full px-6 lg:px-10">
-          <div className="max-w-3xl p-8 sm:p-11 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/82 border border-[#EAB344]/25 shadow-2xl space-y-5">
+          <div className="max-w-3xl p-8 sm:p-11 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/82 border border-[#EAB344]/25 shadow-2xl space-y-5">
             <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#F5C451]">
               Karachi Kitchen Dispatch · Fresh &amp; Frozen
             </p>
             <h1
-              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-semibold leading-[1.06] tracking-tight text-[#FDF9EE]"
+              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-semibold leading-[1.06] tracking-tight text-[#FDF6E9]"
               style={{ textWrap: 'balance' }}
             >
               Karachi Home Delivery, Daily Boxes &amp; Custom Dawats.
             </h1>
-            <p className="text-base sm:text-lg leading-relaxed text-[#D8D3C2]">
+            <p className="text-base sm:text-lg leading-relaxed text-[#E6D7C3]">
               From 1 KG Biryani, Chicken Qorma, Aalu Qeema, and Zarda trays to 12-piece
               Shami Kabab packs and daily Rs. 300 meal plates—we cook hygienically on
               order across Karachi.
@@ -990,8 +990,8 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
                   branch.align === 'right' ? 'lg:order-2' : 'lg:order-1'
                 }`}
               >
-                <div className="rounded-tl-[3.25rem] rounded-br-[3.25rem] rounded-tr-xl rounded-bl-xl p-2.5 bg-[#08261C]/85 border border-[#EAB344]/30 shadow-2xl">
-                  <div className="aspect-[4/3] w-full overflow-hidden rounded-tl-[2.75rem] rounded-br-[2.75rem] rounded-tr-lg rounded-bl-lg bg-[#0B3024]">
+                <div className="rounded-tl-[3.25rem] rounded-br-[3.25rem] rounded-tr-xl rounded-bl-xl p-2.5 bg-[#21120B]/85 border border-[#EAB344]/30 shadow-2xl">
+                  <div className="aspect-[4/3] w-full overflow-hidden rounded-tl-[2.75rem] rounded-br-[2.75rem] rounded-tr-lg rounded-bl-lg bg-[#2E1910]">
                     <img
                       src={branch.image}
                       alt={`${branch.city} — ${branch.area}`}
@@ -1007,7 +1007,7 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
                   branch.align === 'right' ? 'lg:order-1' : 'lg:order-2'
                 }`}
               >
-                <div className="rounded-tr-[3.25rem] rounded-bl-[3.25rem] rounded-tl-xl rounded-br-xl bg-[#08261C]/90 border border-[#EAB344]/25 p-7 sm:p-10 space-y-5 shadow-2xl">
+                <div className="rounded-tr-[3.25rem] rounded-bl-[3.25rem] rounded-tl-xl rounded-br-xl bg-[#21120B]/90 border border-[#EAB344]/25 p-7 sm:p-10 space-y-5 shadow-2xl">
                   <div className="flex items-baseline justify-between gap-2">
                     <span className="font-display italic text-4xl font-semibold text-[#F5C451] tabular-nums">
                       {branch.index}
@@ -1017,13 +1017,13 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
                     </span>
                   </div>
                   <div className="space-y-1">
-                    <h2 className="text-3xl font-semibold text-[#FDF9EE]">
+                    <h2 className="text-3xl font-semibold text-[#FDF6E9]">
                       {branch.city}
                     </h2>
                     <p className="text-sm font-medium text-[#F5C451]">{branch.area}</p>
-                    <p className="text-xs text-[#A8A292]">{branch.seats}</p>
+                    <p className="text-xs text-[#C7B198]">{branch.seats}</p>
                   </div>
-                  <p className="text-sm sm:text-base leading-relaxed text-[#D8D3C2]">
+                  <p className="text-sm sm:text-base leading-relaxed text-[#E6D7C3]">
                     {branch.story}
                   </p>
                   <p className="text-xs text-[#EAB344] pt-2 border-t border-white/10">
@@ -1032,7 +1032,7 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
                   <button
                     type="button"
                     onClick={() => onNavigate('orders')}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-xs font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
                   >
                     Order Now via WhatsApp
                   </button>
@@ -1044,20 +1044,20 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
       </section>
 
       <section className="max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-8">
-        <div className="rounded-tr-[3.5rem] rounded-bl-[3.5rem] rounded-tl-2xl rounded-br-2xl bg-[#08281D]/92 border border-[#EAB344]/25 p-7 sm:p-11 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-2xl">
+        <div className="rounded-tr-[3.5rem] rounded-bl-[3.5rem] rounded-tl-2xl rounded-br-2xl bg-[#21120B]/92 border border-[#EAB344]/25 p-7 sm:p-11 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-2xl">
           <div className="lg:col-span-5 space-y-4">
             <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#F5C451]">
               Custom Dawat &amp; Bulk Homestyle Pots
             </p>
-            <h2 className="text-3xl font-semibold text-[#FDF9EE]">
+            <h2 className="text-3xl font-semibold text-[#FDF6E9]">
               Book Noor Zaiqa Junction Dawat &amp; Bulk Trays
             </h2>
-            <p className="text-sm sm:text-base leading-relaxed text-[#D8D3C2]">
+            <p className="text-sm sm:text-base leading-relaxed text-[#E6D7C3]">
               Hosting a family dawat, office lunch, or milad in Karachi? Order 1 KG+
               trays of Chicken Biryani, Chicken Qorma, Chicken Achaari, Aalu Qeema,
               Mutanjan Zarda, and Shami Kabab boxes—plus any custom dish you request!
             </p>
-            <div className="pt-2 text-xs text-[#A8A292] space-y-1">
+            <div className="pt-2 text-xs text-[#C7B198] space-y-1">
               <p>Custom Spice Calibration · Fresh Hot Rotis &amp; Parathas</p>
               <p>In dishes ke ilawa har tarah ka ghar ka khana order par tayyar</p>
             </div>
@@ -1065,18 +1065,18 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
 
           <div className="lg:col-span-7">
             {catRef ? (
-              <div className="p-6 rounded-2xl bg-[#061C14] border border-[#EAB344]/35 space-y-4">
+              <div className="p-6 rounded-2xl bg-[#0F0705] border border-[#EAB344]/35 space-y-4">
                 <div className="flex items-center gap-2.5 text-[#F5C451]">
                   <CheckCircle2 className="w-6 h-6 shrink-0" />
                   <div>
                     <p className="text-xs font-mono uppercase">
                       Catering Request Ready
                     </p>
-                    <h3 className="text-xl font-semibold text-[#FDF9EE]">{catRef.id}</h3>
+                    <h3 className="text-xl font-semibold text-[#FDF6E9]">{catRef.id}</h3>
                   </div>
                 </div>
-                <p className="text-sm text-[#D8D3C2]">
-                  Shukriya, <span className="font-semibold text-[#FDF9EE]">{name}</span>.
+                <p className="text-sm text-[#E6D7C3]">
+                  Shukriya, <span className="font-semibold text-[#FDF6E9]">{name}</span>.
                   Send your {style} inquiry for {guests} ({hub}) straight to WhatsApp{' '}
                   {WHATSAPP_DISPLAY}:
                 </p>
@@ -1085,7 +1085,7 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
                     href={catRef.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#EAB344] text-[#072118] text-xs font-bold hover:bg-[#F5C451] transition-colors"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#EAB344] text-[#140B07] text-xs font-bold hover:bg-[#F5C451] transition-colors"
                   >
                     <MessageCircle className="w-4 h-4" />
                     <span>Open WhatsApp ({WHATSAPP_DISPLAY})</span>
@@ -1097,7 +1097,7 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
                       setName('');
                       setPhone('');
                     }}
-                    className="px-4 py-2.5 rounded-lg border border-white/15 text-xs font-semibold text-[#FDF9EE] hover:border-[#F5C451] transition-colors cursor-pointer"
+                    className="px-4 py-2.5 rounded-lg border border-white/15 text-xs font-semibold text-[#FDF6E9] hover:border-[#F5C451] transition-colors cursor-pointer"
                   >
                     New Inquiry
                   </button>
@@ -1107,7 +1107,7 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                    <label className="block text-xs font-medium text-[#C7B198] mb-1">
                       Name / Organization
                     </label>
                     <input
@@ -1115,11 +1115,11 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="e.g. Ayesha Khan"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-white/15 text-sm text-[#FDF9EE] placeholder:text-[#7E9689] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-white/15 text-sm text-[#FDF6E9] placeholder:text-[#9E8468] focus:outline-none focus:border-[#EAB344]"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                    <label className="block text-xs font-medium text-[#C7B198] mb-1">
                       Phone / WhatsApp
                     </label>
                     <input
@@ -1127,20 +1127,20 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="0371-2442688"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-white/15 text-sm text-[#FDF9EE] placeholder:text-[#7E9689] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-white/15 text-sm text-[#FDF6E9] placeholder:text-[#9E8468] focus:outline-none focus:border-[#EAB344]"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                    <label className="block text-xs font-medium text-[#C7B198] mb-1">
                       Karachi Zone
                     </label>
                     <select
                       value={hub}
                       onChange={(e) => setHub(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-white/15 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-white/15 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                     >
                       <option>Karachi Home Delivery</option>
                       <option>Clifton / Defence / PECHS</option>
@@ -1148,13 +1148,13 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                    <label className="block text-xs font-medium text-[#C7B198] mb-1">
                       Order Style
                     </label>
                     <select
                       value={style}
                       onChange={(e) => setStyle(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-white/15 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-white/15 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                     >
                       <option>Family Dawat Pots (1 KG+)</option>
                       <option>Office Daal Chawal &amp; Chowmien Boxes</option>
@@ -1162,13 +1162,13 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                    <label className="block text-xs font-medium text-[#C7B198] mb-1">
                       Guest Count
                     </label>
                     <select
                       value={guests}
                       onChange={(e) => setGuests(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-white/15 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-white/15 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                     >
                       <option>10 – 25 Guests</option>
                       <option>25 – 50 Guests</option>
@@ -1187,7 +1187,7 @@ export function BranchesPage({ onNavigate }: { onNavigate: (page: PageId) => voi
 
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-sm font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
+                  className="w-full py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-sm font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
                 >
                   Request Custom Quote on WhatsApp
                 </button>
@@ -1230,20 +1230,20 @@ export function ReservePage() {
   };
 
   return (
-    <div className="relative z-10 text-[#FDF9EE] pb-20">
+    <div className="relative z-10 text-[#FDF6E9] pb-20">
       <section className="min-h-[84vh] pt-28 pb-16 flex items-center">
         <div className="max-w-7xl mx-auto w-full px-6 lg:px-10">
-          <div className="max-w-3xl p-8 sm:p-11 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/82 border border-[#EAB344]/30 shadow-2xl space-y-5">
+          <div className="max-w-3xl p-8 sm:p-11 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/82 border border-[#EAB344]/30 shadow-2xl space-y-5">
             <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#F5C451]">
               Custom Dishes &amp; Dawat Trays · 0371-2442688
             </p>
             <h1
-              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-semibold leading-[1.06] tracking-tight text-[#FDF9EE]"
+              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-semibold leading-[1.06] tracking-tight text-[#FDF6E9]"
               style={{ textWrap: 'balance' }}
             >
               In Dishes Ke Ilawa Bhi Jo Banwana Ho, Wo Order Par Ban Jata Hai.
             </h1>
-            <p className="text-base sm:text-lg leading-relaxed text-[#D8D3C2]">
+            <p className="text-base sm:text-lg leading-relaxed text-[#E6D7C3]">
               Need homemade Nihari, Karahi, Pulao, Haleem, Palak Gosht, or custom mild
               tiffin meals for your parents and kids? Request any homemade dish fresh
               on order across Karachi.
@@ -1257,7 +1257,7 @@ export function ReservePage() {
           {RESERVE_ZONES.map((zoneCard) => (
             <article
               key={zoneCard.index}
-              className="p-6 rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-xl rounded-bl-xl bg-[#08261C]/90 border border-[#EAB344]/25 space-y-3 shadow-xl"
+              className="p-6 rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-xl rounded-bl-xl bg-[#21120B]/90 border border-[#EAB344]/25 space-y-3 shadow-xl"
             >
               <div className="flex items-baseline justify-between">
                 <span className="font-display italic text-3xl font-semibold text-[#F5C451]">
@@ -1267,9 +1267,9 @@ export function ReservePage() {
                   {zoneCard.capacity}
                 </span>
               </div>
-              <h2 className="text-xl font-semibold text-[#FDF9EE]">{zoneCard.name}</h2>
-              <p className="text-sm text-[#D8D3C2]">{zoneCard.note}</p>
-              <p className="text-xs text-[#A8A292] pt-2 border-t border-white/10">
+              <h2 className="text-xl font-semibold text-[#FDF6E9]">{zoneCard.name}</h2>
+              <p className="text-sm text-[#E6D7C3]">{zoneCard.note}</p>
+              <p className="text-xs text-[#C7B198] pt-2 border-t border-white/10">
                 {zoneCard.perks}
               </p>
             </article>
@@ -1280,29 +1280,29 @@ export function ReservePage() {
           {RESERVE_RITUALS.map((ritual) => (
             <article
               key={ritual.time}
-              className="p-6 rounded-tr-[2.25rem] rounded-bl-[2.25rem] rounded-tl-lg rounded-br-lg bg-[#08281D]/88 border border-[#EAB344]/25 space-y-2"
+              className="p-6 rounded-tr-[2.25rem] rounded-bl-[2.25rem] rounded-tl-lg rounded-br-lg bg-[#21120B]/88 border border-[#EAB344]/25 space-y-2"
             >
               <p className="text-xs font-mono text-[#EAB344]">{ritual.time}</p>
-              <h3 className="text-lg font-semibold text-[#FDF9EE]">{ritual.title}</h3>
-              <p className="text-xs sm:text-sm text-[#D8D3C2] leading-relaxed">
+              <h3 className="text-lg font-semibold text-[#FDF6E9]">{ritual.title}</h3>
+              <p className="text-xs sm:text-sm text-[#E6D7C3] leading-relaxed">
                 {ritual.detail}
               </p>
             </article>
           ))}
         </div>
 
-        <div className="rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/94 border border-[#EAB344]/30 p-7 sm:p-11 max-w-4xl mx-auto shadow-2xl">
+        <div className="rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/94 border border-[#EAB344]/30 p-7 sm:p-11 max-w-4xl mx-auto shadow-2xl">
           {confirmed ? (
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-[#F5C451]">
                 <CheckCircle2 className="w-7 h-7 shrink-0" />
                 <div>
                   <p className="text-xs font-mono uppercase">Custom Request Ready</p>
-                  <h2 className="text-2xl font-semibold text-[#FDF9EE]">{confirmed.id}</h2>
+                  <h2 className="text-2xl font-semibold text-[#FDF6E9]">{confirmed.id}</h2>
                 </div>
               </div>
-              <p className="text-sm text-[#D8D3C2]">
-                Prepared for <span className="font-semibold text-[#FDF9EE]">{guestName}</span>{' '}
+              <p className="text-sm text-[#E6D7C3]">
+                Prepared for <span className="font-semibold text-[#FDF6E9]">{guestName}</span>{' '}
                 ({partySize}) in {zone} — {seating} on {date} ({slot}).
               </p>
               <div className="flex flex-wrap gap-3">
@@ -1310,7 +1310,7 @@ export function ReservePage() {
                   href={confirmed.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#EAB344] text-[#072118] text-xs font-bold hover:bg-[#F5C451]"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#EAB344] text-[#140B07] text-xs font-bold hover:bg-[#F5C451]"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Send on WhatsApp ({WHATSAPP_DISPLAY})</span>
@@ -1321,7 +1321,7 @@ export function ReservePage() {
                     setConfirmed(null);
                     setGuestName('');
                   }}
-                  className="px-5 py-2.5 rounded-lg border border-white/15 text-xs font-semibold text-[#FDF9EE] hover:border-[#F5C451] cursor-pointer"
+                  className="px-5 py-2.5 rounded-lg border border-white/15 text-xs font-semibold text-[#FDF6E9] hover:border-[#F5C451] cursor-pointer"
                 >
                   Make Another Request
                 </button>
@@ -1333,14 +1333,14 @@ export function ReservePage() {
                 <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#F5C451]">
                   Custom Homestyle Order
                 </p>
-                <h2 className="text-3xl font-semibold text-[#FDF9EE]">
+                <h2 className="text-3xl font-semibold text-[#FDF6E9]">
                   Request Any Dish Fresh on Order
                 </h2>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                  <label className="block text-xs font-medium text-[#C7B198] mb-1">
                     Your Full Name
                   </label>
                   <input
@@ -1348,17 +1348,17 @@ export function ReservePage() {
                     value={guestName}
                     onChange={(e) => setGuestName(e.target.value)}
                     placeholder="e.g. Tariq Mahmood"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#072118] border border-white/15 text-sm text-[#FDF9EE] placeholder:text-[#7E9689] focus:outline-none focus:border-[#EAB344]"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#140B07] border border-white/15 text-sm text-[#FDF6E9] placeholder:text-[#9E8468] focus:outline-none focus:border-[#EAB344]"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                  <label className="block text-xs font-medium text-[#C7B198] mb-1">
                     Karachi Delivery Area
                   </label>
                   <select
                     value={zone}
                     onChange={(e) => setZone(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#072118] border border-white/15 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#140B07] border border-white/15 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                   >
                     <option>Karachi Home Delivery</option>
                     <option>Clifton / Defence / PECHS</option>
@@ -1369,24 +1369,24 @@ export function ReservePage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                  <label className="block text-xs font-medium text-[#C7B198] mb-1">
                     Date
                   </label>
                   <input
                     type="date"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#072118] border border-white/15 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#140B07] border border-white/15 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                  <label className="block text-xs font-medium text-[#C7B198] mb-1">
                     Delivery Slot
                   </label>
                   <select
                     value={slot}
                     onChange={(e) => setSlot(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#072118] border border-white/15 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#140B07] border border-white/15 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                   >
                     <option>Lunch (1:00 PM – 3:00 PM)</option>
                     <option>Evening Snacks (5:00 PM – 7:00 PM)</option>
@@ -1395,13 +1395,13 @@ export function ReservePage() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                  <label className="block text-xs font-medium text-[#C7B198] mb-1">
                     Quantity / Pack Size
                   </label>
                   <select
                     value={partySize}
                     onChange={(e) => setPartySize(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#072118] border border-white/15 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#140B07] border border-white/15 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                   >
                     <option>1–2 KG Family Tray</option>
                     <option>24+ Shami Kabab Pack</option>
@@ -1412,13 +1412,13 @@ export function ReservePage() {
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                <label className="block text-xs font-medium text-[#C7B198] mb-1">
                   Order Type
                 </label>
                 <select
                   value={seating}
                   onChange={(e) => setSeating(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#072118] border border-white/15 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#140B07] border border-white/15 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                 >
                   <option>Custom Dish Outside Menu</option>
                   <option>Family Dawat Pre-Order</option>
@@ -1427,7 +1427,7 @@ export function ReservePage() {
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                <label className="block text-xs font-medium text-[#C7B198] mb-1">
                   Which Dish Should We Make &amp; Spice Level?
                 </label>
                 <input
@@ -1435,7 +1435,7 @@ export function ReservePage() {
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   placeholder="e.g. White Chicken Karahi 2 KG, mild spice, less oil"
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#072118] border border-white/15 text-sm text-[#FDF9EE] placeholder:text-[#7E9689] focus:outline-none focus:border-[#EAB344]"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#140B07] border border-white/15 text-sm text-[#FDF6E9] placeholder:text-[#9E8468] focus:outline-none focus:border-[#EAB344]"
                 />
               </div>
 
@@ -1448,7 +1448,7 @@ export function ReservePage() {
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-sm font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
+                className="w-full py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-sm font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
               >
                 Prepare Custom Order for WhatsApp
               </button>
@@ -1500,20 +1500,20 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
   };
 
   return (
-    <div className="relative z-10 text-[#FDF9EE] pb-20">
+    <div className="relative z-10 text-[#FDF6E9] pb-20">
       <section className="min-h-[78vh] pt-28 pb-16 flex items-center">
         <div className="max-w-7xl mx-auto w-full px-6 lg:px-10">
-          <div className="max-w-3xl p-8 sm:p-11 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/84 border border-[#EAB344]/30 shadow-2xl space-y-5">
+          <div className="max-w-3xl p-8 sm:p-11 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/84 border border-[#EAB344]/30 shadow-2xl space-y-5">
             <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#F5C451]">
               Contact Noor Zaiqa Junction™ · Karachi
             </p>
             <h1
-              className="text-4xl sm:text-5xl font-semibold leading-[1.06] tracking-tight text-[#FDF9EE]"
+              className="text-4xl sm:text-5xl font-semibold leading-[1.06] tracking-tight text-[#FDF6E9]"
               style={{ textWrap: 'balance' }}
             >
               Call or WhatsApp {WHATSAPP_DISPLAY} for Fresh &amp; Custom Orders.
             </h1>
-            <p className="text-base sm:text-lg leading-relaxed text-[#D8D3C2]">
+            <p className="text-base sm:text-lg leading-relaxed text-[#E6D7C3]">
               Order any dish from our Special Menu or ask for custom homemade meals at{' '}
               <span className="font-mono text-[#EAB344]">{WHATSAPP_DISPLAY}</span>,
               or review our{' '}
@@ -1531,14 +1531,14 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-xs font-semibold hover:bg-[#F5C451] transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-semibold hover:bg-[#F5C451] transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp: {WHATSAPP_DISPLAY}</span>
               </a>
               <a
                 href="mailto:orders@noorzaiqajunction.pk"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/35 bg-[#08281D]/90 text-xs font-medium text-[#FDF9EE] hover:border-[#F5C451] transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/35 bg-[#21120B]/90 text-xs font-medium text-[#FDF6E9] hover:border-[#F5C451] transition-colors"
               >
                 <Mail className="w-4 h-4 text-[#F5C451]" />
                 <span>orders@noorzaiqajunction.pk</span>
@@ -1553,10 +1553,10 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
           {CONTACT_DESKS.map((desk) => (
             <article
               key={desk.city}
-              className="p-6 rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-lg rounded-bl-lg bg-[#08261C]/90 border border-[#EAB344]/25 space-y-3 shadow-xl"
+              className="p-6 rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-lg rounded-bl-lg bg-[#21120B]/90 border border-[#EAB344]/25 space-y-3 shadow-xl"
             >
-              <h2 className="text-xl font-semibold text-[#FDF9EE]">{desk.city}</h2>
-              <div className="space-y-2 text-xs text-[#D8D3C2]">
+              <h2 className="text-xl font-semibold text-[#FDF6E9]">{desk.city}</h2>
+              <div className="space-y-2 text-xs text-[#E6D7C3]">
                 <p className="flex items-start gap-2">
                   <MapPin className="w-3.5 h-3.5 text-[#F5C451] shrink-0 mt-0.5" />
                   <span>{desk.address}</span>
@@ -1576,15 +1576,15 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
       </section>
 
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-14">
-        <div className="rounded-tr-[3.5rem] rounded-bl-[3.5rem] rounded-tl-2xl rounded-br-2xl bg-[#08281D]/92 border border-[#EAB344]/28 p-7 sm:p-11 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-2xl">
+        <div className="rounded-tr-[3.5rem] rounded-bl-[3.5rem] rounded-tl-2xl rounded-br-2xl bg-[#21120B]/92 border border-[#EAB344]/28 p-7 sm:p-11 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-2xl">
           <div className="lg:col-span-5 space-y-4">
             <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#F5C451]">
               Direct Kitchen Support
             </p>
-            <h2 className="text-3xl font-semibold text-[#FDF9EE]">
+            <h2 className="text-3xl font-semibold text-[#FDF6E9]">
               Custom Dish Requests, Daily Tiffins &amp; Dawat Orders
             </h2>
-            <p className="text-sm leading-relaxed text-[#D8D3C2]">
+            <p className="text-sm leading-relaxed text-[#E6D7C3]">
               In dishes ke ilawa bhi jo aapko banwana ho, message us straight on{' '}
               <span className="font-mono text-[#EAB344]">{WHATSAPP_DISPLAY}</span> so we
               can prepare it fresh for your family.
@@ -1593,17 +1593,17 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
 
           <div className="lg:col-span-7">
             {submitted ? (
-              <div className="p-6 rounded-2xl bg-[#061C14] border border-[#EAB344]/35 space-y-4">
+              <div className="p-6 rounded-2xl bg-[#0F0705] border border-[#EAB344]/35 space-y-4">
                 <div className="flex items-center gap-2.5 text-[#F5C451]">
                   <CheckCircle2 className="w-6 h-6 shrink-0" />
                   <div>
                     <p className="text-xs font-mono uppercase">Inquiry Formatted</p>
-                    <h3 className="text-xl font-semibold text-[#FDF9EE]">
+                    <h3 className="text-xl font-semibold text-[#FDF6E9]">
                       {submitted.id}
                     </h3>
                   </div>
                 </div>
-                <p className="text-sm text-[#D8D3C2]">
+                <p className="text-sm text-[#E6D7C3]">
                   Your message for {branch} ({topic}) is ready to send via WhatsApp.
                 </p>
                 <div className="flex flex-wrap gap-3">
@@ -1611,7 +1611,7 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
                     href={submitted.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#EAB344] text-[#072118] text-xs font-semibold hover:bg-[#F5C451]"
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#EAB344] text-[#140B07] text-xs font-semibold hover:bg-[#F5C451]"
                   >
                     <MessageCircle className="w-4 h-4" />
                     <span>Open WhatsApp ({WHATSAPP_DISPLAY})</span>
@@ -1622,7 +1622,7 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
                       setSubmitted(null);
                       setMessage('');
                     }}
-                    className="px-4 py-3 rounded-lg border border-white/15 text-xs text-[#FDF9EE] hover:border-[#EAB344] cursor-pointer"
+                    className="px-4 py-3 rounded-lg border border-white/15 text-xs text-[#FDF6E9] hover:border-[#EAB344] cursor-pointer"
                   >
                     New Message
                   </button>
@@ -1632,7 +1632,7 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
               <form onSubmit={handleConfirm} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                    <label className="block text-xs font-medium text-[#C7B198] mb-1">
                       Full Name
                     </label>
                     <input
@@ -1640,11 +1640,11 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Your name"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-white/15 text-sm text-[#FDF9EE] placeholder:text-[#7E9689] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-white/15 text-sm text-[#FDF6E9] placeholder:text-[#9E8468] focus:outline-none focus:border-[#EAB344]"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                    <label className="block text-xs font-medium text-[#C7B198] mb-1">
                       Phone / WhatsApp
                     </label>
                     <input
@@ -1652,20 +1652,20 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="03XX-XXXXXXX"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-white/15 text-sm text-[#FDF9EE] placeholder:text-[#7E9689] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-white/15 text-sm text-[#FDF6E9] placeholder:text-[#9E8468] focus:outline-none focus:border-[#EAB344]"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                    <label className="block text-xs font-medium text-[#C7B198] mb-1">
                       Topic
                     </label>
                     <select
                       value={topic}
                       onChange={(e) => setTopic(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-white/15 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-white/15 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                     >
                       <option>Menu Order &amp; Delivery</option>
                       <option>Custom Dish Request (Outside Menu)</option>
@@ -1675,13 +1675,13 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                    <label className="block text-xs font-medium text-[#C7B198] mb-1">
                       Service Desk
                     </label>
                     <select
                       value={branch}
                       onChange={(e) => setBranch(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-white/15 text-sm text-[#FDF9EE] focus:outline-none focus:border-[#EAB344]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-white/15 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
                     >
                       <option>Karachi Kitchen Dispatch</option>
                       <option>Dawat &amp; Bulk Order Desk</option>
@@ -1691,7 +1691,7 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-[#C4BFB0] mb-1">
+                  <label className="block text-xs font-medium text-[#C7B198] mb-1">
                     Message / Custom Dish Details
                   </label>
                   <textarea
@@ -1699,7 +1699,7 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Write what dish you want cooked on order, spice level, or delivery question..."
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#061C14] border border-white/15 text-sm text-[#FDF9EE] placeholder:text-[#7E9689] focus:outline-none focus:border-[#EAB344]"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-white/15 text-sm text-[#FDF6E9] placeholder:text-[#9E8468] focus:outline-none focus:border-[#EAB344]"
                   />
                 </div>
 
@@ -1712,7 +1712,7 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-sm font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-sm font-semibold hover:bg-[#F5C451] transition-colors cursor-pointer"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Send Inquiry on WhatsApp ({WHATSAPP_DISPLAY})</span>
@@ -1728,10 +1728,10 @@ export function ContactPage({ onNavigate }: { onNavigate: (page: PageId) => void
 
 export function PrivacyPage({ onNavigate }: { onNavigate: (page: PageId) => void }) {
   return (
-    <div className="relative z-10 text-[#FDF9EE] pb-20">
+    <div className="relative z-10 text-[#FDF6E9] pb-20">
       <section className="min-h-[68vh] pt-28 pb-12 flex items-center">
         <div className="max-w-5xl mx-auto w-full px-6 lg:px-10">
-          <div className="p-8 sm:p-11 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/86 border border-[#EAB344]/30 shadow-2xl space-y-5">
+          <div className="p-8 sm:p-11 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/86 border border-[#EAB344]/30 shadow-2xl space-y-5">
             <div className="flex items-center gap-2.5 text-[#F5C451]">
               <ShieldCheck className="w-5 h-5" />
               <p className="text-xs font-semibold tracking-[0.18em] uppercase">
@@ -1739,12 +1739,12 @@ export function PrivacyPage({ onNavigate }: { onNavigate: (page: PageId) => void
               </p>
             </div>
             <h1
-              className="text-4xl sm:text-5xl font-semibold leading-[1.06] tracking-tight text-[#FDF9EE]"
+              className="text-4xl sm:text-5xl font-semibold leading-[1.06] tracking-tight text-[#FDF6E9]"
               style={{ textWrap: 'balance' }}
             >
               Your Order Details Stay Strictly Between Your Home &amp; Our Kitchen.
             </h1>
-            <p className="text-base leading-relaxed text-[#D8D3C2] max-w-3xl">
+            <p className="text-base leading-relaxed text-[#E6D7C3] max-w-3xl">
               Noor Zaiqa Junction™ is committed to transparent, zero-spam guest
               privacy. Below is exactly how we handle order information, WhatsApp
               dispatch, browser storage, and your rights.
@@ -1757,26 +1757,26 @@ export function PrivacyPage({ onNavigate }: { onNavigate: (page: PageId) => void
         {PRIVACY_SECTIONS.map((sec) => (
           <article
             key={sec.num}
-            className="p-7 sm:p-9 rounded-tr-[3rem] rounded-bl-[3rem] rounded-tl-xl rounded-br-xl bg-[#08261C]/88 border border-[#EAB344]/22 shadow-xl space-y-3"
+            className="p-7 sm:p-9 rounded-tr-[3rem] rounded-bl-[3rem] rounded-tl-xl rounded-br-xl bg-[#21120B]/88 border border-[#EAB344]/22 shadow-xl space-y-3"
           >
             <div className="flex items-baseline gap-4">
               <span className="font-display italic text-3xl font-semibold text-[#F5C451] tabular-nums">
                 {sec.num}
               </span>
-              <h2 className="text-2xl font-semibold text-[#FDF9EE]">{sec.title}</h2>
+              <h2 className="text-2xl font-semibold text-[#FDF6E9]">{sec.title}</h2>
             </div>
-            <p className="text-sm sm:text-base leading-relaxed text-[#D8D3C2]">
+            <p className="text-sm sm:text-base leading-relaxed text-[#E6D7C3]">
               {sec.body}
             </p>
           </article>
         ))}
 
-        <div className="p-7 rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-xl rounded-bl-xl bg-[#08281D]/90 border border-[#EAB344]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="p-7 rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-xl rounded-bl-xl bg-[#21120B]/90 border border-[#EAB344]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
-            <p className="text-sm font-semibold text-[#FDF9EE]">
+            <p className="text-sm font-semibold text-[#FDF6E9]">
               Questions About Our Privacy Practices?
             </p>
-            <p className="text-xs text-[#A8A292]">
+            <p className="text-xs text-[#C7B198]">
               Reach our Guest Care &amp; Privacy Desk via Contact Us or WhatsApp{' '}
               {WHATSAPP_DISPLAY}.
             </p>
@@ -1784,7 +1784,7 @@ export function PrivacyPage({ onNavigate }: { onNavigate: (page: PageId) => void
           <button
             type="button"
             onClick={() => onNavigate('contact')}
-            className="px-5 py-2.5 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-xs font-semibold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+            className="px-5 py-2.5 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-semibold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
           >
             Open Contact Us Page
           </button>

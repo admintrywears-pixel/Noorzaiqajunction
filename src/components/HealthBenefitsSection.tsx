@@ -32,7 +32,7 @@ export function HealthBenefitsSection({
       aria-label="Noor Zaiqa Junction Purity & Hygiene Standards"
       className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-14 sm:py-20"
     >
-      <div className="rounded-tl-[3.75rem] rounded-br-[3.75rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/92 border border-[#EAB344]/35 p-7 sm:p-11 shadow-2xl space-y-10">
+      <div className="rounded-tl-[3.75rem] rounded-br-[3.75rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/92 border border-[#EAB344]/35 p-7 sm:p-11 shadow-2xl space-y-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="space-y-3 max-w-3xl">
             <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#F5C451] flex flex-wrap items-center gap-2">
@@ -45,7 +45,7 @@ export function HealthBenefitsSection({
               </span>
             </p>
             <h2
-              className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight text-[#FDF9EE]"
+              className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight text-[#FDF6E9]"
               style={{ textWrap: 'balance' }}
             >
               Why Classic{' '}
@@ -55,7 +55,7 @@ export function HealthBenefitsSection({
             <p lang="ur" className="font-urdu text-lg sm:text-2xl text-[#EAB344]">
               صاف ستھرا تازہ آئل، خالص گھریلو مصالحے اور روزانہ کی تازہ تیاری آپ کی صحت کے لیے بہترین کیوں ہے؟
             </p>
-            <p className="text-sm sm:text-base leading-relaxed text-[#D8D3C2]">
+            <p className="text-sm sm:text-base leading-relaxed text-[#E6D7C3]">
               We cook real Pakistani masala dishes—Achaari, Biryani, Qorma, Aalu Qeema,
               Beef &amp; Chicken Shami Kabab, Daal Chawal, and Zarda—using clean fresh
               single-use oil, pure spices, and zero commercial preservatives.
@@ -66,7 +66,7 @@ export function HealthBenefitsSection({
             <button
               type="button"
               onClick={() => onNavigate('health')}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-xs font-bold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer self-start lg:self-end shadow-md"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-bold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer self-start lg:self-end shadow-md"
             >
               <span className="inline-flex items-center gap-1.5">
                 <span>Kitchen Purity Standards ·</span>
@@ -87,7 +87,7 @@ export function HealthBenefitsSection({
             return (
               <article
                 key={benefit.id}
-                className="rounded-tl-[2.25rem] rounded-br-[2.25rem] rounded-tr-lg rounded-bl-lg bg-[#0B2E22]/92 border border-[#EAB344]/25 p-6 flex flex-col justify-between space-y-4 hover:border-[#F5C451]/65 transition-colors"
+                className="rounded-tl-[2.25rem] rounded-br-[2.25rem] rounded-tr-lg rounded-bl-lg bg-[#2E1910]/92 border border-[#EAB344]/25 p-6 flex flex-col justify-between space-y-4 hover:border-[#F5C451]/65 transition-colors"
               >
                 <div className="space-y-2.5">
                   <div className="flex items-baseline justify-between gap-3">
@@ -100,7 +100,7 @@ export function HealthBenefitsSection({
                     </span>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-semibold leading-snug text-[#FDF9EE]">
+                  <h3 className="text-lg sm:text-xl font-semibold leading-snug text-[#FDF6E9]">
                     {benefit.title}
                   </h3>
                   {urduItem && (
@@ -109,13 +109,13 @@ export function HealthBenefitsSection({
                     </p>
                   )}
 
-                  <p className="text-sm leading-relaxed text-[#D8D3C2]">
+                  <p className="text-sm leading-relaxed text-[#E6D7C3]">
                     {benefit.summary}
                   </p>
                   {urduItem && (
                     <p
                       lang="ur"
-                      className="font-urdu-body text-xs sm:text-sm text-[#C4BFB0]"
+                      className="font-urdu-body text-xs sm:text-sm text-[#C7B198]"
                     >
                       {urduItem.summary}
                     </p>
@@ -123,7 +123,7 @@ export function HealthBenefitsSection({
                 </div>
 
                 {!compact && (
-                  <p className="pt-3 border-t border-[#EAB344]/15 text-xs text-[#B2C1B7]">
+                  <p className="pt-3 border-t border-[#EAB344]/15 text-xs text-[#C7B198]">
                     {benefit.scienceNote}
                   </p>
                 )}

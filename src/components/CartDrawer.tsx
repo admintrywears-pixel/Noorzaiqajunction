@@ -118,20 +118,20 @@ export function CartDrawer({
       aria-modal="true"
       aria-label="Order Bag"
     >
-      <div className="w-full max-w-md h-full bg-[#FDF9EE] text-[#072118] flex flex-col shadow-2xl">
-        <div className="px-5 py-4 border-b border-[#D4A64A]/30 flex items-center justify-between bg-[#08281D] text-[#FDF9EE]">
+      <div className="w-full max-w-md h-full bg-[#FDF6E9] text-[#140B07] flex flex-col shadow-2xl">
+        <div className="px-5 py-4 border-b border-[#D4A64A]/30 flex items-center justify-between bg-[#21120B] text-[#FDF6E9]">
           <div>
             <h2 className="text-lg font-semibold text-[#F5C451]">
-              Order Bag · <span lang="ur" className="font-urdu-inline text-base text-[#FDF9EE]">آرڈر بیگ</span>
+              Order Bag · <span lang="ur" className="font-urdu-inline text-base text-[#FDF6E9]">آرڈر بیگ</span>
             </h2>
-            <p className="text-xs text-[#D7D2BE]">
+            <p className="text-xs text-[#E6D7C3]">
               Noor Zaiqa Junction · WhatsApp {WHATSAPP_DISPLAY}
             </p>
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="w-9 h-9 rounded-lg border border-[#EAB344]/35 flex items-center justify-center text-[#FDF9EE] hover:bg-[#0D3528] cursor-pointer"
+            className="w-9 h-9 rounded-lg border border-[#EAB344]/35 flex items-center justify-center text-[#FDF6E9] hover:bg-[#2E1910] cursor-pointer"
             aria-label="Close Order Bag"
           >
             <X className="w-4 h-4" />
@@ -141,21 +141,21 @@ export function CartDrawer({
         <div className="flex-1 overflow-y-auto p-5 space-y-5">
           {receipt ? (
             <div className="p-5 rounded-2xl bg-white border border-[#D4A64A]/30 space-y-4">
-              <div className="flex items-center gap-3 text-[#0A3525]">
+              <div className="flex items-center gap-3 text-[#21120B]">
                 <CheckCircle2 className="w-6 h-6 text-[#D4A23E] shrink-0" />
                 <div>
                   <p className="text-xs font-mono uppercase tracking-wider text-[#9E7522]">
                     Order Confirmed
                   </p>
-                  <h3 className="text-xl font-semibold text-[#072118]">
+                  <h3 className="text-xl font-semibold text-[#140B07]">
                     {receipt.orderId}
                   </h3>
                 </div>
               </div>
 
-              <p className="text-sm text-[#2E4D3E] leading-relaxed">
+              <p className="text-sm text-[#5E4030] leading-relaxed">
                 Thank you,{' '}
-                <span className="font-semibold text-[#072118]">
+                <span className="font-semibold text-[#140B07]">
                   {receipt.customerName}
                 </span>
                 . Your fresh Noor Zaiqa Junction order for{' '}
@@ -163,13 +163,13 @@ export function CartDrawer({
                 send to WhatsApp <span className="font-mono">{WHATSAPP_DISPLAY}</span>.
               </p>
 
-              <div className="pt-3 border-t border-[#072118]/10 flex items-center justify-between text-sm">
-                <span className="text-[#4F6859]">
+              <div className="pt-3 border-t border-[#140B07]/10 flex items-center justify-between text-sm">
+                <span className="text-[#7A5742]">
                   {receipt.fulfillment === 'delivery'
                     ? 'Cash on Delivery Total'
                     : 'Pickup Counter Total'}
                 </span>
-                <span className="font-mono font-semibold tabular-nums text-[#072118]">
+                <span className="font-mono font-semibold tabular-nums text-[#140B07]">
                   Rs. {receipt.total.toLocaleString()}
                 </span>
               </div>
@@ -178,7 +178,7 @@ export function CartDrawer({
                 href={receipt.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-[#EAB344] text-[#072118] text-sm font-bold hover:bg-[#F5C451] transition-colors"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-[#EAB344] text-[#140B07] text-sm font-bold hover:bg-[#F5C451] transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Send to WhatsApp ({WHATSAPP_DISPLAY})</span>
@@ -187,17 +187,17 @@ export function CartDrawer({
               <button
                 type="button"
                 onClick={handleReset}
-                className="w-full py-2.5 rounded-lg bg-[#08281D] text-[#FDF9EE] text-sm font-semibold hover:bg-[#0D3528] transition-colors cursor-pointer"
+                className="w-full py-2.5 rounded-lg bg-[#21120B] text-[#FDF6E9] text-sm font-semibold hover:bg-[#2E1910] transition-colors cursor-pointer"
               >
                 Back to Kitchen
               </button>
             </div>
           ) : entries.length === 0 ? (
             <div className="py-14 text-center space-y-4">
-              <p className="text-base font-semibold text-[#072118]">
+              <p className="text-base font-semibold text-[#140B07]">
                 Your order bag is empty
               </p>
-              <p className="text-sm text-[#425B4E]">
+              <p className="text-sm text-[#5E4030]">
                 Add Beef or Chicken Shami Kabab, Chicken Achaari, Biryani, Qorma, Aalu
                 Qeema, Zarda, Chowmien, or Daal Chawal + Kabab—or tell us any custom
                 dish you want cooked on order.
@@ -208,7 +208,7 @@ export function CartDrawer({
                   onClose();
                   onOpenOrdersPage();
                 }}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#08281D] text-[#F5C451] text-xs font-semibold hover:bg-[#0D3528] cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#21120B] text-[#F5C451] text-xs font-semibold hover:bg-[#2E1910] cursor-pointer"
               >
                 <span>Open Full Orders Page</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -222,7 +222,7 @@ export function CartDrawer({
                   onClose();
                   onOpenOrdersPage();
                 }}
-                className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl bg-[#F2E7C9] text-[#072118] text-xs font-semibold hover:bg-[#EADBA9] transition-colors cursor-pointer border border-[#D4A64A]/30"
+                className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl bg-[#F3E6D2] text-[#140B07] text-xs font-semibold hover:bg-[#E8D4B4] transition-colors cursor-pointer border border-[#D4A64A]/30"
               >
                 <span>Open Full Orders &amp; Attached Photo Form</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -241,10 +241,10 @@ export function CartDrawer({
                       className="w-12 h-12 rounded-lg object-cover shrink-0 border border-[#D4A64A]/25"
                     />
                     <div className="space-y-0.5 flex-1 min-w-0">
-                      <p className="text-sm font-semibold text-[#072118] truncate">
+                      <p className="text-sm font-semibold text-[#140B07] truncate">
                         {item.name}
                       </p>
-                      <p className="text-xs text-[#4F6859] font-mono tabular-nums">
+                      <p className="text-xs text-[#7A5742] font-mono tabular-nums">
                         Rs. {(item.pricePkr * quantity).toLocaleString()} · {item.spice}
                       </p>
                     </div>
@@ -252,7 +252,7 @@ export function CartDrawer({
                       <button
                         type="button"
                         onClick={() => onUpdateQty(item.id, -1)}
-                        className="w-7 h-7 rounded-md bg-[#F2E7C9] text-[#072118] flex items-center justify-center hover:bg-[#EADBA9] cursor-pointer"
+                        className="w-7 h-7 rounded-md bg-[#F3E6D2] text-[#140B07] flex items-center justify-center hover:bg-[#E8D4B4] cursor-pointer"
                         aria-label={`Decrease ${item.name} quantity`}
                       >
                         <Minus className="w-3.5 h-3.5" />
@@ -263,7 +263,7 @@ export function CartDrawer({
                       <button
                         type="button"
                         onClick={() => onUpdateQty(item.id, 1)}
-                        className="w-7 h-7 rounded-md bg-[#F2E7C9] text-[#072118] flex items-center justify-center hover:bg-[#EADBA9] cursor-pointer"
+                        className="w-7 h-7 rounded-md bg-[#F3E6D2] text-[#140B07] flex items-center justify-center hover:bg-[#E8D4B4] cursor-pointer"
                         aria-label={`Increase ${item.name} quantity`}
                       >
                         <Plus className="w-3.5 h-3.5" />
@@ -271,7 +271,7 @@ export function CartDrawer({
                       <button
                         type="button"
                         onClick={() => onRemoveItem(item.id)}
-                        className="w-7 h-7 rounded-md text-[#855E14] hover:bg-[#F2E7C9] flex items-center justify-center cursor-pointer"
+                        className="w-7 h-7 rounded-md text-[#855E14] hover:bg-[#F3E6D2] flex items-center justify-center cursor-pointer"
                         aria-label={`Remove ${item.name}`}
                       >
                         <Trash2 className="w-3.5 h-3.5" />
@@ -282,14 +282,14 @@ export function CartDrawer({
               </div>
 
               <div className="space-y-3 pt-2 border-t border-[#D4A64A]/25">
-                <div className="grid grid-cols-2 gap-1 p-1 rounded-lg bg-[#F2E7C9]">
+                <div className="grid grid-cols-2 gap-1 p-1 rounded-lg bg-[#F3E6D2]">
                   <button
                     type="button"
                     onClick={() => setFulfillment('delivery')}
                     className={`py-2 rounded-md text-xs font-semibold transition-colors cursor-pointer ${
                       fulfillment === 'delivery'
-                        ? 'bg-[#08281D] text-[#F5C451]'
-                        : 'text-[#2E4D3E] hover:text-[#072118]'
+                        ? 'bg-[#21120B] text-[#F5C451]'
+                        : 'text-[#5E4030] hover:text-[#140B07]'
                     }`}
                   >
                     Home Delivery (COD)
@@ -299,8 +299,8 @@ export function CartDrawer({
                     onClick={() => setFulfillment('pickup')}
                     className={`py-2 rounded-md text-xs font-semibold transition-colors cursor-pointer ${
                       fulfillment === 'pickup'
-                        ? 'bg-[#08281D] text-[#F5C451]'
-                        : 'text-[#2E4D3E] hover:text-[#072118]'
+                        ? 'bg-[#21120B] text-[#F5C451]'
+                        : 'text-[#5E4030] hover:text-[#140B07]'
                     }`}
                   >
                     Self Pickup
@@ -308,19 +308,19 @@ export function CartDrawer({
                 </div>
 
                 <div className="p-4 rounded-xl bg-white border border-[#D4A64A]/30 space-y-2 text-sm">
-                  <div className="flex justify-between text-[#4F6859]">
+                  <div className="flex justify-between text-[#7A5742]">
                     <span>Subtotal</span>
                     <span className="font-mono tabular-nums">
                       Rs. {subtotal.toLocaleString()}
                     </span>
                   </div>
-                  <div className="flex justify-between text-[#4F6859]">
+                  <div className="flex justify-between text-[#7A5742]">
                     <span>Delivery (Free over Rs. 2,500)</span>
                     <span className="font-mono tabular-nums">
                       {deliveryFee === 0 ? 'Free' : `Rs. ${deliveryFee}`}
                     </span>
                   </div>
-                  <div className="pt-2 border-t border-[#072118]/10 flex justify-between font-semibold text-[#072118]">
+                  <div className="pt-2 border-t border-[#140B07]/10 flex justify-between font-semibold text-[#140B07]">
                     <span>Total Payable</span>
                     <span className="font-mono tabular-nums">
                       Rs. {total.toLocaleString()}
@@ -330,13 +330,13 @@ export function CartDrawer({
 
                 <form id="checkout-form" onSubmit={handleSubmit} className="space-y-3">
                   <div>
-                    <label className="block text-xs font-medium text-[#2E4D3E] mb-1">
+                    <label className="block text-xs font-medium text-[#5E4030] mb-1">
                       Karachi Delivery Zone
                     </label>
                     <select
                       value={branch}
                       onChange={(e) => setBranch(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg bg-white border border-[#D4A64A]/35 text-sm text-[#072118] focus:outline-none focus:border-[#08281D]"
+                      className="w-full px-3 py-2 rounded-lg bg-white border border-[#D4A64A]/35 text-sm text-[#140B07] focus:outline-none focus:border-[#21120B]"
                     >
                       <option>Karachi Home Delivery</option>
                       <option>Clifton / Defence / Saddar, Karachi</option>
@@ -344,7 +344,7 @@ export function CartDrawer({
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#2E4D3E] mb-1">
+                    <label className="block text-xs font-medium text-[#5E4030] mb-1">
                       Full Name
                     </label>
                     <input
@@ -352,11 +352,11 @@ export function CartDrawer({
                       value={customerName}
                       onChange={(e) => setCustomerName(e.target.value)}
                       placeholder="e.g. Hamza Tariq"
-                      className="w-full px-3 py-2 rounded-lg bg-white border border-[#D4A64A]/35 text-sm text-[#072118] focus:outline-none focus:border-[#08281D]"
+                      className="w-full px-3 py-2 rounded-lg bg-white border border-[#D4A64A]/35 text-sm text-[#140B07] focus:outline-none focus:border-[#21120B]"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#2E4D3E] mb-1">
+                    <label className="block text-xs font-medium text-[#5E4030] mb-1">
                       Mobile Number
                     </label>
                     <input
@@ -364,12 +364,12 @@ export function CartDrawer({
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="03XX-XXXXXXX"
-                      className="w-full px-3 py-2 rounded-lg bg-white border border-[#D4A64A]/35 text-sm text-[#072118] focus:outline-none focus:border-[#08281D]"
+                      className="w-full px-3 py-2 rounded-lg bg-white border border-[#D4A64A]/35 text-sm text-[#140B07] focus:outline-none focus:border-[#21120B]"
                     />
                   </div>
                   {fulfillment === 'delivery' && (
                     <div>
-                      <label className="block text-xs font-medium text-[#2E4D3E] mb-1">
+                      <label className="block text-xs font-medium text-[#5E4030] mb-1">
                         Delivery Address
                       </label>
                       <input
@@ -377,7 +377,7 @@ export function CartDrawer({
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
                         placeholder="House, Street & Sector"
-                        className="w-full px-3 py-2 rounded-lg bg-white border border-[#D4A64A]/35 text-sm text-[#072118] focus:outline-none focus:border-[#08281D]"
+                        className="w-full px-3 py-2 rounded-lg bg-white border border-[#D4A64A]/35 text-sm text-[#140B07] focus:outline-none focus:border-[#21120B]"
                       />
                     </div>
                   )}
@@ -401,7 +401,7 @@ export function CartDrawer({
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={confirmOrder}
-                className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-[#08281D] text-[#F5C451] text-sm font-bold hover:bg-[#0D3528] transition-colors cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-[#21120B] text-[#F5C451] text-sm font-bold hover:bg-[#2E1910] transition-colors cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4 text-[#EAB344]" />
                 <span>
@@ -412,7 +412,7 @@ export function CartDrawer({
               <button
                 type="submit"
                 form="checkout-form"
-                className="w-full py-3 rounded-lg bg-[#08281D] text-[#F5C451] text-sm font-bold hover:bg-[#0D3528] transition-colors cursor-pointer"
+                className="w-full py-3 rounded-lg bg-[#21120B] text-[#F5C451] text-sm font-bold hover:bg-[#2E1910] transition-colors cursor-pointer"
               >
                 Confirm &amp; Send on WhatsApp · Rs. {total.toLocaleString()}
               </button>

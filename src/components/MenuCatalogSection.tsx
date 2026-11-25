@@ -82,21 +82,21 @@ export function MenuCatalogSection({
   };
 
   return (
-    <div className="relative z-10 text-[#FDF9EE]">
+    <div className="relative z-10 text-[#FDF6E9]">
       <section
         id="our-promise"
         className="py-16"
         aria-label="Our Homemade Kitchen Promise"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/92 border border-[#EAB344]/35 p-8 sm:p-12 shadow-2xl">
+          <div className="rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/92 border border-[#EAB344]/35 p-8 sm:p-12 shadow-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10">
               <div className="lg:col-span-7 space-y-3">
                 <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#F5C451]">
                   Noor Zaiqa Junction · Ghar ka Zaiqa, Har Plate Mein
                 </p>
                 <h2
-                  className="text-3xl sm:text-4xl lg:text-[2.65rem] font-semibold tracking-tight leading-tight text-[#FDF9EE]"
+                  className="text-3xl sm:text-4xl lg:text-[2.65rem] font-semibold tracking-tight leading-tight text-[#FDF6E9]"
                   style={{ textWrap: 'balance' }}
                 >
                   Homestyle Masala Classics &amp; Sweets,{' '}
@@ -104,7 +104,7 @@ export function MenuCatalogSection({
                   On Order.
                 </h2>
               </div>
-              <p className="lg:col-span-5 text-sm sm:text-base leading-relaxed text-[#D8D3C2]">
+              <p className="lg:col-span-5 text-sm sm:text-base leading-relaxed text-[#E6D7C3]">
                 Beef &amp; Chicken Shami Kabab, Chicken Achaari, Chicken Biryani, Chicken
                 Qorma, Aalu Qeema, Zarda, Mutanjan, Chicken Chowmien, Daal Chawal + Kabab,
                 Roti &amp; Aalu Paratha. In dishes ke ilawa bhi jo aapko banwana ho, wo
@@ -137,10 +137,10 @@ export function MenuCatalogSection({
                 <p className="text-3xl sm:text-4xl font-display italic font-semibold tabular-nums text-[#F5C451]">
                   Rs. 20+
                 </p>
-                <p className="text-sm font-semibold text-[#FDF9EE]">
+                <p className="text-sm font-semibold text-[#FDF6E9]">
                   Honest Family Rates
                 </p>
-                <p className="text-xs text-[#B2C1B7]">
+                <p className="text-xs text-[#C7B198]">
                   Roti Rs. 20, Parathas Rs. 120, Boxes Rs. 300 &amp; 1 KG trays
                 </p>
               </div>
@@ -148,10 +148,10 @@ export function MenuCatalogSection({
                 <p className="text-3xl sm:text-4xl font-display italic font-semibold tabular-nums text-[#F5C451]">
                   100%
                 </p>
-                <p className="text-sm font-semibold text-[#FDF9EE]">
+                <p className="text-sm font-semibold text-[#FDF6E9]">
                   Ghar Ka Masala &amp; Taste
                 </p>
-                <p className="text-xs text-[#B2C1B7]">
+                <p className="text-xs text-[#C7B198]">
                   Traditional spices, clean cooking oil &amp; zero preservatives
                 </p>
               </div>
@@ -159,8 +159,8 @@ export function MenuCatalogSection({
                 <p className="text-3xl sm:text-4xl font-display italic font-semibold tabular-nums text-[#F5C451]">
                   Custom
                 </p>
-                <p className="text-sm font-semibold text-[#FDF9EE]">Anything on Order</p>
-                <p className="text-xs text-[#B2C1B7]">
+                <p className="text-sm font-semibold text-[#FDF6E9]">Anything on Order</p>
+                <p className="text-xs text-[#C7B198]">
                   In dishes ke ilawa bhi har item order par tayyar
                 </p>
               </div>
@@ -168,10 +168,10 @@ export function MenuCatalogSection({
                 <p className="text-3xl sm:text-4xl font-display italic font-semibold tabular-nums text-[#F5C451]">
                   {MENU_ITEMS.length}
                 </p>
-                <p className="text-sm font-semibold text-[#FDF9EE]">
+                <p className="text-sm font-semibold text-[#FDF6E9]">
                   Special Menu Dishes
                 </p>
-                <p className="text-xs text-[#B2C1B7]">
+                <p className="text-xs text-[#C7B198]">
                   Kababs, Curries, Biryani, Zarda, Chowmien &amp; Breads
                 </p>
               </div>
@@ -181,38 +181,38 @@ export function MenuCatalogSection({
       </section>
 
       <section id="menu" className="max-w-7xl mx-auto px-6 lg:px-10 py-14 sm:py-20 space-y-12">
-        <div className="rounded-tr-[3.5rem] rounded-bl-[3.5rem] rounded-tl-2xl rounded-br-2xl bg-[#08261C]/92 border border-[#EAB344]/35 p-7 sm:p-11 shadow-2xl">
+        <div className="rounded-tr-[3.5rem] rounded-bl-[3.5rem] rounded-tl-2xl rounded-br-2xl bg-[#21120B]/92 border border-[#EAB344]/35 p-7 sm:p-11 shadow-2xl">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
             <div className="space-y-2 max-w-2xl">
               <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#F5C451]">
                 Noor Zaiqa Junction Special Menu · {filteredItems.length} Dishes
               </p>
-              <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-[#FDF9EE]">
+              <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-[#FDF6E9]">
                 Ghar ka Zaiqa, Har Plate Mein
               </h2>
               <p lang="ur" className="font-urdu text-lg sm:text-2xl text-[#EAB344]">
                 بیف و چکن شامی کباب، اچاری، بریانی، قورمہ، آلو قیمہ، زردہ، متنجن، چاؤمین و دال چاول
               </p>
-              <p className="text-xs sm:text-sm text-[#D8D3C2]">
+              <p className="text-xs sm:text-sm text-[#E6D7C3]">
                 In Dishes Ke Ilawa Bhi Jo Aapko Banwana Ho, Wo Order Par Ban Jata Hai · WhatsApp 0371-2442688
               </p>
             </div>
 
             <div className="relative w-full lg:w-80 shrink-0">
-              <Search className="w-4 h-4 text-[#B2C1B7] absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <Search className="w-4 h-4 text-[#C7B198] absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 type="search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search shami, biryani, qorma, zarda..."
                 aria-label="Search menu items"
-                className="w-full pl-11 pr-4 py-3 rounded-tl-xl rounded-br-xl rounded-tr-md rounded-bl-md bg-[#0B3024] border border-[#EAB344]/25 text-sm text-[#FDF9EE] placeholder:text-[#8CA396] focus:outline-none focus:border-[#EAB344]"
+                className="w-full pl-11 pr-4 py-3 rounded-tl-xl rounded-br-xl rounded-tr-md rounded-bl-md bg-[#2E1910] border border-[#EAB344]/25 text-sm text-[#FDF6E9] placeholder:text-[#9E8468] focus:outline-none focus:border-[#EAB344]"
               />
             </div>
           </div>
 
           <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center gap-1.5 p-1.5 bg-[#061C14] rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md border border-[#EAB344]/20">
+            <div className="flex flex-wrap items-center gap-1.5 p-1.5 bg-[#0F0705] rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md border border-[#EAB344]/20">
               {MENU_CATEGORIES.map((cat) => {
                 const isActive = activeCategory === cat;
                 const count =
@@ -227,8 +227,8 @@ export function MenuCatalogSection({
                     onClick={() => setCategory(cat)}
                     className={`px-3.5 py-2 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm text-xs font-semibold transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                       isActive
-                        ? 'bg-[#EAB344] text-[#072118]'
-                        : 'text-[#D8D3C2] hover:text-[#FDF9EE]'
+                        ? 'bg-[#EAB344] text-[#140B07]'
+                        : 'text-[#E6D7C3] hover:text-[#FDF6E9]'
                     }`}
                   >
                     <span className="inline-flex items-center gap-1.5">
@@ -251,8 +251,8 @@ export function MenuCatalogSection({
                   onClick={() => setSpiceFilter(level)}
                   className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                     spiceFilter === level
-                      ? 'bg-[#D4A23E] text-[#072118] font-bold border-[#F5C451]'
-                      : 'bg-[#0B3024] text-[#D8D3C2] border-[#EAB344]/20 hover:border-[#EAB344]'
+                      ? 'bg-[#D4A23E] text-[#140B07] font-bold border-[#F5C451]'
+                      : 'bg-[#2E1910] text-[#E6D7C3] border-[#EAB344]/20 hover:border-[#EAB344]'
                   }`}
                 >
                   {level !== 'All Flavors' && <Flame className="w-3.5 h-3.5" />}
@@ -269,8 +269,8 @@ export function MenuCatalogSection({
         </div>
 
         {spotlight && (
-          <article className="rounded-tl-[3.75rem] rounded-br-[3.75rem] rounded-tr-2xl rounded-bl-2xl bg-[#08261C]/95 border border-[#EAB344]/45 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 items-stretch">
-            <div className="lg:col-span-6 relative min-h-[270px] sm:min-h-[340px] bg-[#0B3024]">
+          <article className="rounded-tl-[3.75rem] rounded-br-[3.75rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/95 border border-[#EAB344]/45 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 items-stretch">
+            <div className="lg:col-span-6 relative min-h-[270px] sm:min-h-[340px] bg-[#2E1910]">
               <img
                 src={spotlight.image}
                 alt={spotlight.name}
@@ -278,7 +278,7 @@ export function MenuCatalogSection({
                 className="w-full h-full lg:h-full object-cover"
               />
               <div
-                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#061D15]/80 via-transparent to-transparent"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#120906]/80 via-transparent to-transparent"
                 aria-hidden="true"
               />
               <span className="absolute bottom-4 left-5 text-xs font-mono uppercase tracking-[0.16em] text-[#F5C451]">
@@ -291,7 +291,7 @@ export function MenuCatalogSection({
                 <div className="flex flex-wrap items-center gap-3 text-xs text-[#F5C451]">
                   <span className="font-medium">{spotlight.urduTag}</span>
                   <span aria-hidden="true">·</span>
-                  <span className="inline-flex items-center gap-1 font-mono tabular-nums text-[#D8D3C2]">
+                  <span className="inline-flex items-center gap-1 font-mono tabular-nums text-[#E6D7C3]">
                     <Clock className="w-3.5 h-3.5 text-[#EAB344]" />
                     {spotlight.prepTime}
                   </span>
@@ -312,7 +312,7 @@ export function MenuCatalogSection({
                 </div>
 
                 <h3
-                  className="text-2xl sm:text-4xl font-semibold leading-tight text-[#FDF9EE]"
+                  className="text-2xl sm:text-4xl font-semibold leading-tight text-[#FDF6E9]"
                   style={{ textWrap: 'balance' }}
                 >
                   {spotlight.name}
@@ -328,12 +328,12 @@ export function MenuCatalogSection({
                   Kitchen Standard: {getHealthFocus(spotlight)}
                 </p>
 
-                <p className="text-sm sm:text-base leading-relaxed text-[#D8D3C2]">
+                <p className="text-sm sm:text-base leading-relaxed text-[#E6D7C3]">
                   {spotlight.description}
                 </p>
 
                 {URDU_DISHES[spotlight.id] && (
-                  <p lang="ur" className="font-urdu-body text-sm text-[#C4BFB0]">
+                  <p lang="ur" className="font-urdu-body text-sm text-[#C7B198]">
                     {URDU_DISHES[spotlight.id].tagline}
                   </p>
                 )}
@@ -341,7 +341,7 @@ export function MenuCatalogSection({
 
               <div className="pt-5 border-t border-[#EAB344]/15 flex flex-wrap items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs text-[#B2C1B7]">Special Menu Rate</p>
+                  <p className="text-xs text-[#C7B198]">Special Menu Rate</p>
                   <p className="text-2xl sm:text-3xl font-mono font-semibold tabular-nums text-[#F5C451]">
                     Rs. {spotlight.pricePkr.toLocaleString()}
                   </p>
@@ -352,7 +352,7 @@ export function MenuCatalogSection({
                     href={buildSingleDishWhatsAppUrl(spotlight)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-4 py-3 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/45 bg-[#0B3024] text-xs font-semibold text-[#F5C451] hover:border-[#F5C451] transition-colors whitespace-nowrap shrink-0"
+                    className="inline-flex items-center gap-1.5 px-4 py-3 rounded-tr-xl rounded-bl-xl rounded-tl-sm rounded-br-sm border border-[#EAB344]/45 bg-[#2E1910] text-xs font-semibold text-[#F5C451] hover:border-[#F5C451] transition-colors whitespace-nowrap shrink-0"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
                     <span>Order on WhatsApp</span>
@@ -361,7 +361,7 @@ export function MenuCatalogSection({
                   <button
                     type="button"
                     onClick={() => handleAdd(spotlight)}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] text-xs font-bold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-bold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
                   >
                     <Plus className="w-4 h-4" />
                     <span>
@@ -377,8 +377,8 @@ export function MenuCatalogSection({
         )}
 
         {filteredItems.length === 0 ? (
-          <div className="py-16 text-center rounded-tl-[3rem] rounded-br-[3rem] border border-[#EAB344]/25 bg-[#08261C]/90 space-y-3">
-            <p className="text-base font-semibold text-[#FDF9EE]">
+          <div className="py-16 text-center rounded-tl-[3rem] rounded-br-[3rem] border border-[#EAB344]/25 bg-[#21120B]/90 space-y-3">
+            <p className="text-base font-semibold text-[#FDF6E9]">
               No dishes match your current filter.
             </p>
             <button
@@ -388,7 +388,7 @@ export function MenuCatalogSection({
                 setSpiceFilter('All Flavors');
                 setSearchQuery('');
               }}
-              className="px-4 py-2 rounded-lg bg-[#EAB344] text-[#072118] text-xs font-bold hover:bg-[#F5C451] transition-colors cursor-pointer"
+              className="px-4 py-2 rounded-lg bg-[#EAB344] text-[#140B07] text-xs font-bold hover:bg-[#F5C451] transition-colors cursor-pointer"
             >
               Reset Menu Filters
             </button>
@@ -404,11 +404,11 @@ export function MenuCatalogSection({
               return (
                 <article
                   key={item.id}
-                  className="group flex flex-col rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-xl rounded-bl-xl bg-[#08261C]/95 border border-[#EAB344]/30 p-4 transition-all duration-200 hover:-translate-y-1 hover:border-[#F5C451]/75 shadow-2xl"
+                  className="group flex flex-col rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-xl rounded-bl-xl bg-[#21120B]/95 border border-[#EAB344]/30 p-4 transition-all duration-200 hover:-translate-y-1 hover:border-[#F5C451]/75 shadow-2xl"
                 >
-                  <div className="relative aspect-[4/3] w-full bg-[#0C3527] overflow-hidden rounded-tl-[2.35rem] rounded-br-[2.35rem] rounded-tr-lg rounded-bl-lg">
+                  <div className="relative aspect-[4/3] w-full bg-[#2E1910] overflow-hidden rounded-tl-[2.35rem] rounded-br-[2.35rem] rounded-tr-lg rounded-bl-lg">
                     {imgFailed ? (
-                      <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#0B2E22] to-[#134736] text-[#FDF9EE]">
+                      <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#2E1910] to-[#452518] text-[#FDF6E9]">
                         <span className="text-sm font-display font-semibold">
                           {item.name}
                         </span>
@@ -428,10 +428,10 @@ export function MenuCatalogSection({
                       />
                     )}
                     <div
-                      className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#061E16]/85 to-transparent"
+                      className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#120906]/85 to-transparent"
                       aria-hidden="true"
                     />
-                    <div className="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-[11px] font-medium text-[#EFE8D5]">
+                    <div className="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-[11px] font-medium text-[#E6D7C3]">
                       <span>{item.category}</span>
                       <span className="font-mono tabular-nums text-[#F5C451]">
                         {item.prepTime}
@@ -441,7 +441,7 @@ export function MenuCatalogSection({
 
                   <div className="flex-1 flex flex-col justify-between px-2 pt-4 pb-1 space-y-4">
                     <div className="space-y-2.5">
-                      <div className="flex items-center justify-between gap-2 text-xs text-[#B2C1B7]">
+                      <div className="flex items-center justify-between gap-2 text-xs text-[#C7B198]">
                         <span className="truncate">{item.urduTag}</span>
                         <span className="inline-flex items-center gap-1 shrink-0 text-[#F5C451] font-medium">
                           {Array.from({ length: 3 }).map((_, idx) => (
@@ -456,7 +456,7 @@ export function MenuCatalogSection({
                         </span>
                       </div>
 
-                      <h3 className="text-xl font-semibold leading-snug text-[#FDF9EE]">
+                      <h3 className="text-xl font-semibold leading-snug text-[#FDF6E9]">
                         {item.name}
                       </h3>
 
@@ -470,12 +470,12 @@ export function MenuCatalogSection({
                         {getHealthFocus(item)}
                       </p>
 
-                      <p className="text-sm leading-relaxed text-[#D8D3C2]">
+                      <p className="text-sm leading-relaxed text-[#E6D7C3]">
                         {item.description}
                       </p>
 
                       {URDU_DISHES[item.id] && (
-                        <p lang="ur" className="font-urdu-body text-xs text-[#C4BFB0]">
+                        <p lang="ur" className="font-urdu-body text-xs text-[#C7B198]">
                           {URDU_DISHES[item.id].tagline}
                         </p>
                       )}
@@ -487,7 +487,7 @@ export function MenuCatalogSection({
                       </p>
 
                       {qty > 0 && onUpdateQty ? (
-                        <div className="inline-flex items-center rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#072118] overflow-hidden">
+                        <div className="inline-flex items-center rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] overflow-hidden">
                           <button
                             type="button"
                             onClick={() => onUpdateQty(item.id, -1)}
@@ -514,8 +514,8 @@ export function MenuCatalogSection({
                           onClick={() => handleAdd(item)}
                           className={`inline-flex items-center gap-1.5 px-4 py-2.5 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm text-xs font-bold transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                             isJustAdded
-                              ? 'bg-[#D4A23E] text-[#072118]'
-                              : 'bg-[#EAB344] text-[#072118] hover:bg-[#F5C451]'
+                              ? 'bg-[#D4A23E] text-[#140B07]'
+                              : 'bg-[#EAB344] text-[#140B07] hover:bg-[#F5C451]'
                           }`}
                         >
                           {isJustAdded ? (
