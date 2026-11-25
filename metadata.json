@@ -1,0 +1,6 @@
+{
+  "name": "Noor Zaiqa Junction | نور ذائقہ جنکشن — Ghar ka Zaiqa, Har Plate Mein",
+  "description": "Noor Zaiqa Junction (نور ذائقہ جنکشن) — Homemade fresh & frozen Pakistani kitchen in Karachi serving Beef & Chicken Shami Kabab, Chicken Achaari, Chicken Biryani, Chicken Qorma, Aalu Qeema, Zarda, Mutanjan, Chicken Chowmien, Daal Chawal + Kabab, Roti & Aalu Ka Paratha.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

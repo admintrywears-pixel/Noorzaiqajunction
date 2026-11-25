@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-urdu: "Jameel Noori Nastaleeq", "Jameel Noori Nastaliq", "Noto Nastaliq Urdu", serif;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-urdu {
+  font-family: var(--font-urdu);
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: 2.05;
+  letter-spacing: 0 !important;
+}
+
+.font-urdu-body {
+  font-family: var(--font-urdu);
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: 1.9;
+  letter-spacing: 0 !important;
+}
+
+.font-urdu-inline {
+  font-family: var(--font-urdu);
+  vertical-align: middle;
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: 1.55;
+  display: inline-block;
+  letter-spacing: 0 !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #072118;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #174937;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #eab344;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
