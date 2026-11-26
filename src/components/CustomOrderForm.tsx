@@ -8,7 +8,7 @@ import {
   Trash2,
   Truck,
 } from 'lucide-react';
-import { useState, type FormEvent } from 'react';
+import { useMemo, useState, type FormEvent } from 'react';
 import { WHATSAPP_DISPLAY, WHATSAPP_NUMBER } from '../data/menuData';
 
 interface CustomDishRow {
@@ -98,6 +98,91 @@ export function CustomOrderForm({ variant = 'page' }: CustomOrderFormProps) {
     );
   };
 
+  const validDishes = useMemo(
+    () => dishes.filter((d) => d.name.trim().length > 0),
+    [dishes]
+  );
+
+  const isReady =
+    guestName.trim().length > 0 &&
+    phone.trim().length > 0 &&
+    (fulfillment === 'pickup' || address.trim().length > 0) &&
+    date.trim().length > 0 &&
+    (slot !== 'Custom Time' || customTime.trim().length > 0) &&
+    validDishes.length > 0;
+
+  const liveOrderId = useMemo(
+    () => `ORD-${1000 + ((guestName.length * 137 + validDishes.length * 97) % 8999)}`,
+    [guestName.length, validDishes.length]
+  );
+
+  const liveTimeLabel = useMemo(
+    () => (slot === 'Custom Time' ? `Custom Time (${formatTime12h(customTime)})` : slot),
+    [slot, customTime]
+  );
+
+  const liveFulfillmentLabel =
+    fulfillment === 'delivery' ? 'Home Delivery' : 'Self Pickup';
+
+  const liveWhatsAppUrl = useMemo(() => {
+    const dishLines = validDishes.map(
+      (dish, idx) =>
+        `${idx + 1}. *${dish.name.trim()}* — Qty: ${dish.quantity.trim() || '1 KG'} | Spice: ${dish.spice}`
+    );
+
+    const lines = [
+      '*ZAIQA JUNCTION™ — CUSTOM / DAWAT ORDER*',
+      `Ref: *${liveOrderId}*`,
+      `Order Type: ${orderType}`,
+      `Mode: ${liveFulfillmentLabel}`,
+      `Date & Time: ${date} · ${liveTimeLabel}`,
+      '',
+      `*Requested Dishes (${validDishes.length}):*`,
+      ...dishLines,
+      '',
+      '*Customer Details:*',
+      `Name: ${guestName.trim()}`,
+      `Mobile: ${phone.trim()}`,
+      ...(fulfillment === 'delivery'
+        ? [`Address: ${address.trim()}`]
+        : ['Pickup: Self Pickup from Karachi Kitchen']),
+      ...(notes.trim() ? [`Extra Notes: ${notes.trim()}`] : []),
+      '',
+      'Ghar ka Zaiqa, Har Plate Mein · Sent via Zaiqa Junction Web',
+    ];
+
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      lines.join('\n')
+    )}`;
+  }, [
+    liveOrderId,
+    orderType,
+    liveFulfillmentLabel,
+    date,
+    liveTimeLabel,
+    validDishes,
+    guestName,
+    phone,
+    fulfillment,
+    address,
+    notes,
+  ]);
+
+  const confirmCustomOrder = () => {
+    setErrorMsg('');
+    setConfirmed({
+      id: liveOrderId,
+      name: guestName.trim(),
+      phone: phone.trim(),
+      fulfillmentLabel: liveFulfillmentLabel,
+      address: address.trim(),
+      date,
+      timeLabel: liveTimeLabel,
+      dishes: validDishes,
+      whatsappUrl: liveWhatsAppUrl,
+    });
+  };
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
@@ -121,61 +206,12 @@ export function CustomOrderForm({ variant = 'page' }: CustomOrderFormProps) {
       return;
     }
 
-    const validDishes = dishes.filter((d) => d.name.trim().length > 0);
     if (validDishes.length === 0) {
       setErrorMsg('Please enter at least one dish name you want us to prepare.');
       return;
     }
 
-    setErrorMsg('');
-
-    const id = `ORD-${Math.floor(1000 + Math.random() * 8999)}`;
-    const timeLabel =
-      slot === 'Custom Time' ? `Custom Time (${formatTime12h(customTime)})` : slot;
-    const fulfillmentLabel =
-      fulfillment === 'delivery' ? 'Home Delivery' : 'Self Pickup';
-
-    const dishLines = validDishes.map(
-      (dish, idx) =>
-        `${idx + 1}. *${dish.name.trim()}* — Qty: ${dish.quantity.trim() || '1 KG'} | Spice: ${dish.spice}`
-    );
-
-    const lines = [
-      '*ZAIQA JUNCTION™ — CUSTOM / DAWAT ORDER*',
-      `Ref: *${id}*`,
-      `Order Type: ${orderType}`,
-      `Mode: ${fulfillmentLabel}`,
-      `Date & Time: ${date} · ${timeLabel}`,
-      '',
-      `*Requested Dishes (${validDishes.length}):*`,
-      ...dishLines,
-      '',
-      '*Customer Details:*',
-      `Name: ${guestName.trim()}`,
-      `Mobile: ${phone.trim()}`,
-      ...(fulfillment === 'delivery'
-        ? [`Address: ${address.trim()}`]
-        : ['Pickup: Self Pickup from Karachi Kitchen']),
-      ...(notes.trim() ? [`Extra Notes: ${notes.trim()}`] : []),
-      '',
-      'Ghar ka Zaiqa, Har Plate Mein · Sent via Zaiqa Junction Web',
-    ];
-
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      lines.join('\n')
-    )}`;
-
-    setConfirmed({
-      id,
-      name: guestName.trim(),
-      phone: phone.trim(),
-      fulfillmentLabel,
-      address: address.trim(),
-      date,
-      timeLabel,
-      dishes: validDishes,
-      whatsappUrl,
-    });
+    confirmCustomOrder();
   };
 
   if (confirmed) {
@@ -523,12 +559,26 @@ export function CustomOrderForm({ variant = 'page' }: CustomOrderFormProps) {
         </div>
       )}
 
-      <button
-        type="submit"
-        className="w-full py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-sm font-bold hover:bg-[#F5C451] transition-colors cursor-pointer shadow-lg"
-      >
-        Prepare Custom Order for WhatsApp
-      </button>
+      {isReady ? (
+        <a
+          href={liveWhatsAppUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={confirmCustomOrder}
+          className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-sm font-bold hover:bg-[#F5C451] transition-colors cursor-pointer shadow-lg"
+        >
+          <MessageCircle className="w-4 h-4 shrink-0" />
+          <span>Send Custom Order on WhatsApp ({WHATSAPP_DISPLAY})</span>
+        </a>
+      ) : (
+        <button
+          type="submit"
+          className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-sm font-bold hover:bg-[#F5C451] transition-colors cursor-pointer shadow-lg"
+        >
+          <MessageCircle className="w-4 h-4 shrink-0" />
+          <span>Send Custom Order on WhatsApp ({WHATSAPP_DISPLAY})</span>
+        </button>
+      )}
     </form>
   );
 }
