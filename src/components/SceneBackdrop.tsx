@@ -547,10 +547,10 @@ export function SceneBackdrop({
     const scenes: Record<PageId, ManagedScene> = {
       home: buildHomeScene(anisotropy),
       menu: buildOrbitalRingsScene(0xd4a64a, 0xf5c451, 0xc85a24),
+      products: buildOrbitalRingsScene(0xd96b27, 0xf5c451, 0xeab344),
       health: buildOrbitalRingsScene(0xeab344, 0xd97706, 0xd4a64a),
       orders: buildOrbitalRingsScene(0xf3c969, 0xd96b27, 0xc89b3c),
       story: buildOrbitalRingsScene(0xeab344, 0xb45309, 0xd4a64a),
-      branches: buildOrbitalRingsScene(0xf5c451, 0xd4a64a, 0x9a3412),
       reserve: buildOrbitalRingsScene(0xd4a64a, 0xf5c451, 0xeab344),
       contact: buildOrbitalRingsScene(0xeab344, 0xf3c969, 0xc85a24),
       privacy: buildOrbitalRingsScene(0xd4a64a, 0x9a3412, 0xb45309),

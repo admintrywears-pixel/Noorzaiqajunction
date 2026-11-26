@@ -35,12 +35,10 @@ export function CartDrawer({
   const [customerName, setCustomerName] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
-  const [branch, setBranch] = useState('Karachi Home Delivery');
   const [errorMsg, setErrorMsg] = useState('');
   const [receipt, setReceipt] = useState<{
     orderId: string;
     customerName: string;
-    branch: string;
     fulfillment: 'delivery' | 'pickup';
     total: number;
     whatsappUrl: string;
@@ -59,14 +57,13 @@ export function CartDrawer({
     phone.trim().length > 0 &&
     (fulfillment === 'pickup' || address.trim().length > 0);
 
-  const orderId = useMemo(() => `NZJ-${Math.floor(1000 + (subtotal % 8999))}`, [subtotal]);
+  const orderId = useMemo(() => `ZJ-${Math.floor(1000 + (subtotal % 8999))}`, [subtotal]);
 
   const whatsappUrl = useMemo(
     () =>
       buildOrderWhatsAppUrl({
         orderId,
         fulfillment,
-        branch,
         entries,
         subtotal,
         deliveryFee,
@@ -75,7 +72,7 @@ export function CartDrawer({
         phone: phone.trim(),
         address: address.trim(),
       }),
-    [orderId, fulfillment, branch, entries, subtotal, deliveryFee, total, customerName, phone, address]
+    [orderId, fulfillment, entries, subtotal, deliveryFee, total, customerName, phone, address]
   );
 
   const confirmOrder = () => {
@@ -83,7 +80,6 @@ export function CartDrawer({
     setReceipt({
       orderId,
       customerName: customerName.trim(),
-      branch,
       fulfillment,
       total,
       whatsappUrl,
@@ -118,14 +114,14 @@ export function CartDrawer({
       aria-modal="true"
       aria-label="Order Bag"
     >
-      <div className="w-full max-w-md h-full bg-[#FDF6E9] text-[#140B07] flex flex-col shadow-2xl">
-        <div className="px-5 py-4 border-b border-[#D4A64A]/30 flex items-center justify-between bg-[#21120B] text-[#FDF6E9]">
+      <div className="w-full max-w-md h-[100dvh] bg-[#FDF6E9] text-[#140B07] flex flex-col shadow-2xl">
+        <div className="px-4 sm:px-5 py-3.5 sm:py-4 border-b border-[#D4A64A]/30 flex items-center justify-between bg-[#21120B] text-[#FDF6E9]">
           <div>
             <h2 className="text-lg font-semibold text-[#F5C451]">
               Order Bag · <span lang="ur" className="font-urdu-inline text-base text-[#FDF6E9]">آرڈر بیگ</span>
             </h2>
             <p className="text-xs text-[#E6D7C3]">
-              Noor Zaiqa Junction · WhatsApp {WHATSAPP_DISPLAY}
+              Zaiqa Junction · WhatsApp {WHATSAPP_DISPLAY}
             </p>
           </div>
           <button
@@ -158,9 +154,8 @@ export function CartDrawer({
                 <span className="font-semibold text-[#140B07]">
                   {receipt.customerName}
                 </span>
-                . Your fresh Noor Zaiqa Junction order for{' '}
-                <span className="font-semibold">{receipt.branch}</span> is ready to
-                send to WhatsApp <span className="font-mono">{WHATSAPP_DISPLAY}</span>.
+                . Your fresh Zaiqa Junction order is ready to send to WhatsApp{' '}
+                <span className="font-mono">{WHATSAPP_DISPLAY}</span>.
               </p>
 
               <div className="pt-3 border-t border-[#140B07]/10 flex items-center justify-between text-sm">
@@ -329,20 +324,6 @@ export function CartDrawer({
                 </div>
 
                 <form id="checkout-form" onSubmit={handleSubmit} className="space-y-3">
-                  <div>
-                    <label className="block text-xs font-medium text-[#5E4030] mb-1">
-                      Karachi Delivery Zone
-                    </label>
-                    <select
-                      value={branch}
-                      onChange={(e) => setBranch(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg bg-white border border-[#D4A64A]/35 text-sm text-[#140B07] focus:outline-none focus:border-[#21120B]"
-                    >
-                      <option>Karachi Home Delivery</option>
-                      <option>Clifton / Defence / Saddar, Karachi</option>
-                      <option>Gulshan / Nazimabad / PECHS, Karachi</option>
-                    </select>
-                  </div>
                   <div>
                     <label className="block text-xs font-medium text-[#5E4030] mb-1">
                       Full Name

@@ -1,10 +1,10 @@
 export type PageId =
   | 'home'
   | 'menu'
+  | 'products'
   | 'health'
   | 'orders'
   | 'story'
-  | 'branches'
   | 'reserve'
   | 'contact'
   | 'privacy';
@@ -15,7 +15,31 @@ export type Category =
   | 'Homemade Curries & Biryani'
   | 'Shami Kababs'
   | 'Desserts (Meetha)'
-  | 'Combos, Noodles & Breads';
+  | 'Combos, Noodles & Breads'
+  | 'Packed Pantry';
+
+export type PackedCategory =
+  | 'All Packs'
+  | 'Pastes & Purees'
+  | 'Fried & Frozen'
+  | 'Pickles & Chutneys'
+  | 'Spices & Masalas';
+
+export interface PackedProduct {
+  id: string;
+  name: string;
+  urduName: string;
+  urduTag: string;
+  packSize: string;
+  shelfLife: string;
+  category: Exclude<PackedCategory, 'All Packs'>;
+  pricePkr: number;
+  description: string;
+  urduSummary: string;
+  purityNote: string;
+  image: string;
+  featured?: boolean;
+}
 
 export interface MenuItem {
   id: string;
@@ -63,22 +87,9 @@ export interface ComparisonRow {
   ordinaryRestaurant: string;
 }
 
-export interface BranchInfo {
-  index: string;
-  city: string;
-  area: string;
-  hours: string;
-  seats: string;
-  signature: string;
-  story: string;
-  image: string;
-  align: 'left' | 'right';
-}
-
 export interface WhatsAppOrderPayload {
   orderId: string;
   fulfillment: 'delivery' | 'pickup';
-  branch: string;
   entries: CartEntry[];
   subtotal: number;
   deliveryFee: number;

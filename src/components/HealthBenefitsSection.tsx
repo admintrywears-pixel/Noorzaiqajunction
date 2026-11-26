@@ -29,13 +29,13 @@ export function HealthBenefitsSection({
   return (
     <section
       id="health-benefits"
-      aria-label="Noor Zaiqa Junction Purity & Hygiene Standards"
-      className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-14 sm:py-20"
+      aria-label="Zaiqa Junction Purity & Hygiene Standards"
+      className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-16"
     >
-      <div className="rounded-tl-[3.75rem] rounded-br-[3.75rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/92 border border-[#EAB344]/35 p-7 sm:p-11 shadow-2xl space-y-10">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-          <div className="space-y-3 max-w-3xl">
-            <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#F5C451] flex flex-wrap items-center gap-2">
+      <div className="rounded-tl-[1.75rem] rounded-br-[1.75rem] sm:rounded-tl-[3.75rem] sm:rounded-br-[3.75rem] rounded-tr-xl rounded-bl-xl sm:rounded-tr-2xl sm:rounded-bl-2xl bg-[#21120B]/92 border border-[#EAB344]/35 p-5 sm:p-7 lg:p-11 shadow-2xl space-y-8 sm:space-y-10">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-5 sm:gap-6">
+          <div className="space-y-2.5 sm:space-y-3 max-w-3xl">
+            <p className="text-xs font-semibold tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#F5C451] flex flex-wrap items-center gap-2">
               <span>Hygienic Homemade Kitchen ·</span>
               <span
                 lang="ur"
@@ -45,7 +45,7 @@ export function HealthBenefitsSection({
               </span>
             </p>
             <h2
-              className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight text-[#FDF6E9]"
+              className="text-2xl sm:text-5xl font-semibold tracking-tight leading-tight text-[#FDF6E9]"
               style={{ textWrap: 'balance' }}
             >
               Why Classic{' '}
@@ -66,15 +66,15 @@ export function HealthBenefitsSection({
             <button
               type="button"
               onClick={() => onNavigate('health')}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-bold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer self-start lg:self-end shadow-md"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#EAB344] text-[#140B07] text-xs font-bold hover:bg-[#F5C451] transition-colors whitespace-normal sm:whitespace-nowrap text-center shrink-0 cursor-pointer self-start lg:self-end shadow-md"
             >
-              <span className="inline-flex items-center gap-1.5">
+              <span className="inline-flex flex-wrap items-center justify-center gap-1.5">
                 <span>Kitchen Purity Standards ·</span>
                 <span lang="ur" className="font-urdu-inline text-sm">
                   صفائی و معیار
                 </span>
               </span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-3.5 h-3.5 shrink-0" />
             </button>
           )}
         </div>

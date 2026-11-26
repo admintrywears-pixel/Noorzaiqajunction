@@ -9,10 +9,11 @@ import {
   Trash2,
 } from 'lucide-react';
 import { useMemo, useState, type FormEvent } from 'react';
+import { useCatalog } from '../context/CatalogContext';
 import {
   buildOrderWhatsAppText,
   buildOrderWhatsAppUrl,
-  MENU_ITEMS,
+  packedToCartItem,
   QUICK_ATTACH_IDS,
   WHATSAPP_DISPLAY,
 } from '../data/menuData';
@@ -33,11 +34,11 @@ export function OrdersCheckoutSection({
   onRemoveItem,
   onClearCart,
 }: OrdersCheckoutSectionProps) {
+  const { dishes, products } = useCatalog();
   const [fulfillment, setFulfillment] = useState<'delivery' | 'pickup'>('delivery');
   const [customerName, setCustomerName] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
-  const [branch, setBranch] = useState('Karachi Home Delivery');
   const [notes, setNotes] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [copied, setCopied] = useState(false);
@@ -58,10 +59,10 @@ export function OrdersCheckoutSection({
 
   const quickItems = useMemo(
     () =>
-      QUICK_ATTACH_IDS.map((id) => MENU_ITEMS.find((m) => m.id === id)).filter(
+      QUICK_ATTACH_IDS.map((id) => dishes.find((m) => m.id === id)).filter(
         (m): m is MenuItem => Boolean(m)
       ),
-    []
+    [dishes]
   );
 
   const isReady =
@@ -71,7 +72,7 @@ export function OrdersCheckoutSection({
     (fulfillment === 'pickup' || address.trim().length > 0);
 
   const liveOrderId = useMemo(
-    () => `NZJ-${Math.floor(1000 + (subtotal % 8999))}`,
+    () => `ZJ-${Math.floor(1000 + (subtotal % 8999))}`,
     [subtotal]
   );
 
@@ -79,7 +80,6 @@ export function OrdersCheckoutSection({
     () => ({
       orderId: liveOrderId,
       fulfillment,
-      branch,
       entries,
       subtotal,
       deliveryFee,
@@ -89,7 +89,7 @@ export function OrdersCheckoutSection({
       address: address.trim(),
       notes: notes.trim(),
     }),
-    [liveOrderId, fulfillment, branch, entries, subtotal, deliveryFee, total, customerName, phone, address, notes]
+    [liveOrderId, fulfillment, entries, subtotal, deliveryFee, total, customerName, phone, address, notes]
   );
 
   const liveWhatsAppUrl = useMemo(() => buildOrderWhatsAppUrl(payload), [payload]);
@@ -136,15 +136,15 @@ export function OrdersCheckoutSection({
   return (
     <section
       id="orders-checkout"
-      className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-14 sm:py-20"
+      className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-16"
     >
-      <div className="rounded-tl-[3.75rem] rounded-br-[3.75rem] rounded-tr-2xl rounded-bl-2xl bg-[#21120B]/94 border border-[#EAB344]/35 p-7 sm:p-11 shadow-2xl space-y-10">
+      <div className="rounded-tl-[1.75rem] rounded-br-[1.75rem] sm:rounded-tl-[3.75rem] sm:rounded-br-[3.75rem] rounded-tr-xl rounded-bl-xl sm:rounded-tr-2xl sm:rounded-bl-2xl bg-[#21120B]/94 border border-[#EAB344]/35 p-4 sm:p-7 lg:p-11 shadow-2xl space-y-8 sm:space-y-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
           <div className="space-y-2 max-w-2xl">
-            <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#F5C451]">
+            <p className="text-xs font-semibold tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#F5C451]">
               Direct Kitchen Dispatch · {WHATSAPP_DISPLAY}
             </p>
-            <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-[#FDF6E9]">
+            <h2 className="text-2xl sm:text-5xl font-semibold tracking-tight text-[#FDF6E9]">
               Your Attached Order Tray &amp; WhatsApp Checkout
             </h2>
             <p lang="ur" className="font-urdu text-lg sm:text-2xl text-[#EAB344]">
@@ -242,7 +242,7 @@ export function OrdersCheckoutSection({
 
             <div className="space-y-2.5 pt-2">
               <p className="text-xs font-semibold uppercase tracking-wider text-[#F5C451]">
-                Quick-Attach Homemade Favorites
+                Quick-Attach Homemade Dishes
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {quickItems.map((item) => (
@@ -272,6 +272,38 @@ export function OrdersCheckoutSection({
               </div>
             </div>
 
+            <div className="space-y-2.5 pt-2 border-t border-[#EAB344]/15">
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#D96B27]">
+                Quick-Attach Packed Pantry Products
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {products.slice(0, 4).map((product) => (
+                  <button
+                    key={product.id}
+                    type="button"
+                    onClick={() => onAddToCart(packedToCartItem(product))}
+                    className="group flex items-center gap-2.5 p-2 rounded-xl bg-[#0F0705] border border-[#D96B27]/25 hover:border-[#F5C451]/70 text-left transition-colors cursor-pointer"
+                  >
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      referrerPolicy="no-referrer"
+                      className="w-10 h-10 rounded-lg object-cover shrink-0"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xs font-semibold text-[#FDF6E9] truncate">
+                        {product.name}
+                      </p>
+                      <p className="text-[11px] font-mono text-[#F5C451] tabular-nums">
+                        Rs. {product.pricePkr.toLocaleString()} · {product.packSize}
+                      </p>
+                    </div>
+                    <Plus className="w-4 h-4 text-[#D96B27] shrink-0 mr-1" />
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {entries.length > 0 && (
               <div className="p-4 rounded-2xl bg-[#0F0705] border border-[#EAB344]/25 space-y-2 text-sm">
                 <div className="flex justify-between text-[#E6D7C3]">
@@ -296,7 +328,7 @@ export function OrdersCheckoutSection({
             )}
           </div>
 
-          <div className="lg:col-span-6 p-6 sm:p-8 rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-xl rounded-bl-xl bg-[#2E1910] border border-[#EAB344]/30">
+          <div className="lg:col-span-6 p-4 sm:p-6 lg:p-8 rounded-tl-[1.5rem] rounded-br-[1.5rem] sm:rounded-tl-[2.5rem] sm:rounded-br-[2.5rem] rounded-tr-xl rounded-bl-xl bg-[#2E1910] border border-[#EAB344]/30">
             {confirmed ? (
               <div className="space-y-5">
                 <div className="flex items-center gap-3 text-[#F5C451]">
@@ -315,7 +347,7 @@ export function OrdersCheckoutSection({
                   <span className="font-semibold text-[#FDF6E9]">
                     {confirmed.customerName}
                   </span>
-                  . Your fresh Noor Zaiqa Junction order totaling{' '}
+                  . Your fresh Zaiqa Junction order totaling{' '}
                   <span className="font-mono text-[#F5C451] font-semibold">
                     Rs. {confirmed.total.toLocaleString()}
                   </span>{' '}
@@ -445,21 +477,6 @@ export function OrdersCheckoutSection({
                       className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-[#EAB344]/20 text-sm text-[#FDF6E9] placeholder:text-[#9E8468] focus:outline-none focus:border-[#EAB344]"
                     />
                   </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-medium text-[#E6D7C3] mb-1">
-                    Noor Zaiqa Junction Delivery Zone
-                  </label>
-                  <select
-                    value={branch}
-                    onChange={(e) => setBranch(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#0F0705] border border-[#EAB344]/20 text-sm text-[#FDF6E9] focus:outline-none focus:border-[#EAB344]"
-                  >
-                    <option>Karachi Home Delivery</option>
-                    <option>Clifton / Defence / Saddar, Karachi</option>
-                    <option>Gulshan / Nazimabad / PECHS, Karachi</option>
-                  </select>
                 </div>
 
                 {fulfillment === 'delivery' && (

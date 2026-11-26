@@ -1,32 +1,40 @@
 import { ChevronUp, EyeOff, Volume2, VolumeX } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { AdminConsoleModal } from './components/AdminConsoleModal';
 import { CartDrawer } from './components/CartDrawer';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 import {
-  BranchesPage,
   ContactPage,
   HealthPage,
   HomePage,
   MenuPage,
   OrdersPage,
   PrivacyPage,
+  ProductsPage,
   ReservePage,
   StoryPage,
 } from './components/Pages';
 import { SceneBackdrop } from './components/SceneBackdrop';
+import { CatalogProvider } from './context/CatalogContext';
 import { PAGE_STAGE_CONFIG } from './data/menuData';
 import type { CartEntry, MenuItem, PageId } from './types';
 import { KitchenSizzleAudio } from './utils/sizzleAudio';
+
+function hasSecretAdminTrigger(): boolean {
+  const hash = window.location.hash.replace('#', '').toLowerCase();
+  const params = new URLSearchParams(window.location.search);
+  return hash === 'zj-admin' || params.get('admin') === 'zj';
+}
 
 function parseHashPage(): PageId {
   const hash = window.location.hash.replace('#', '').toLowerCase();
   if (
     hash === 'menu' ||
+    hash === 'products' ||
     hash === 'health' ||
     hash === 'orders' ||
     hash === 'story' ||
-    hash === 'branches' ||
     hash === 'reserve' ||
     hash === 'contact' ||
     hash === 'privacy'
@@ -36,10 +44,11 @@ function parseHashPage(): PageId {
   return 'home';
 }
 
-export default function App() {
+function AppContent() {
   const [activePage, setActivePage] = useState<PageId>(parseHashPage);
   const [cart, setCart] = useState<Record<string, CartEntry>>({});
   const [cartOpen, setCartOpen] = useState(false);
+  const [adminOpen, setAdminOpen] = useState<boolean>(hasSecretAdminTrigger);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeStage, setActiveStage] = useState(1);
@@ -61,7 +70,13 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const onHash = () => setActivePage(parseHashPage());
+    const onHash = () => {
+      if (hasSecretAdminTrigger()) {
+        setAdminOpen(true);
+      } else {
+        setActivePage(parseHashPage());
+      }
+    };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
@@ -101,6 +116,11 @@ export default function App() {
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'a') {
+        e.preventDefault();
+        setAdminOpen((prev) => !prev);
+        return;
+      }
       if (
         e.key.toLowerCase() === 'h' &&
         document.activeElement?.tagName !== 'INPUT' &&
@@ -196,7 +216,7 @@ export default function App() {
   const stageNames = PAGE_STAGE_CONFIG[activePage].stageNames;
 
   return (
-    <div className="relative min-h-screen bg-[#140B07] text-[#FDF6E9]">
+    <div className="relative min-h-screen bg-[#140B07] text-[#FDF6E9] overflow-x-clip">
       <SceneBackdrop
         activePage={activePage}
         pageScrollProgress={scrollProgress}
@@ -223,10 +243,19 @@ export default function App() {
             onClearCart={clearCart}
             cartQuantities={cartQuantities}
             onNavigate={navigate}
+            onSecretUnlock={() => setAdminOpen(true)}
           />
         )}
         {activePage === 'menu' && (
           <MenuPage
+            onAddToCart={addToCart}
+            onUpdateQty={updateQty}
+            cartQuantities={cartQuantities}
+            onNavigate={navigate}
+          />
+        )}
+        {activePage === 'products' && (
+          <ProductsPage
             onAddToCart={addToCart}
             onUpdateQty={updateQty}
             cartQuantities={cartQuantities}
@@ -251,15 +280,17 @@ export default function App() {
           />
         )}
         {activePage === 'story' && <StoryPage onNavigate={navigate} />}
-        {activePage === 'branches' && <BranchesPage onNavigate={navigate} />}
         {activePage === 'reserve' && <ReservePage />}
         {activePage === 'contact' && <ContactPage onNavigate={navigate} />}
         {activePage === 'privacy' && <PrivacyPage onNavigate={navigate} />}
       </main>
 
-      <Footer onNavigate={navigate} />
+      <Footer
+        onNavigate={navigate}
+        onSecretUnlock={() => setAdminOpen(true)}
+      />
 
-      <div className="fixed bottom-4 right-4 z-20 flex flex-col items-end max-w-[92vw]">
+      <div className="hidden sm:flex fixed bottom-4 right-4 z-20 flex-col items-end max-w-[92vw]">
         {!hudHidden && (
           <div className="mb-2 flex flex-wrap items-center justify-end gap-2 px-3 py-2 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#21120B]/95 border border-[#EAB344]/35 shadow-2xl">
             <div className="flex flex-wrap items-center gap-1 p-1 rounded-lg bg-[#0F0705] border border-[#EAB344]/15">
@@ -355,6 +386,24 @@ export default function App() {
         onClearCart={clearCart}
         onOpenOrdersPage={() => navigate('orders')}
       />
+
+      <AdminConsoleModal
+        isOpen={adminOpen}
+        onClose={() => {
+          setAdminOpen(false);
+          if (hasSecretAdminTrigger()) {
+            window.history.replaceState(null, '', `#${activePage}`);
+          }
+        }}
+      />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <CatalogProvider>
+      <AppContent />
+    </CatalogProvider>
   );
 }

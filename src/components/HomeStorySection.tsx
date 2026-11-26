@@ -1,14 +1,18 @@
 import { ArrowRight } from 'lucide-react';
+import { useRef } from 'react';
+import { useCatalog } from '../context/CatalogContext';
 import {
   CULINARY_STAGES,
   IMAGE_ASSETS,
-  MENU_ITEMS,
   URDU_STAGES,
 } from '../data/menuData';
+import { ZaiqaLogo } from './ZaiqaLogo';
 
 interface HomeStorySectionProps {
   activeStage: number;
   onJumpToMenu: () => void;
+  onCustomOrder: () => void;
+  onSecretUnlock?: () => void;
 }
 
 const STAGE_IMAGES = [
@@ -48,43 +52,53 @@ const STAGE_SHAPES = [
 export function HomeStorySection({
   activeStage,
   onJumpToMenu,
+  onCustomOrder,
+  onSecretUnlock,
 }: HomeStorySectionProps) {
+  const { dishes } = useCatalog();
+  const tapCountRef = useRef(0);
+  const tapTimerRef = useRef<number | null>(null);
+
+  const handleBadgeTap = () => {
+    if (!onSecretUnlock) return;
+    tapCountRef.current += 1;
+    if (tapTimerRef.current !== null) {
+      window.clearTimeout(tapTimerRef.current);
+    }
+    if (tapCountRef.current >= 5) {
+      tapCountRef.current = 0;
+      tapTimerRef.current = null;
+      onSecretUnlock();
+      return;
+    }
+    tapTimerRef.current = window.setTimeout(() => {
+      tapCountRef.current = 0;
+      tapTimerRef.current = null;
+    }, 2500);
+  };
+
   return (
     <div id="handi-walkthrough" className="relative z-10">
-      <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
+      <section className="relative min-h-[90svh] sm:min-h-screen flex items-center pt-20 pb-12 sm:pt-24 sm:pb-20 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-y-0 left-0 w-full lg:w-[68%] bg-gradient-to-r from-[#120906]/92 via-[#140B07]/70 to-transparent"
         />
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.18em] uppercase text-[#F5C451]">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                  className="text-[#EAB344] shrink-0"
-                >
-                  <path
-                    d="M17 3C11 4 6 9 5 16C5 19 7 21 10 21C16 20 20 14 21 7C21 4.5 19.5 3 17 3Z"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                  />
-                  <path
-                    d="M19 5C14 9 10 14 8 20"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <span>Noor Zaiqa Junction · Ghar ka Zaiqa, Har Plate Mein</span>
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+            <div className="lg:col-span-7 space-y-4 sm:space-y-6">
+              <div
+                onClick={handleBadgeTap}
+                className="flex items-center gap-2.5 sm:gap-3 text-[11px] sm:text-xs font-semibold tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#F5C451] select-none"
+              >
+                <ZaiqaLogo size={28} />
+                <span className="leading-snug">
+                  Zaiqa Junction · Ghar ka Zaiqa, Har Plate Mein
+                </span>
               </div>
 
               <h1
-                className="text-4xl sm:text-6xl lg:text-[4.15rem] font-semibold leading-[1.03] tracking-tight text-[#FDF6E9] drop-shadow-[0_4px_24px_rgba(16,8,5,0.92)]"
+                className="text-3xl sm:text-5xl lg:text-[4.15rem] font-semibold leading-[1.06] sm:leading-[1.03] tracking-tight text-[#FDF6E9] drop-shadow-[0_4px_24px_rgba(16,8,5,0.92)]"
                 style={{ textWrap: 'balance' }}
               >
                 Ghar ka Zaiqa,{' '}
@@ -94,12 +108,12 @@ export function HomeStorySection({
 
               <p
                 lang="ur"
-                className="font-urdu text-2xl sm:text-[1.7rem] font-semibold text-[#F3C969] drop-shadow-[0_3px_14px_rgba(16,8,5,0.98)] leading-[2.2]"
+                className="font-urdu text-xl sm:text-[1.7rem] font-semibold text-[#F3C969] drop-shadow-[0_3px_14px_rgba(16,8,5,0.98)] leading-[2.05] sm:leading-[2.2]"
               >
-                نور ذائقہ جنکشن — گھر کا اصلی ذائقہ، ہر پلیٹ میں
+                ذائقہ جنکشن — گھر کا اصلی ذائقہ، ہر پلیٹ میں
               </p>
 
-              <p className="text-base sm:text-lg leading-relaxed text-[#E6D7C3] max-w-xl drop-shadow-[0_2px_12px_rgba(16,8,5,0.95)]">
+              <p className="text-sm sm:text-lg leading-relaxed text-[#E6D7C3] max-w-xl drop-shadow-[0_2px_12px_rgba(16,8,5,0.95)]">
                 Authentic Pakistani homestyle masala dishes prepared hygienically in
                 Karachi—Beef &amp; Chicken Shami Kabab, Chicken Achaari, Chicken Biryani,
                 Chicken Qorma, Aalu Qeema, Zarda, Mutanjan, Chicken Chowmien, Daal Chawal +
@@ -116,20 +130,16 @@ export function HomeStorySection({
                 ہو وہ آرڈر پر تیار ہو جاتا ہے۔
               </p>
 
-              <div className="flex flex-wrap items-center gap-3.5 pt-2">
+              <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 pt-2">
                 <button
                   type="button"
-                  onClick={() => {
-                    document
-                      .getElementById('chapter-1')
-                      ?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#EAB344] text-[#140B07] text-sm font-bold hover:bg-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer shadow-lg"
+                  onClick={onCustomOrder}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md bg-[#EAB344] text-[#140B07] text-sm font-bold hover:bg-[#F5C451] transition-colors cursor-pointer shadow-lg"
                 >
                   <span className="inline-flex items-center gap-1.5">
-                    <span>Kitchen Process ·</span>
+                    <span>Custom Order ·</span>
                     <span lang="ur" className="font-urdu-inline text-[15px]">
-                      تیاری دیکھیں
+                      کسٹم آرڈر
                     </span>
                   </span>
                 </button>
@@ -137,10 +147,10 @@ export function HomeStorySection({
                 <button
                   type="button"
                   onClick={onJumpToMenu}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-tr-2xl rounded-bl-2xl rounded-tl-md rounded-br-md border border-[#EAB344]/50 bg-[#21120B]/92 text-[#FDF6E9] text-sm font-medium hover:border-[#F5C451] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-tr-2xl rounded-bl-2xl rounded-tl-md rounded-br-md border border-[#EAB344]/50 bg-[#21120B]/92 text-[#FDF6E9] text-sm font-medium hover:border-[#F5C451] transition-colors cursor-pointer"
                 >
-                  <span className="inline-flex items-center gap-1.5">
-                    <span>Special Menu ({MENU_ITEMS.length} Dishes) ·</span>
+                  <span className="inline-flex flex-wrap items-center justify-center gap-1.5">
+                    <span>Special Menu ({dishes.length} Dishes) ·</span>
                     <span
                       lang="ur"
                       className="font-urdu-inline text-[15px] text-[#F5C451]"
@@ -148,28 +158,28 @@ export function HomeStorySection({
                       مکمل مینیو
                     </span>
                   </span>
-                  <ArrowRight className="w-4 h-4 text-[#F5C451]" />
+                  <ArrowRight className="w-4 h-4 text-[#F5C451] shrink-0" />
                 </button>
               </div>
             </div>
 
             <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md">
-                <div className="rounded-t-[210px] rounded-b-[2rem] p-3 border border-[#EAB344]/45 bg-[#21120B]/88 shadow-2xl">
-                  <div className="rounded-t-[198px] rounded-b-[1.5rem] overflow-hidden aspect-[4/4.3] bg-[#2E1910]">
+              <div className="relative w-full max-w-sm sm:max-w-md">
+                <div className="rounded-t-[150px] sm:rounded-t-[210px] rounded-b-[1.5rem] sm:rounded-b-[2rem] p-2.5 sm:p-3 border border-[#EAB344]/45 bg-[#21120B]/88 shadow-2xl">
+                  <div className="rounded-t-[140px] sm:rounded-t-[198px] rounded-b-[1.2rem] sm:rounded-b-[1.5rem] overflow-hidden aspect-[4/4.2] sm:aspect-[4/4.3] bg-[#2E1910]">
                     <img
                       src={IMAGE_ASSETS.chickenBiryani}
-                      alt="Noor Zaiqa Junction Karachi Special Chicken Biryani 1 KG"
+                      alt="Zaiqa Junction Karachi Special Chicken Biryani 1 KG"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="px-4 pt-4 pb-2 flex items-end justify-between gap-4">
-                    <div>
-                      <p className="text-[11px] font-mono uppercase tracking-wider text-[#F5C451]">
+                  <div className="px-3 sm:px-4 pt-3 sm:pt-4 pb-1.5 sm:pb-2 flex items-end justify-between gap-3 sm:gap-4">
+                    <div className="min-w-0">
+                      <p className="text-[11px] font-mono uppercase tracking-wider text-[#F5C451] truncate">
                         Special Menu · 1 KG Dum Tray
                       </p>
-                      <p className="font-display text-lg font-semibold text-[#FDF6E9]">
+                      <p className="font-display text-base sm:text-lg font-semibold text-[#FDF6E9] truncate">
                         Chicken Biryani (1 KG)
                       </p>
                     </div>
@@ -194,7 +204,7 @@ export function HomeStorySection({
       </section>
 
       <section
-        className="py-10 sm:py-20 space-y-24 sm:space-y-36"
+        className="py-8 sm:py-20 space-y-12 sm:space-y-36"
         aria-label="4-Stage Homestyle Kitchen Process"
       >
         {CULINARY_STAGES.map((stage, idx) => {
@@ -207,12 +217,12 @@ export function HomeStorySection({
             <div
               key={stage.id}
               id={`chapter-${stage.id}`}
-              className="max-w-7xl mx-auto px-6 lg:px-10"
+              className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-14 items-center">
                 <div className={`lg:col-span-6 ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
                   <article
-                    className={`relative p-7 sm:p-10 bg-[#21120B]/90 border transition-colors duration-300 space-y-4 ${shape.card} ${
+                    className={`relative p-5 sm:p-10 bg-[#21120B]/90 border transition-colors duration-300 space-y-3.5 sm:space-y-4 ${shape.card} ${
                       isCurrent ? 'border-[#EAB344]/65' : 'border-[#EAB344]/20'
                     }`}
                   >

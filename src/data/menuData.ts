@@ -1,14 +1,16 @@
 import type {
-  BranchInfo,
   Category,
   ComparisonRow,
   CulinaryStage,
   HealthBenefit,
   MenuItem,
+  PackedCategory,
+  PackedProduct,
   PageId,
   SpiceLevel,
   WhatsAppOrderPayload,
 } from '../types';
+import catalogSeeds from './catalogSeeds.json';
 
 export const WHATSAPP_DISPLAY = '+92 371 2442688';
 export const WHATSAPP_NUMBER = '923712442688';
@@ -26,7 +28,38 @@ export const IMAGE_ASSETS = {
   roti: '/src/assets/images/dish_roti_1795608116734.jpg',
   aaluParatha: '/src/assets/images/dish_aalu_paratha_1795608118535.jpg',
   daalChawalKabab: '/src/assets/images/dish_daal_chawal_kabab_1795608119343.jpg',
+  packFriedOnion: '/src/assets/images/pack_fried_onion_1795707703089.jpg',
+  packGingerGarlic: '/src/assets/images/pack_ginger_garlic_paste_1795707703093.jpg',
+  packGreenChilli: '/src/assets/images/pack_green_chilli_paste_1795707703701.jpg',
+  packFrozenParathay: '/src/assets/images/pack_frozen_parathay_1795707704190.jpg',
+  packImliChutney: '/src/assets/images/pack_imli_chutney_1795707705022.jpg',
+  packTomatoPuree: '/src/assets/images/pack_tomato_puree_1795707705361.jpg',
+  packDesiAchar: '/src/assets/images/pack_desi_achar_1795707705768.jpg',
+  packGaramMasala: '/src/assets/images/pack_garam_masala_1795707705570.jpg',
 };
+
+export const CATALOG_IMAGE_OPTIONS: Array<{ label: string; src: string }> = [
+  { label: 'Beef Shami Kabab', src: IMAGE_ASSETS.beefShami },
+  { label: 'Chicken Shami Kabab', src: IMAGE_ASSETS.chickenShami },
+  { label: 'Chicken Achaari', src: IMAGE_ASSETS.chickenAchaari },
+  { label: 'Chicken Biryani', src: IMAGE_ASSETS.chickenBiryani },
+  { label: 'Chicken Qorma', src: IMAGE_ASSETS.chickenQorma },
+  { label: 'Aalu Qeema', src: IMAGE_ASSETS.aaluQeema },
+  { label: 'Zarda', src: IMAGE_ASSETS.zarda },
+  { label: 'Mutanjan Zarda', src: IMAGE_ASSETS.mutanjanZarda },
+  { label: 'Chicken Chowmien', src: IMAGE_ASSETS.chickenChowmien },
+  { label: 'Daal Chawal + Kabab', src: IMAGE_ASSETS.daalChawalKabab },
+  { label: 'Aalu Paratha', src: IMAGE_ASSETS.aaluParatha },
+  { label: 'Roti', src: IMAGE_ASSETS.roti },
+  { label: 'Fried Onion Pack', src: IMAGE_ASSETS.packFriedOnion },
+  { label: 'Ginger Garlic Paste', src: IMAGE_ASSETS.packGingerGarlic },
+  { label: 'Green Chilli Paste', src: IMAGE_ASSETS.packGreenChilli },
+  { label: 'Frozen Parathay Pack', src: IMAGE_ASSETS.packFrozenParathay },
+  { label: 'Imli Chutney', src: IMAGE_ASSETS.packImliChutney },
+  { label: 'Tomato Puree', src: IMAGE_ASSETS.packTomatoPuree },
+  { label: 'Desi Mix Achar', src: IMAGE_ASSETS.packDesiAchar },
+  { label: 'Garam & Biryani Masala', src: IMAGE_ASSETS.packGaramMasala },
+];
 
 export const CULINARY_STAGES: CulinaryStage[] = [
   {
@@ -35,7 +68,7 @@ export const CULINARY_STAGES: CulinaryStage[] = [
     title: 'Pure Whole Spices & Fresh Oil Base',
     subtitle: 'Hand-Cleaned Zeera, Laung, Badiyan & Elaichi Tadka',
     description:
-      'Every Noor Zaiqa Junction pot starts just like your mother’s home kitchen—whole roasted cumin seeds, cloves, cinnamon bark, cardamom, and crisp golden onions sizzling in clean, fresh single-use oil or desi ghee.',
+      'Every Zaiqa Junction pot starts just like your mother’s home kitchen—whole roasted cumin seeds, cloves, cinnamon bark, cardamom, and crisp golden onions sizzling in clean, fresh single-use oil or desi ghee.',
     keyIngredients: ['Whole Garam Masala', 'Golden Onion', 'Fresh Ginger-Garlic', 'Pure Oil & Ghee'],
     heatTemp: '180°C',
     duration: '5 min',
@@ -83,7 +116,7 @@ export const URDU_STAGES: Record<
     title: 'خالص ثابت مصالحے اور تازہ تڑکا',
     subtitle: 'زیرہ، لونگ، دارچینی، الائچی اور سنہری پیاز کی خوشبو',
     summary:
-      'نور ذائقہ جنکشن کے ہر سالن اور بریانی کی شروعات گھر کے خالص ثابت مصالحوں اور صاف ستھرے تازہ کوکنگ آئل سے ہوتی ہے۔',
+      'ذائقہ جنکشن کے ہر سالن اور بریانی کی شروعات گھر کے خالص ثابت مصالحوں اور صاف ستھرے تازہ کوکنگ آئل سے ہوتی ہے۔',
   },
   2: {
     title: 'روایتی پاکستانی مصالحہ بھنائی',
@@ -105,168 +138,16 @@ export const URDU_STAGES: Record<
   },
 };
 
-export const MENU_ITEMS: MenuItem[] = [
-  {
-    id: 'nzj-beef-shami',
-    name: 'Beef Shami Kabab (12 Pieces)',
-    urduTag: '1000 / 12 Piece · Homestyle Resha',
-    category: 'Shami Kababs',
-    pricePkr: 1000,
-    spice: 'Classic Masala',
-    prepTime: '12 Pieces Pack',
-    description:
-      'Twelve handmade resha beef & chana daal shami kababs slow-simmered with whole garam masala, black pepper, ginger-garlic, and fresh herbs—ready fresh or frozen.',
-    image: IMAGE_ASSETS.beefShami,
-    featured: true,
-  },
-  {
-    id: 'nzj-chicken-shami',
-    name: 'Chicken Shami Kabab (12 Pieces)',
-    urduTag: '900 / 12 Piece · Tender Chicken & Daal',
-    category: 'Shami Kababs',
-    pricePkr: 900,
-    spice: 'Classic Masala',
-    prepTime: '12 Pieces Pack',
-    description:
-      'Twelve juicy shredded boneless chicken & chana daal patties seasoned with traditional aromatic spices, coriander, and green chilli—available freshly fried or frozen.',
-    image: IMAGE_ASSETS.chickenShami,
-    featured: true,
-  },
-  {
-    id: 'nzj-chicken-achaari',
-    name: 'Chicken Achaari (1 KG)',
-    urduTag: '1200 / 1 KG · Tangy Masala Curry',
-    category: 'Homemade Curries & Biryani',
-    pricePkr: 1200,
-    spice: 'Spicy Homestyle',
-    prepTime: '1 KG Fresh Pot',
-    description:
-      'Tender chicken slow-cooked in tangy homestyle tomato-yogurt gravy infused with pickled kalonji, saunf, mustard seeds, whole red & green spices.',
-    image: IMAGE_ASSETS.chickenAchaari,
-    featured: true,
-  },
-  {
-    id: 'nzj-chicken-biryani',
-    name: 'Chicken Biryani (1 KG)',
-    urduTag: '1250 / 1 KG · Karachi Masala Dum',
-    category: 'Homemade Curries & Biryani',
-    pricePkr: 1250,
-    spice: 'Classic Masala',
-    prepTime: '1 KG Dum Tray',
-    description:
-      'Fluffy aged basmati rice layered with rich homemade Karachi chicken masala, potatoes, fried onions, fresh mint, aloo bukhara, and warm biryani spice aroma.',
-    image: IMAGE_ASSETS.chickenBiryani,
-    featured: true,
-  },
-  {
-    id: 'nzj-chicken-qorma',
-    name: 'Chicken Qorma (1 KG)',
-    urduTag: '1000 / 1 KG · Traditional Danedar Qorma',
-    category: 'Homemade Curries & Biryani',
-    pricePkr: 1000,
-    spice: 'Mild & Sweet',
-    prepTime: '1 KG Fresh Pot',
-    description:
-      'Classic family-dawat danedar Chicken Qorma simmered in whisked yogurt, crispy browned onions, cardamom, nutmeg-mace, almonds & rich ghar ka masala.',
-    image: IMAGE_ASSETS.chickenQorma,
-    featured: true,
-  },
-  {
-    id: 'nzj-aalu-qeema',
-    name: 'Aalu Qeema (1 KG)',
-    urduTag: '1600 / 1 KG · Homestyle Mince & Potatoes',
-    category: 'Homemade Curries & Biryani',
-    pricePkr: 1600,
-    spice: 'Spicy Homestyle',
-    prepTime: '1 KG Fresh Pot',
-    description:
-      'Hand-minced beef qeema bhuna with sweet golden potato cubes, caramelized tomatoes, ginger juliennes, garam masala, and fresh coriander.',
-    image: IMAGE_ASSETS.aaluQeema,
-  },
-  {
-    id: 'nzj-zarda',
-    name: 'Zarda (1 KG)',
-    urduTag: '800 / 1 KG · Classic Saffron Sweet Rice',
-    category: 'Desserts (Meetha)',
-    pricePkr: 800,
-    spice: 'Mild & Sweet',
-    prepTime: '1 KG Dessert Tray',
-    description:
-      'Traditional golden saffron-infused sweet basmati rice cooked in pure ghee with green cardamom, topped with crumbled khoya, almonds, pistachios & raisins.',
-    image: IMAGE_ASSETS.zarda,
-    featured: true,
-  },
-  {
-    id: 'nzj-mutanjan-zarda',
-    name: 'Mutanjan Zarda (1 KG)',
-    urduTag: '1100 / 1 KG · Shahi Colorful Dessert',
-    category: 'Desserts (Meetha)',
-    pricePkr: 1100,
-    spice: 'Mild & Sweet',
-    prepTime: '1 KG Shahi Tray',
-    description:
-      'Festive jewel-toned Mutanjan Zarda prepared with aromatic sugar syrup, kewra water, miniature gulab jamun, cham cham, khoya chunks & roasted nuts.',
-    image: IMAGE_ASSETS.mutanjanZarda,
-  },
-  {
-    id: 'nzj-chicken-chowmien',
-    name: 'Chicken Chowmien (1 Box)',
-    urduTag: '300 / 1 Box · Desi Wok Noodles',
-    category: 'Combos, Noodles & Breads',
-    pricePkr: 300,
-    spice: 'Classic Masala',
-    prepTime: '1 Full Box',
-    description:
-      'Hot desi-style wok-tossed noodles with spiced chicken strips, crunchy carrots, capsicum, cabbage, and black-pepper garlic soy glaze.',
-    image: IMAGE_ASSETS.chickenChowmien,
-  },
-  {
-    id: 'nzj-daal-chawal-kabab',
-    name: 'Daal Chawal + Kabab (1 Plate)',
-    urduTag: '300 / 1 Plate · Comfort Meal Combo',
-    category: 'Combos, Noodles & Breads',
-    pricePkr: 300,
-    spice: 'Classic Masala',
-    prepTime: '1 Full Plate',
-    description:
-      'Steaming white basmati chawal topped with fragrant garlic-cumin tadka daal, paired with golden fried Shami Kababs & fresh kachumber salad.',
-    image: IMAGE_ASSETS.daalChawalKabab,
-    featured: true,
-  },
-  {
-    id: 'nzj-aalu-paratha',
-    name: 'Aalu Ka Paratha (1 Piece)',
-    urduTag: '120 / Piece · Stuffed Potato Paratha',
-    category: 'Combos, Noodles & Breads',
-    pricePkr: 120,
-    spice: 'Classic Masala',
-    prepTime: 'Made Hot on Order',
-    description:
-      'Crispy golden whole-wheat tawa paratha generously stuffed with spiced mashed potatoes, roasted cumin, coriander, green chilli & red chilli flakes.',
-    image: IMAGE_ASSETS.aaluParatha,
-  },
-  {
-    id: 'nzj-roti',
-    name: 'Roti (1 Piece)',
-    urduTag: '20 / Piece · Soft Ghar Ki Roti',
-    category: 'Combos, Noodles & Breads',
-    pricePkr: 20,
-    spice: 'Mild & Sweet',
-    prepTime: 'Fresh Off Tawa',
-    description:
-      'Soft, warm homemade chakki-atta flatbread cooked fresh to order—perfect accompaniment for Chicken Achaari, Chicken Qorma, and Aalu Qeema.',
-    image: IMAGE_ASSETS.roti,
-  },
-];
+export const MENU_ITEMS: MenuItem[] = catalogSeeds.dishes as MenuItem[];
 
 export const URDU_NAV: Record<PageId, string> = {
   home: 'ہوم',
   menu: 'مینیو',
+  products: 'پیکڈ پروڈکٹس',
   health: 'صفائی و معیار',
   orders: 'آرڈر',
   story: 'ہماری کہانی',
-  branches: 'سروس ایریاز',
-  reserve: 'دعوت آرڈر',
+  reserve: 'کسٹم آرڈر',
   contact: 'رابطہ',
   privacy: 'رازداری پالیسی',
 };
@@ -277,7 +158,56 @@ export const URDU_CATEGORIES: Record<'All' | Category, string> = {
   'Shami Kababs': 'شامی کباب',
   'Desserts (Meetha)': 'میٹھا و زردہ',
   'Combos, Noodles & Breads': 'چاؤمین، دال چاول و روٹی',
+  'Packed Pantry': 'پیکڈ کچن پروڈکٹس',
 };
+
+export const PACKED_CATEGORIES: PackedCategory[] = [
+  'All Packs',
+  'Pastes & Purees',
+  'Fried & Frozen',
+  'Pickles & Chutneys',
+  'Spices & Masalas',
+];
+
+export const URDU_PACKED_CATEGORIES: Record<PackedCategory, string> = {
+  'All Packs': 'تمام پیکڈ اشیاء',
+  'Pastes & Purees': 'پیسٹ اور پیوری',
+  'Fried & Frozen': 'تلی پیاز و فروزن',
+  'Pickles & Chutneys': 'اچار اور چٹنیاں',
+  'Spices & Masalas': 'گھر کے پسے مصالحے',
+};
+
+export const PACKED_PRODUCTS: PackedProduct[] =
+  catalogSeeds.products as PackedProduct[];
+
+export function packedToCartItem(product: PackedProduct): MenuItem {
+  return {
+    id: product.id,
+    name: product.name,
+    urduTag: product.urduTag,
+    category: 'Packed Pantry',
+    pricePkr: product.pricePkr,
+    spice: 'Classic Masala',
+    prepTime: product.packSize,
+    description: product.description,
+    image: product.image,
+    featured: product.featured,
+  };
+}
+
+export function buildSinglePackedWhatsAppUrl(product: PackedProduct): string {
+  const origin = typeof window !== 'undefined' ? window.location.origin : '';
+  const text = [
+    '*ZAIQA JUNCTION™ — PACKED PRODUCT ORDER*',
+    `• Product: *${product.name}* (${product.packSize})`,
+    `• Rate: Rs. ${product.pricePkr.toLocaleString()}`,
+    `• Category: ${product.category}`,
+    `• Photo: ${origin}${product.image}`,
+    '',
+    'Please confirm packed product availability & Karachi delivery.',
+  ].join('\n');
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
 
 export const URDU_SPICE: Record<'All Flavors' | SpiceLevel, string> = {
   'All Flavors': 'تمام ذائقے',
@@ -385,7 +315,7 @@ export const HEALTH_BENEFITS: HealthBenefit[] = [
     metric: '0%',
     unit: 'reused dark commercial oil',
     summary:
-      'Street stalls repeatedly fry kababs and curries in oxidized dark oil. Noor Zaiqa Junction uses clean, fresh oil and pure ghee for every batch so your family never feels heavy acidity.',
+      'Street stalls repeatedly fry kababs and curries in oxidized dark oil. Zaiqa Junction uses clean, fresh oil and pure ghee for every batch so your family never feels heavy acidity.',
     scienceNote:
       'Non-oxidized fresh oil protects heart wellness and keeps fried Shami Kababs & Aalu Parathas crisp and light.',
   },
@@ -503,45 +433,6 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
     pillar: 'Value & Home Comfort',
     zaiqaStandard: 'Transparent per-KG, per-12-piece & per-plate family pricing in Karachi',
     ordinaryRestaurant: 'High restaurant markups with small portions and extra service taxes',
-  },
-];
-
-export const BRANCHES: BranchInfo[] = [
-  {
-    index: '01',
-    city: 'Karachi Central Kitchen',
-    area: 'Homemade Fresh & Frozen Dispatch · Karachi',
-    hours: '9:00 AM – 11:30 PM Daily (On Order)',
-    seats: 'Fresh Hot Delivery & Custom Dawat Pots',
-    signature: 'Beef & Chicken Shami Kabab (12 pcs), Chicken Achaari, Chicken Biryani & Qorma',
-    story:
-      'Our primary Karachi home kitchen prepares every 1 KG pot, 12-piece Shami Kabab pack, Zarda/Mutanjan tray, and daily tiffin fresh to order with strict household cleanliness.',
-    image: IMAGE_ASSETS.chickenBiryani,
-    align: 'left',
-  },
-  {
-    index: '02',
-    city: 'Daily Tiffin & Lunch Zone',
-    area: 'Karachi Offices, Hostels & Families',
-    hours: 'Lunch & Dinner Slots Daily',
-    seats: 'Boxes, Plates & Hot Rotis Ready on Schedule',
-    signature: 'Daal Chawal + Kabab (Rs. 300), Chicken Chowmien Box (Rs. 300), Aalu Paratha & Roti',
-    story:
-      'Designed for working professionals, students, and busy homes across Karachi craving honest Ghar ka Zaiqa—from crisp Aalu Ka Paratha breakfasts to Daal Chawal + Kabab lunches.',
-    image: IMAGE_ASSETS.daalChawalKabab,
-    align: 'right',
-  },
-  {
-    index: '03',
-    city: 'Custom Orders & Dawats',
-    area: 'Karachi-Wide Advance & Same-Day Prep',
-    hours: 'Order via Call / WhatsApp 0371-2442688',
-    seats: '1 KG+ Family Pots & Shahi Meetha Trays',
-    signature: 'Mutanjan Zarda, Zarda, Aalu Qeema (1 KG) & Custom Dishes Made to Order',
-    story:
-      'In dishes ke ilawa bhi jo aapko banwana ho, wo order par ban jata hai—family dawats, Eid platters, or custom homestyle curries cooked fresh just the way your home loves it.',
-    image: IMAGE_ASSETS.mutanjanZarda,
-    align: 'left',
   },
 ];
 
@@ -697,7 +588,7 @@ export const PRIVACY_SECTIONS = [
   {
     num: '01',
     title: 'Information You Provide Voluntarily',
-    body: 'When you place an order, request a custom meal, or book a dawat tray through Noor Zaiqa Junction™, we collect only the details you type into our forms: your name, mobile/WhatsApp number, Karachi delivery area/address, and optional spice or custom-dish notes. We do not collect financial card numbers on this site—deliveries operate on Cash on Delivery (COD) or pay-on-pickup.',
+    body: 'When you place an order, request a custom meal, or book a dawat tray through Zaiqa Junction™, we collect only the details you type into our forms: your name, mobile/WhatsApp number, Karachi delivery area/address, and optional spice or custom-dish notes. We do not collect financial card numbers on this site—deliveries operate on Cash on Delivery (COD) or pay-on-pickup.',
   },
   {
     num: '02',
@@ -712,7 +603,7 @@ export const PRIVACY_SECTIONS = [
   {
     num: '04',
     title: 'Cookies, Browser Preferences & Analytics',
-    body: 'Noor Zaiqa Junction™ operates without intrusive cross-site behavioral tracking cookies. Browser preferences such as reduced-motion accessibility settings (`prefers-reduced-motion`) are respected automatically in real time without storing persistent tracking identifiers.',
+    body: 'Zaiqa Junction™ operates without intrusive cross-site behavioral tracking cookies. Browser preferences such as reduced-motion accessibility settings (`prefers-reduced-motion`) are respected automatically in real time without storing persistent tracking identifiers.',
   },
   {
     num: '05',
@@ -722,7 +613,7 @@ export const PRIVACY_SECTIONS = [
   {
     num: '06',
     title: 'Your Privacy Rights & Contact Officer',
-    body: `You may request access to, correction of, or deletion of any WhatsApp order record or inquiry history at any time by messaging our Guest Care desk at ${WHATSAPP_DISPLAY} or emailing orders@noorzaiqajunction.pk.`,
+    body: `You may request access to, correction of, or deletion of any WhatsApp order record or inquiry history at any time by messaging or calling our Guest Care desk at ${WHATSAPP_DISPLAY}.`,
   },
 ];
 
@@ -799,19 +690,20 @@ export const HEALTH_SPOTLIGHT_IDS = [
 export const PRIMARY_NAV_ITEMS: Array<{ id: PageId; label: string }> = [
   { id: 'home', label: 'Home' },
   { id: 'menu', label: 'Menu' },
-  { id: 'health', label: 'Hygiene & Purity' },
+  { id: 'products', label: 'Products' },
   { id: 'orders', label: 'Orders' },
+  { id: 'reserve', label: 'Custom Order' },
   { id: 'contact', label: 'Contact Us' },
 ];
 
 export const ALL_NAV_ITEMS: Array<{ id: PageId; label: string }> = [
   { id: 'home', label: 'Home' },
   { id: 'menu', label: 'Menu' },
+  { id: 'products', label: 'Packed Products' },
   { id: 'health', label: 'Hygiene & Purity' },
   { id: 'orders', label: 'Orders' },
   { id: 'story', label: 'Our Story' },
-  { id: 'branches', label: 'Service Areas' },
-  { id: 'reserve', label: 'Custom Orders' },
+  { id: 'reserve', label: 'Custom Order' },
   { id: 'contact', label: 'Contact Us' },
   { id: 'privacy', label: 'Privacy Policy' },
 ];
@@ -822,10 +714,10 @@ export const PAGE_STAGE_CONFIG: Record<
 > = {
   home: { id: 'home', label: 'Home', stageNames: ['01 · Spices', '02 · Bhunai', '03 · Dum', '04 · Plate'] },
   menu: { id: 'menu', label: 'Menu', stageNames: ['01 · Special Menu', '02 · Orbital Spin', '03 · Rates', '04 · Full Grid'] },
+  products: { id: 'products', label: 'Packed Products', stageNames: ['01 · Sealed Packs', '02 · Pastes', '03 · Fried & Frozen', '04 · Pantry'] },
   health: { id: 'health', label: 'Hygiene & Purity', stageNames: ['01 · Pure Spices', '02 · Clean Oil', '03 · Hygiene', '04 · Custom Prep'] },
   orders: { id: 'orders', label: 'Orders', stageNames: ['01 · Attached Tray', '02 · Dish Photos', '03 · Details', '04 · WhatsApp'] },
   story: { id: 'story', label: 'Our Story', stageNames: ['01 · Ghar Ka Zaiqa', '02 · Masala Craft', '03 · Dum & Sweets', '04 · On Order'] },
-  branches: { id: 'branches', label: 'Service Areas', stageNames: ['01 · Karachi Hub', '02 · Daily Boxes', '03 · Dawats', '04 · Custom Booking'] },
   reserve: { id: 'reserve', label: 'Custom Orders', stageNames: ['01 · Combos', '02 · 1 KG Pots', '03 · Shami Packs', '04 · Custom Book'] },
   contact: { id: 'contact', label: 'Contact Us', stageNames: ['01 · Order Desk', '02 · WhatsApp', '03 · Karachi', '04 · Inquiry'] },
   privacy: { id: 'privacy', label: 'Privacy Policy', stageNames: ['01 · Vault', '02 · Data Charter', '03 · WhatsApp', '04 · Rights'] },
@@ -840,7 +732,7 @@ export function getSpiceCount(spice: SpiceLevel): number {
 export function buildSingleDishWhatsAppUrl(item: MenuItem): string {
   const origin = typeof window !== 'undefined' ? window.location.origin : '';
   const text = [
-    '*NOOR ZAIQA JUNCTION™ — DIRECT DISH ORDER*',
+    '*ZAIQA JUNCTION™ — DIRECT DISH ORDER*',
     `• Dish: *${item.name}* (${item.urduTag})`,
     `• Price: Rs. ${item.pricePkr.toLocaleString()}`,
     `• Flavor Style: ${item.spice}`,
@@ -860,10 +752,9 @@ export function buildOrderWhatsAppText(payload: WhatsAppOrderPayload): string {
   });
   const totalCount = payload.entries.reduce((sum, entry) => sum + entry.quantity, 0);
   const lines = [
-    '*NOOR ZAIQA JUNCTION™ — NEW KITCHEN ORDER*',
+    '*ZAIQA JUNCTION™ — NEW KITCHEN ORDER*',
     `Order Ref: *${payload.orderId}*`,
     `Mode: ${payload.fulfillment === 'delivery' ? 'Home Delivery (COD)' : 'Self Pickup'}`,
-    `Kitchen Area: ${payload.branch}`,
     '',
     `*Attached Dishes (${totalCount} items):*`,
     ...itemLines,
@@ -882,7 +773,7 @@ export function buildOrderWhatsAppText(payload: WhatsAppOrderPayload): string {
   if (payload.notes?.trim()) {
     lines.push(`Custom Order / Notes: ${payload.notes.trim()}`);
   }
-  lines.push('', 'Ghar ka Zaiqa, Har Plate Mein · Sent via Noor Zaiqa Junction Web');
+  lines.push('', 'Ghar ka Zaiqa, Har Plate Mein · Sent via Zaiqa Junction Web');
   return lines.join('\n');
 }
 
@@ -892,15 +783,15 @@ export function buildOrderWhatsAppUrl(payload: WhatsAppOrderPayload): string {
 
 export function buildInquiryWhatsAppUrl(payload: {
   topic: string;
-  branch: string;
+  branch?: string;
   name: string;
   phone: string;
   message: string;
 }): string {
   const lines = [
-    '*NOOR ZAIQA JUNCTION™ — CUSTOM ORDER / INQUIRY*',
+    '*ZAIQA JUNCTION™ — CUSTOM ORDER / INQUIRY*',
     `Topic: ${payload.topic}`,
-    `Area: ${payload.branch}`,
+    ...(payload.branch ? [`Desk: ${payload.branch}`] : []),
     `Name: ${payload.name}`,
     `Phone: ${payload.phone}`,
     '',
